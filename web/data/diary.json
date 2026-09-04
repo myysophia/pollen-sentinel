@@ -1,0 +1,6 @@
+{
+  "schema": "pollen-sentinel-diary-v1",
+  "owner": "self",
+  "note": "个人鼻炎症状日记归档，随仓库公开保存（本人自愿）。更新方式：在报告页点击「导出备份(JSON)」，将其中记录合并到本文件 records 后提交。",
+  "records": {}
+}

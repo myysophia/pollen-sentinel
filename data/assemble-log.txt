@@ -1,0 +1,66 @@
+=== date (runner TZ): Fri Sep  4 10:52:11 UTC 2026 ===
+=== tree under data/raw ===
+data/raw/2026-09-04/baoding.json
+data/raw/2026-09-04/baotou.json
+data/raw/2026-09-04/beijing.json
+data/raw/2026-09-04/botou.json
+data/raw/2026-09-04/cangzhou.json
+data/raw/2026-09-04/changchun.json
+data/raw/2026-09-04/changsha.json
+data/raw/2026-09-04/chengde.json
+data/raw/2026-09-04/chengdu.json
+data/raw/2026-09-04/chifeng.json
+data/raw/2026-09-04/chongqing.json
+data/raw/2026-09-04/dalian.json
+data/raw/2026-09-04/eerduosi.json
+data/raw/2026-09-04/fuzhou.json
+data/raw/2026-09-04/guangzhou.json
+data/raw/2026-09-04/guiyang.json
+data/raw/2026-09-04/haerbin.json
+data/raw/2026-09-04/haikou.json
+data/raw/2026-09-04/hangzhou.json
+data/raw/2026-09-04/hefei.json
+data/raw/2026-09-04/huhehaote.json
+data/raw/2026-09-04/jinan.json
+data/raw/2026-09-04/jiuquan.json
+data/raw/2026-09-04/kunming.json
+data/raw/2026-09-04/lanzhou.json
+data/raw/2026-09-04/lasa.json
+data/raw/2026-09-04/liaocheng.json
+data/raw/2026-09-04/liupanshui.json
+data/raw/2026-09-04/nanchang.json
+data/raw/2026-09-04/nanchong.json
+data/raw/2026-09-04/nanning.json
+data/raw/2026-09-04/shanghai.json
+data/raw/2026-09-04/shenyang.json
+data/raw/2026-09-04/shenzhen.json
+data/raw/2026-09-04/shijiazhuang.json
+data/raw/2026-09-04/taiyuan.json
+data/raw/2026-09-04/tianjin.json
+data/raw/2026-09-04/wuhai.json
+data/raw/2026-09-04/wuhan.json
+data/raw/2026-09-04/wulanhaote.json
+data/raw/2026-09-04/wulumuqi.json
+data/raw/2026-09-04/wuxi.json
+data/raw/2026-09-04/xian.json
+data/raw/2026-09-04/xianyang.json
+data/raw/2026-09-04/xining.json
+data/raw/2026-09-04/yanan.json
+data/raw/2026-09-04/yangzhou.json
+data/raw/2026-09-04/yantai.json
+data/raw/2026-09-04/yinchuan.json
+data/raw/2026-09-04/yulin.json
+data/raw/2026-09-04/zhangjiakou.json
+data/raw/2026-09-04/zhengzhou.json
+data/raw/2026-09-04/zibo.json
+snapshot count: 53
+=== assemble ===
+found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
+assembled from 53 snapshots. pollen_rows=2226 weather_rows=371
+=== build report ===
+report written: web/reports/latest.html 46 KB
+=== export web ===
+web/data.json written, cities=53
+=== validate ===
+dashboard cities: 53
+=== BUILD OK ===

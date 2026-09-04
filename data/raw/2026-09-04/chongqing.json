@@ -1,0 +1,470 @@
+{
+ "city": {
+  "code": "101040100",
+  "en": "chongqing",
+  "name": "重庆",
+  "prov": "重庆",
+  "lat": 29.563,
+  "lon": 106.551
+ },
+ "fetched_at": "2026-09-04T10:51:05",
+ "pollen": [
+  {
+   "date": "2026-07-26",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-26T21:01:58",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-27",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-27T20:54:28",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-28",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-28T23:15:02",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-29",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-29T23:24:21",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-30",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-30T22:50:01",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-31",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-07-31T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-01",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-01T20:03:49",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-02",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-08-02T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-03",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-03T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-04",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-04T22:01:35",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-05",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-05T22:51:01",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-06",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-06T23:16:54",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-07",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-07T22:58:07",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-08",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-08T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-09",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-09T22:00:28",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-10",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-10T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-11",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-11T20:47:07",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-12",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-08-12T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-13",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-13T22:01:12",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-14",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-14T22:00:25",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-15",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-15T21:29:03",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-16",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-16T21:34:52",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-17",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-17T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-18",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-18T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-19",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-19T22:00:30",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-20",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-20T21:58:58",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-21",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-21T21:33:17",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-22",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-22T23:28:18",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-23",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-08-23T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-24",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-24T23:14:12",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-25",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-08-25T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-26",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-26T21:33:47",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-27",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-27T21:38:27",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-28",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-28T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-29",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-29T22:00:50",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-30",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-30T20:36:51",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-31",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-31T23:01:28",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-01",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-09-01T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-02",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-09-02T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-03",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-09-03T22:12:19",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-04",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-09-03T22:12:19",
+   "kind": "forecast"
+  },
+  {
+   "date": "2026-09-05",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": null,
+   "kind": "forecast"
+  }
+ ],
+ "weather_forecast": [
+  {
+   "date": "2026-09-04",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 32.8,
+   "tmin": 24.7,
+   "prcp_mm": 0.0,
+   "wind_kmh": 9.5,
+   "rhum_pct": 59
+  },
+  {
+   "date": "2026-09-05",
+   "code": 2,
+   "weather": "多云",
+   "is_rain": false,
+   "tmax": 34.4,
+   "tmin": 24.8,
+   "prcp_mm": 0.0,
+   "wind_kmh": 5.4,
+   "rhum_pct": 62
+  },
+  {
+   "date": "2026-09-06",
+   "code": 1,
+   "weather": "基本晴朗",
+   "is_rain": false,
+   "tmax": 36.3,
+   "tmin": 26.5,
+   "prcp_mm": 0.0,
+   "wind_kmh": 8.2,
+   "rhum_pct": 50
+  },
+  {
+   "date": "2026-09-07",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 36.8,
+   "tmin": 25.7,
+   "prcp_mm": 0.0,
+   "wind_kmh": 10.5,
+   "rhum_pct": 47
+  },
+  {
+   "date": "2026-09-08",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 36.2,
+   "tmin": 27.0,
+   "prcp_mm": 0.0,
+   "wind_kmh": 7.7,
+   "rhum_pct": 54
+  },
+  {
+   "date": "2026-09-09",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 35.9,
+   "tmin": 28.3,
+   "prcp_mm": 0.0,
+   "wind_kmh": 10.1,
+   "rhum_pct": 43
+  },
+  {
+   "date": "2026-09-10",
+   "code": 51,
+   "weather": "小毛毛雨",
+   "is_rain": true,
+   "tmax": 30.4,
+   "tmin": 24.2,
+   "prcp_mm": 1.2,
+   "wind_kmh": 11.2,
+   "rhum_pct": 59
+  }
+ ]
+}
