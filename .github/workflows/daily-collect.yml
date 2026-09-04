@@ -1,0 +1,55 @@
+name: daily-collect
+
+on:
+  schedule:
+    # 07:00 and 17:30 Beijing time (UTC+8)
+    - cron: '0 23 * * *'
+    - cron: '30 9 * * *'
+  workflow_dispatch:
+    inputs:
+      cities:
+        description: 'Comma-separated city en names (empty = all 53)'
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run daily pipeline
+        env:
+          CITIES: ${{ github.event.inputs.cities }}
+          REPORT_CITIES: xian,xianyang
+          SLEEP: '0.8'
+        run: bash scripts/run_daily.sh
+
+      - name: Validate outputs
+        run: |
+          test -s web/data.json
+          test -s web/reports/latest.html
+          python3 -c "import json;d=json.load(open('web/data.json'));assert len(d['cities'])>0;print('dashboard cities:',len(d['cities']))"
+
+      - name: Commit snapshots and site
+        run: |
+          git config user.name  "pollen-sentinel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data web reports
+          if git diff --staged --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "data: daily snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

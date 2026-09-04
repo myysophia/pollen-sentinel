@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile all modules
+        run: python3 -m compileall -q collectors predictor reporter scripts tests
+      - name: Validate city config
+        run: python3 -c "import json;d=json.load(open('config/cities.json'));assert len(d['cities'])>=50;print(len(d['cities']),'cities')"
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
