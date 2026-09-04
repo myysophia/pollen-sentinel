@@ -10,6 +10,14 @@ on:
       cities:
         description: 'Comma-separated city en names (empty = all 53)'
         default: ''
+  # Bootstrap trigger: editing this workflow itself runs the pipeline once,
+  # so no manual workflow_dispatch is needed after initial setup. Daily runs
+  # come from the schedule above; ordinary code pushes do NOT collect (the
+  # path filter matches only this file).
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-collect.yml'
 
 permissions:
   contents: write
