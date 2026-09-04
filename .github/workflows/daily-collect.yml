@@ -125,3 +125,30 @@ jobs:
             git commit -m "data: daily snapshot $(date -u +%Y-%m-%dT%H:%MZ) [${{ job.status }}]"
             git push || echo "::warning::git push failed (non-fast-forward?)"
           fi
+
+  deploy:
+    # Runs inside the same workflow, so it is NOT subject to the rule that
+    # GITHUB_TOKEN pushes don't trigger new workflow runs. It checks out the
+    # freshly committed site and publishes it to GitHub Pages.
+    needs: assemble
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './web'
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
