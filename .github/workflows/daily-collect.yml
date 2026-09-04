@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: daily-collect
+  group: daily-collect-shard
   cancel-in-progress: false
 
 jobs:
