@@ -69,38 +69,47 @@ jobs:
           python-version: '3.12'
 
       - name: Download all shard snapshots
+        # Tolerate a fully failed matrix so the diagnostic commit still runs.
+        continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           pattern: raw-*
           path: data/raw
           merge-multiple: true
 
-      - name: Inspect downloaded snapshots
+      - name: Assemble, report and export (logged)
+        id: build
         run: |
-          find data/raw -type f -name '*.json' | sort
-          echo "snapshot count: $(find data/raw -type f -name '*.json' | wc -l)"
+          set -o pipefail
+          mkdir -p data
+          LOG=data/assemble-log.txt
+          : > "$LOG"
+          {
+            echo "=== date (runner TZ): $(date) ==="
+            echo "=== tree under data/raw ==="
+            find data/raw -type f 2>/dev/null | sort
+            echo "snapshot count: $(find data/raw -type f -name '*.json' 2>/dev/null | wc -l)"
+            echo "=== assemble ==="
+            python3 -m collectors.collect --assemble
+            echo "=== build report ==="
+            test -f "data/raw/$(date +%F)/xian.json" || {
+              # xian may sit one nesting level deeper after artifact merge
+              test -n "$(find data/raw -name xian.json -print -quit)" || { echo '::error::xian snapshot missing'; exit 3; }
+            }
+            python3 -m reporter.build_report --cities xian,xianyang --out web/reports/latest.html
+            cp web/reports/latest.html "web/reports/$(date +%F).html"
+            mkdir -p web/data
+            cp data/personal/diary.json web/data/diary.json
+            echo "=== export web ==="
+            python3 scripts/export_web.py
+            echo "=== validate ==="
+            test -s web/data.json
+            test -s web/reports/latest.html
+            python3 -c "import json;d=json.load(open('web/data.json'));assert len(d['cities'])>0;print('dashboard cities:',len(d['cities']))"
+            echo "=== BUILD OK ==="
+          } 2>&1 | tee "$LOG"
 
-      - name: Assemble normalised CSVs from snapshots
-        run: python3 -m collectors.collect --assemble
-
-      - name: Build personal report (xian/xianyang)
-        run: |
-          test -f "data/raw/$(date +%F)/xian.json" || { echo '::error::xian snapshot missing'; exit 3; }
-          python3 -m reporter.build_report --cities xian,xianyang --out web/reports/latest.html
-          cp web/reports/latest.html "web/reports/$(date +%F).html"
-          mkdir -p web/data
-          cp data/personal/diary.json web/data/diary.json
-
-      - name: Export national dashboard data
-        run: python3 scripts/export_web.py
-
-      - name: Validate outputs
-        run: |
-          test -s web/data.json
-          test -s web/reports/latest.html
-          python3 -c "import json;d=json.load(open('web/data.json'));assert len(d['cities'])>0;print('dashboard cities:',len(d['cities']))"
-
-      - name: Commit snapshots and site
+      - name: Commit snapshots and site (also saves diagnostics on failure)
         if: always()
         run: |
           git config user.name  "pollen-sentinel-bot"
@@ -110,5 +119,5 @@ jobs:
             echo "nothing to commit"
           else
             git commit -m "data: daily snapshot $(date -u +%Y-%m-%dT%H:%MZ) [${{ job.status }}]"
-            git push
+            git push || echo "::warning::git push failed (non-fast-forward?)"
           fi

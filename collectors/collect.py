@@ -1,11 +1,9 @@
 """
 Daily collection orchestrator.
-
 Usage:
   python -m collectors.collect                       # all 53 cities, last 40 days
   python -m collectors.collect --cities xian,xianyang
   python -m collectors.collect --backfill            # full history since 2022-08-01
-
 Outputs:
   data/raw/<YYYY-MM-DD>/<city_en>.json   immutable-ish daily raw snapshot
   data/daily/pollen.csv                  normalised pollen levels (upsert)
@@ -18,20 +16,14 @@ import json
 import os
 import time
 from datetime import date, datetime, timedelta
-
 from . import pollen_cma as pc
 from . import weather_om as wo
-
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "config", "cities.json")
 HISTORY_START = "2022-08-01"  # Chinese pollen monitoring network begins Aug 2022
-
-
 def load_cities():
     with open(CONFIG, encoding="utf-8") as f:
         return json.load(f)["cities"]
-
-
 def upsert_csv(path, fieldnames, rows, key_fields):
     existing = {}
     if os.path.exists(path):
@@ -47,18 +39,31 @@ def upsert_csv(path, fieldnames, rows, key_fields):
         w.writeheader()
         w.writerows(ordered)
     return len(ordered)
-
-
 def collect_city(city, start, end, fetch_weather=True):
     payload = pc.fetch_pollen(city["en"], start, end)
     records = pc.normalize(payload)
     wrows = wo.forecast(city["lat"], city["lon"], days=7) if fetch_weather else []
     return records, wrows
-
-
-def _rows_from_snapshot(city, stamp):
+def _find_snapshot_files(raw_dir):
+    """Recursively collect city snapshot files under data/raw.
+    Artifact download nesting can differ (data/raw/<date>/x.json vs an extra
+    level), so discover by the <city_en>.json filename rather than a fixed
+    depth. Returns {city_en: abs_path}, shallowest path wins on duplicates.
+    """
+    found = {}
+    if not os.path.isdir(raw_dir):
+        return found
+    for dirpath, _dirs, files in os.walk(raw_dir):
+        for fn in files:
+            if not fn.endswith(".json"):
+                continue
+            en = fn[:-5]
+            depth = os.path.relpath(os.path.join(dirpath, fn), raw_dir).count(os.sep)
+            if en not in found or depth < found[en][0]:
+                found[en] = (depth, os.path.join(dirpath, fn))
+    return {en: v[1] for en, v in found.items()}
+def _rows_from_snapshot(city, path, stamp):
     """Build normalised pollen/weather rows from a saved raw snapshot."""
-    path = os.path.join(ROOT, "data", "raw", stamp, city["en"] + ".json")
     with open(path, encoding="utf-8") as f:
         snap = json.load(f)
     pollen_rows, weather_rows = [], []
@@ -81,26 +86,33 @@ def _rows_from_snapshot(city, stamp):
             "fetched_date": stamp,
         })
     return pollen_rows, weather_rows
-
-
 def assemble(stamp=None):
     """Rebuild normalised CSVs and summary from data/raw/<date>/ snapshots.
     Used by the aggregator job after parallel shards upload their artifacts."""
     today = date.today()
     stamp = stamp or today.isoformat()
-    raw_dir = os.path.join(ROOT, "data", "raw", stamp)
+    raw_root = os.path.join(ROOT, "data", "raw")
+    raw_dir = os.path.join(raw_root, stamp)
     cities = load_cities()
     by_en = {c["en"]: c for c in cities}
     pollen_rows, weather_rows, summary_cities = [], [], []
-    present = sorted(f[:-5] for f in os.listdir(raw_dir) if f.endswith(".json"))
+    snapshots = _find_snapshot_files(raw_dir)
+    # Prefer the dated folder; fall back to whole raw root if nesting differs.
+    if not snapshots:
+        snapshots = _find_snapshot_files(raw_root)
+    if not snapshots:
+        raise RuntimeError("no snapshot files found under data/raw for %s" % stamp)
+    present = sorted(snapshots)
+    print("found %d snapshot files: %s" % (len(present), ",".join(present)))
     for en in present:
         city = by_en.get(en)
         if not city:
             continue
-        pr, wr = _rows_from_snapshot(city, stamp)
+        path = snapshots[en]
+        pr, wr = _rows_from_snapshot(city, path, stamp)
         pollen_rows.extend(pr)
         weather_rows.extend(wr)
-        recs = json.load(open(os.path.join(raw_dir, en + ".json"), encoding="utf-8"))["pollen"]
+        recs = json.load(open(path, encoding="utf-8"))["pollen"]
         latest = pc.latest_observed(recs)
         summary_cities.append({
             "en": en, "name": city["name"], "prov": city["prov"], "ok": True,
@@ -128,8 +140,6 @@ def assemble(stamp=None):
         json.dump(summary, f, ensure_ascii=False, indent=1)
     print("assembled from %d snapshots. pollen_rows=%d weather_rows=%d" % (
         len(present), n_pol, n_wx))
-
-
 def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=False):
     cities = load_cities()
     if city_names:
@@ -146,10 +156,8 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
     stamp = today.isoformat()
     raw_dir = os.path.join(ROOT, "data", "raw", stamp)
     os.makedirs(raw_dir, exist_ok=True)
-
     pollen_rows, weather_rows = [], []
     summary_cities = []
-
     for i, city in enumerate(cities):
         try:
             if do_backfill:
@@ -175,7 +183,6 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
             print("[error] %s: %s" % (city["en"], exc))
             summary_cities.append({"en": city["en"], "name": city["name"], "ok": False, "error": str(exc)})
             continue
-
         for r in recs:
             pollen_rows.append({
                 "date": r["date"], "city": city["en"], "city_name": city["name"],
@@ -194,7 +201,6 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
                 "rhum_pct": "" if w["rhum_pct"] is None else w["rhum_pct"],
                 "fetched_date": stamp,
             })
-
         real = [r for r in recs if r["level_code"] >= 0]
         latest = pc.latest_observed(recs)
         summary_cities.append({
@@ -211,7 +217,6 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
             latest["level"] if latest else "-", len(real)))
         if i < len(cities) - 1:
             time.sleep(sleep_s)
-
     if raw_only:
         # Shard mode: only raw snapshots matter; the aggregator assembles CSVs.
         print("raw-only shard done. cities=%d ok=%d failed=%d" % (
@@ -228,7 +233,6 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
         ["date", "city", "code", "weather", "is_rain", "tmax", "tmin",
          "prcp_mm", "wind_kmh", "rhum_pct", "fetched_date"],
         weather_rows, ["date", "city"])
-
     summary = {
         "fetched_at": datetime.now().isoformat(timespec="seconds"),
         "today": stamp, "mode": "backfill" if do_backfill else "daily",
@@ -241,8 +245,6 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
         json.dump(summary, f, ensure_ascii=False, indent=1)
     print("done. pollen_rows=%d weather_rows=%d ok=%d failed=%d" % (
         n_pol, n_wx, summary["cities_ok"], len(summary["cities_failed"])))
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cities", default="", help="comma-separated city en names; default = all")
@@ -263,7 +265,5 @@ def main():
         i, n = args.shard.split("/")
         shard = (int(i), int(n))
     run(names, args.days, args.backfill, args.sleep, shard, args.raw_only)
-
-
 if __name__ == "__main__":
     main()
