@@ -1,6 +1,7 @@
 name: daily-collect
 
 # GitHub Pages source is set to "GitHub Actions"; the deploy job publishes ./web.
+# Republished to pick up the report template polish.
 
 on:
   schedule:
