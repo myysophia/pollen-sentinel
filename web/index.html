@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>花粉哨兵 · 全国花粉风险看板</title>
+<style>
+:root{--green:#2e7d32;--green-d:#1b5e20;--bg:#f3f6f2;--line:#e2e8e2;--sub:#5c6b62}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:#1f2a24;font-size:15px}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 50px}
+h1{font-size:23px;color:var(--green-d)}
+.muted{color:var(--sub);font-size:13px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0}
+.summary{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border-radius:999px;padding:4px 12px;font-size:13px;color:#fff;font-weight:600}
+select{border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;background:#fff}
+a.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;border-radius:9px;padding:7px 14px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:14px}
+.cc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cc .top{display:flex;justify-content:space-between;align-items:center}
+.cc .name{font-weight:700;font-size:15px}
+.cc .prov{font-size:12px;color:var(--sub)}
+.badge{font-size:13px;font-weight:700;padding:2px 10px;border-radius:8px;color:#fff}
+.cc .date{font-size:12px;color:var(--sub);margin:6px 0 8px}
+.dots{display:flex;gap:5px;align-items:center;font-size:11px;color:var(--sub)}
+.dot{width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:11px}
+.dot.p{background:repeating-linear-gradient(45deg,#fff,#fff 3px,#e5e7eb 3px,#e5e7eb 6px);border:1px dashed #bbb;color:#999}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--sub);margin-top:8px}
+.legend i{display:inline-flex;align-items:center;gap:4px}
+.sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+footer{margin-top:26px;font-size:12px;color:var(--sub);line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>花粉哨兵 · 全国花粉风险看板</h1>
+  <div class="muted" id="updated">加载中…</div>
+  <div class="bar">
+    <div class="summary" id="summary"></div>
+    <span style="flex:1"></span>
+    <select id="f-prov"><option value="">全部省份</option></select>
+    <select id="f-lv">
+      <option value="">全部等级</option>
+      <option value="5">很高</option><option value="4">高</option><option value="3">中</option>
+      <option value="2">低</option><option value="1">很低</option><option value="0">未检测</option>
+    </select>
+    <a class="btn" href="./reports/latest.html">西安/咸阳个人日报</a>
+  </div>
+  <div class="legend">
+    <i><span class="sw" style="background:#81CB31"></span>很低</i>
+    <i><span class="sw" style="background:#A1FF3D"></span>低</i>
+    <i><span class="sw" style="background:#F5EE32"></span>中</i>
+    <i><span class="sw" style="background:#FFAF13"></span>高</i>
+    <i><span class="sw" style="background:#FF2319"></span>很高</i>
+    <i>数字=未来3天预测等级，斜纹=待发布</i>
+  </div>
+  <div class="grid" id="grid"></div>
+  <footer>
+    花粉等级来源：中国天气网 · 北京同仁医院「花粉过敏指数」（仅官方监测城市有实测值，每日下午更新）；
+    气象来源：Open-Meteo（CC BY 4.0）；未来展望为 PollenSentinel 规则推断/官方预报。
+    本看板为健康管理参考，不替代诊疗。MIT License。
+  </footer>
+</div>
+<script>
+var COLOR={'-1':'#E5E7EB',0:'#999999',1:'#81CB31',2:'#A1FF3D',3:'#F5EE32',4:'#FFAF13',5:'#FF2319'};
+var NAME={'-1':'待发布',0:'未检测',1:'很低',2:'低',3:'中',4:'高',5:'很高'};
+function tc(c){return (c==2||c==3)?'#333':'#fff';}
+function md(s){return s.slice(5);}
+fetch('./data.json?_='+Date.now()).then(function(r){return r.json();}).then(render).catch(function(e){
+  document.getElementById('updated').textContent='数据加载失败：'+e+'（若为本地直接打开，请通过 GitHub Pages 访问）';
+});
+var DATA=null;
+function render(d){
+  DATA=d;
+  document.getElementById('updated').textContent='数据日期 '+d.today+' · 共 '+d.cities.length+' 个监测城市 · 每日 07:00/17:30(北京时间) 自动更新';
+  var cnt={};d.cities.forEach(function(c){cnt[c.latest_code]=(cnt[c.latest_code]||0)+1;});
+  var sh='';
+  [5,4,3,2,1,0,-1].forEach(function(lv){
+    if(cnt[lv]) sh+='<span class="chip" style="background:'+COLOR[lv]+';color:'+tc(lv)+'">'+NAME[lv]+' '+cnt[lv]+'城</span>';
+  });
+  document.getElementById('summary').innerHTML=sh;
+  var provs={};d.cities.forEach(function(c){provs[c.prov]=1;});
+  var ps=Object.keys(provs).sort();
+  document.getElementById('f-prov').innerHTML='<option value="">全部省份</option>'+ps.map(function(p){return '<option>'+p+'</option>';}).join('');
+  ['f-prov','f-lv'].forEach(function(id){document.getElementById(id).onchange=draw;});
+  draw();
+}
+function draw(){
+  var fp=document.getElementById('f-prov').value, fl=document.getElementById('f-lv').value;
+  var html='';
+  DATA.cities.forEach(function(c){
+    if(fp&&c.prov!==fp)return;
+    if(fl!==''&&String(c.latest_code)!==fl)return;
+    var dots=c.outlook.slice(0,3).map(function(o){
+      return '<div class="dot'+(o.level<0?' p':'')+'" title="'+o.date+' '+o.weather+' '+NAME[o.level]+'" style="background:'+COLOR[o.level]+';color:'+tc(o.level)+'">'+o.level+'</div>';
+    }).join('');
+    html+='<div class="cc"><div class="top"><div><div class="name">'+c.name+'</div><div class="prov">'+c.prov+'</div></div>'+
+      '<span class="badge" style="background:'+COLOR[c.latest_code]+';color:'+tc(c.latest_code)+'">'+c.latest_level+'</span></div>'+
+      '<div class="date">最新实况 '+ (c.latest_date||'—') +'</div>'+
+      '<div class="dots">未来3天 '+dots+'</div></div>';
+  });
+  document.getElementById('grid').innerHTML=html||'<div class="muted">无匹配城市</div>';
+}
+</script>
+</body>
+</html>

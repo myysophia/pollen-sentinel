@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花粉哨兵 · 个人鼻炎管理日报</title>
+<style>
+:root{
+  --green:#2e7d32; --green-d:#1b5e20; --green-l:#e8f5e9; --bg:#f3f6f2;
+  --ink:#1f2a24; --sub:#5c6b62; --line:#e2e8e2; --card:#ffffff;
+  --warn:#b26a00;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;font-size:15px}
+.wrap{max-width:1080px;margin:0 auto;padding:18px 16px 40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(30,60,40,.05)}
+h1{font-size:22px;color:var(--green-d)}
+h2{font-size:17px;color:var(--green-d);margin-bottom:12px;padding-left:10px;border-left:4px solid var(--green)}
+.muted{color:var(--sub);font-size:13px}
+.topbar{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:8px}
+.topbar .date{color:var(--sub);font-size:14px}
+.cheer{background:linear-gradient(90deg,#e8f5e9,#f1f8e9);border:1px solid #c8e6c9;border-radius:12px;padding:12px 16px;margin:12px 0 16px;color:var(--green-d);font-size:15px;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.risk{border-radius:12px;padding:16px;border:1px solid var(--line);position:relative;overflow:hidden}
+.risk .city{font-size:15px;color:var(--sub);font-weight:600}
+.risk .lv{display:flex;align-items:center;gap:10px;margin:8px 0 4px}
+.risk .badge{font-size:24px;font-weight:800;padding:4px 16px;border-radius:10px;color:#fff}
+.risk .range{font-size:13px;color:var(--sub)}
+.risk .row{font-size:13.5px;margin-top:6px;color:var(--ink)}
+.risk .msg{margin-top:8px;font-size:13px;background:rgba(255,255,255,.7);border-radius:8px;padding:7px 10px}
+.pill{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:600;color:#fff}
+.src-tag{display:inline-block;font-size:11px;padding:0 7px;border-radius:6px;margin-left:6px;font-weight:400}
+.src-official{background:#2e7d32}.src-rule{background:#78909c}
+.conf-high{color:#2e7d32}.conf-medium{color:#b26a00}.conf-low{color:#8a8a8a}
+.fc-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;overflow-x:auto}
+.fc-day{border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center;min-width:96px;background:#fbfdfb}
+.fc-day.rain{background:#eef5fb;border-color:#cfe3f5}
+.fc-day .d{font-size:12.5px;font-weight:600}
+.fc-day .w{font-size:12px;color:var(--sub);margin:3px 0}
+.fc-day .t{font-size:12px}
+.fc-day .prcp{font-size:11px;color:#1565c0}
+.lv-dots{display:flex;gap:4px;justify-content:center;margin:6px 0 3px}
+.lv-dot{width:15px;height:15px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700}
+.lv-dot.pending{background:repeating-linear-gradient(45deg,#fff,#fff 3px,#e5e7eb 3px,#e5e7eb 6px);border:1px dashed #b0b8b0;color:#999}
+.arrow-up{color:#d32f2f}.arrow-flat{color:#777}.arrow-down{color:#2e7d32}
+.reasons{margin-top:12px;font-size:13px;color:var(--sub)}
+.reasons li{margin:3px 0 3px 18px}
+.chart{width:100%;height:340px}
+.legend-inline{font-size:12.5px;color:var(--sub);margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap}
+.legend-inline span.i{display:inline-flex;align-items:center;gap:5px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.cal-toolbar{margin-bottom:8px}
+.cal-toolbar button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 12px;cursor:pointer;font-size:13px;margin-right:6px}
+.cal-toolbar button.active{background:var(--green);color:#fff;border-color:var(--green)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;max-width:720px}
+.cal-grid .mh{grid-column:1/-1;font-weight:700;color:var(--green-d);margin-top:8px;font-size:14px}
+.cal-grid .dow,.cal-grid .cell{height:38px;border-radius:7px;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dow{color:var(--sub);height:auto;font-weight:600}
+.cell{background:#f6f8f6;color:var(--sub);border:1px solid var(--line)}
+.cell.has{color:#222;font-weight:600}
+.cell.pending{background:repeating-linear-gradient(45deg,#fff,#fff 4px,#eef1ee 4px,#eef1ee 8px);border:1px dashed #c2cac2;color:#9aa39a;font-weight:400}
+.cell.today{outline:2px solid var(--green-d);outline-offset:1px}
+.cell .n{font-size:11px;line-height:1.1}
+.factors{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:10px}
+.factor{background:#f6faf5;border:1px solid var(--line);border-radius:10px;padding:9px;text-align:center}
+.factor .k{font-size:12px;color:var(--sub)}
+.factor .v{font-size:16px;font-weight:700;margin-top:2px;color:var(--green-d)}
+.bullets{font-size:13.5px;color:var(--ink)}
+.bullets li{margin:4px 0 4px 18px}
+.season-bar{display:flex;height:30px;border-radius:8px;overflow:hidden;margin:10px 0;font-size:12px}
+.season-bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;white-space:nowrap}
+.stat-row{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+.stat-row .lab{width:52px;color:var(--sub)}
+.stat-row .track{flex:1;background:#eef1ee;border-radius:6px;height:18px;overflow:hidden}
+.stat-row .fill{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;color:#fff;font-size:11px;font-weight:600}
+form.diary .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){form.diary .grid2{grid-template-columns:1fr}}
+.slider-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13.5px}
+.slider-row label{width:74px}
+.slider-row input[type=range]{flex:1}
+.slider-row .sv{width:20px;text-align:right;font-weight:700;color:var(--green-d)}
+.chk-row{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0;font-size:13.5px}
+select,input[type=text]{border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:13.5px;font-family:inherit;background:#fff}
+.btn{border:none;border-radius:9px;padding:8px 16px;font-size:13.5px;cursor:pointer;margin:4px 8px 4px 0}
+.btn-p{background:var(--green);color:#fff}.btn-s{background:#eef1ee;color:var(--ink)}
+table.records{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+table.records th,table.records td{border:1px solid var(--line);padding:6px 8px;text-align:center}
+table.records th{background:#f3f7f2;color:var(--green-d)}
+.protect{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.pcard{background:#f8fbf7;border:1px solid var(--line);border-radius:11px;padding:12px 14px}
+.pcard h3{font-size:14px;color:var(--green-d);margin-bottom:6px}
+.pcard p{font-size:13px;color:var(--ink)}
+footer{font-size:12px;color:var(--sub);line-height:1.8}
+.fallback{display:none;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:8px;padding:10px;font-size:13px;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card topbar">
+    <div>
+      <h1>花粉哨兵 · 个人鼻炎管理日报</h1>
+      <div class="date" id="h-date"></div>
+    </div>
+    <div class="muted">PollenSentinel · 比花粉早知道一步</div>
+  </div>
+
+  <div class="cheer" id="cheer"></div>
+
+  <div class="card">
+    <h2>今日风险</h2>
+    <div class="cards" id="risk-cards"></div>
+  </div>
+
+  <div class="card">
+    <h2>未来 7 天花粉展望</h2>
+    <div class="legend-inline">
+      <span class="i"><span class="sw" style="background:#2e7d32"></span>官方预报</span>
+      <span class="i"><span class="sw" style="background:#78909c"></span>气象规则推断</span>
+      <span class="i">置信度：<span class="conf-high">高</span> / <span class="conf-medium">中</span> / <span class="conf-low">低(仅趋势参考)</span></span>
+    </div>
+    <div class="fc-strip" id="fc-strip"></div>
+    <ul class="reasons" id="fc-reasons"></ul>
+  </div>
+
+  <div class="card">
+    <h2>近 35 天花粉等级趋势</h2>
+    <div class="legend-inline">
+      <span class="i">实线=实况　虚线=预报　灰断点=当日尚未发布</span>
+    </div>
+    <div id="trend" class="chart"></div>
+    <div class="fallback" id="trend-fb">图表库未加载(离线环境)，可查看日历热力获取每日等级。</div>
+  </div>
+
+  <div class="card">
+    <h2>花粉日历</h2>
+    <div class="cal-toolbar" id="cal-tabs"></div>
+    <div class="legend-inline">
+      <span class="i"><span class="sw" style="background:#81CB31"></span>很低</span>
+      <span class="i"><span class="sw" style="background:#A1FF3D"></span>低</span>
+      <span class="i"><span class="sw" style="background:#F5EE32"></span>中</span>
+      <span class="i"><span class="sw" style="background:#FFAF13"></span>高</span>
+      <span class="i"><span class="sw" style="background:#FF2319"></span>很高</span>
+      <span class="i"><span class="sw" style="background:#999"></span>未检测</span>
+      <span class="i"><span class="sw" style="background:repeating-linear-gradient(45deg,#fff,#fff 3px,#e5e7eb 3px,#e5e7eb 6px);border:1px solid #ccc"></span>待发布</span>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+
+  <div class="card">
+    <h2>影响因素：天气与扩散条件</h2>
+    <div id="factors"></div>
+  </div>
+
+  <div class="card">
+    <h2>花粉季节历与本季统计</h2>
+    <div class="season-bar">
+      <div style="background:#cfd8dc;flex:2">1-2月</div>
+      <div style="background:#81CB31;flex:3">3月</div>
+      <div style="background:#FFAF13;flex:3">4月</div>
+      <div style="background:#A1FF3D;flex:3">5月</div>
+      <div style="background:#cfd8dc;flex:2">6-7月</div>
+      <div style="background:#A1FF3D;flex:3">8月</div>
+      <div style="background:#FF2319;flex:3">9月</div>
+      <div style="background:#FFAF13;flex:3">10月</div>
+      <div style="background:#cfd8dc;flex:2">11-12月</div>
+    </div>
+    <div class="muted" style="margin-bottom:8px">北方致敏花粉：春季以柏/杨/榆/悬铃木为主，秋季以蒿属、葎草、豚草、藜苋为主。</div>
+    <div id="season-stats"></div>
+  </div>
+
+  <div class="card diary">
+    <h2>我的治疗日记 <span class="muted" style="font-weight:400">（数据保存在本机浏览器，可导出备份）</span></h2>
+    <div class="muted" style="margin-bottom:10px">每天花 20 秒记录症状与用药，下方曲线将症状与花粉等级叠加——症状通常比花粉浓度滞后 1-3 天，对照观察可辅助判断诱因与用药效果，复诊时可直接给医生看。</div>
+    <form class="diary" onsubmit="return false">
+      <div class="grid2">
+        <div>
+          <div class="muted" style="font-weight:600;margin-bottom:4px">症状评分（0无 1轻 2中 3重）</div>
+          <div id="sliders"></div>
+        </div>
+        <div>
+          <div class="muted" style="font-weight:600;margin-bottom:4px">夜间与用药</div>
+          <div class="chk-row" id="checks"></div>
+          <div class="slider-row"><label>户外时长</label>
+            <select id="f-out"><option>&lt;1小时</option><option>1-3小时</option><option>&gt;3小时</option></select>
+          </div>
+          <div class="slider-row"><label>佩戴口罩</label>
+            <select id="f-mask"><option>无</option><option selected>是</option><option>N95/KN95</option></select>
+          </div>
+          <div class="slider-row"><label>备注</label><input type="text" id="f-note" style="flex:1" placeholder="如：午后河边散步"></div>
+        </div>
+      </div>
+      <div style="margin-top:10px">
+        <button type="button" class="btn btn-p" id="btn-save">保存今日记录</button>
+        <button type="button" class="btn btn-s" id="btn-export">导出备份(JSON)</button>
+        <button type="button" class="btn btn-s" id="btn-import">导入备份</button>
+        <input type="file" id="file-import" accept=".json" style="display:none">
+        <button type="button" class="btn btn-s" id="btn-clear">清空全部记录</button>
+      </div>
+    </form>
+    <h2 style="margin-top:18px">近 14 天：症状总分 vs 两城最高花粉等级</h2>
+    <div class="muted" id="remote-hint" style="display:none;margin-bottom:6px"></div>
+    <div id="diary-chart" class="chart" style="height:300px"></div>
+    <div id="diary-empty" class="muted">暂无日记，开始记录后这里会出现对照曲线。</div>
+    <div style="overflow-x:auto"><table class="records" id="rec-table"></table></div>
+  </div>
+
+  <div class="card">
+    <h2>今日防护清单</h2>
+    <div class="protect" id="protect"></div>
+  </div>
+
+  <div class="card">
+    <footer id="footer"></footer>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script>
+var D = '__DATA__';
+var LVM = D.level_meta;
+var LVNAME = {0:'未检测',1:'很低',2:'低',3:'中',4:'高',5:'很高'};
+function lvColor(c){ if(c===null||c===undefined||c===-1) return '#E5E7EB'; return LVM[String(c)].color; }
+function lvTextColor(c){ return (c===2||c===3)? '#333':'#fff'; }
+function md(ds){ return ds.slice(5); }
+function wk(ds){ var w=['日','一','二','三','四','五','六']; return '周'+w[new Date(ds+'T00:00:00').getDay()]; }
+function $(id){ return document.getElementById(id); }
+
+/* header + cheer */
+$('h-date').textContent = '报告日期 '+D.today+' '+D.weekday+' · 城市：'+D.cities.map(function(c){return c.name;}).join(' / ');
+$('cheer').textContent = '今日寄语｜'+D.cheer;
+
+/* risk cards */
+(function(){
+  var html='';
+  D.cities.forEach(function(c){
+    var L=c.latest, F=c.first_forecast;
+    var lc = L? L.level_code : -1;
+    var meta = (lc>=0)? LVM[String(lc)] : null;
+    var range = (lc>=1 && meta)? ((meta.max===null? '≥'+meta.min : meta.min+'~'+meta.max)+' 粒/千平方毫米') : '当日无有效读数';
+    html += '<div class="risk" style="background:'+ (lc>=0? lvColor(lc):'#f2f4f2') +'22;border-color:'+lvColor(lc)+'">'+
+      '<div class="city">'+c.prov+' · '+c.name+'</div>'+
+      '<div class="lv"><span class="badge" style="background:'+lvColor(lc)+';color:'+lvTextColor(lc)+'">'+(L?L.level:'待发布')+'</span>'+
+      '<span class="range">'+(L?('最新实况 '+L.date+' '+wk(L.date)):'实况尚未发布')+'</span></div>'+
+      '<div class="row">数值区间：'+range+'</div>'+
+      (F? '<div class="row">未来首个预报：<span class="pill" style="background:'+lvColor(F.level_code)+';color:'+lvTextColor(F.level_code)+'">'+F.date+' '+F.level+'</span></div>':'<div class="row">未来预报：发布窗口暂未更新</div>')+
+      (L&&L.msg? '<div class="msg">'+L.msg+'</div>':'')+'</div>';
+  });
+  $('risk-cards').innerHTML=html;
+})();
+
+/* 7-day outlook */
+(function(){
+  var days = D.cities[0].predictions.length, html='';
+  for(var i=0;i<days;i++){
+    var p0=D.cities[0].predictions[i];
+    var w=p0.weather;
+    var rain = w.is_rain? ' rain':'';
+    var dots='';
+    D.cities.forEach(function(c){
+      var p=c.predictions[i];
+      dots+='<div class="lv-dot" title="'+c.name+' '+LVNAME[p.level]+'" style="background:'+lvColor(p.level)+';color:'+lvTextColor(p.level)+'">'+p.level+'</div>';
+    });
+    var ar = p0.direction==='升'?'<span class="arrow-up">▲升</span>':p0.direction==='降'?'<span class="arrow-down">▼降</span>':'<span class="arrow-flat">—平</span>';
+    html+='<div class="fc-day'+rain+'"><div class="d">'+md(p0.date)+'<br>'+wk(p0.date)+'</div>'+
+      '<div class="w">'+(w.weather||'-')+'</div>'+
+      '<div class="t">'+(w.tmin===null?'':Math.round(w.tmin))+'~'+(w.tmax===null?'':Math.round(w.tmax))+'℃</div>'+
+      '<div class="lv-dots">'+dots+'</div><div style="font-size:11px">'+ar+'</div>'+
+      ((w.prcp_mm&&w.prcp_mm>=0.1)? '<div class="prcp">降水'+w.prcp_mm.toFixed(1)+'mm</div>':'<div class="prcp">&nbsp;</div>')+'</div>';
+  }
+  $('fc-strip').innerHTML=html;
+  var rh='';
+  D.cities[0].predictions.forEach(function(p){
+    var cls = p.source==='official'?'src-official':'src-rule';
+    var tag = p.source==='official'?'官方预报':'规则推断';
+    rh+='<li><b>'+p.date+' '+wk(p.date)+'</b><span class="src-tag '+cls+'">'+tag+'</span>'+
+        ' 预测'+LVNAME[p.level]+'（置信度<span class="conf-'+p.confidence+'">'+({high:'高',medium:'中',low:'低'}[p.confidence])+'</span>）：'+p.reasons.join('；')+'</li>';
+  });
+  $('fc-reasons').innerHTML=rh;
+})();
+
+/* trend chart */
+(function(){
+  if(typeof echarts==='undefined'){ $('trend-fb').style.display='block'; return; }
+  var chart=echarts.init($('trend'));
+  var dates=D.cities[0].series.map(function(s){return md(s.date);});
+  var series=[];
+  var palette=['#2e7d32','#0277bd'];
+  D.cities.forEach(function(c,ci){
+    var obs=[],fc=[];
+    c.series.forEach(function(s){
+      var v=(s.code===null||s.code<0)?null:s.code;
+      if(s.kind==='forecast'){ fc.push(v); obs.push(null);} else { obs.push(v); fc.push(null);}
+    });
+    series.push({name:c.name+'实况',type:'line',data:obs,step:false,symbolSize:5,
+      lineStyle:{color:palette[ci],width:2},itemStyle:{color:palette[ci]},connectNulls:false});
+    series.push({name:c.name+'预报',type:'line',data:fc,symbolSize:5,
+      lineStyle:{color:palette[ci],width:2,type:'dashed'},itemStyle:{color:palette[ci]},connectNulls:false});
+  });
+  var bands=[];
+  [[0.5,1.5,'rgba(129,203,49,.10)'],[1.5,2.5,'rgba(161,255,61,.10)'],[2.5,3.5,'rgba(245,238,50,.12)'],[3.5,4.5,'rgba(255,175,19,.12)'],[4.5,5.5,'rgba(255,35,25,.10)']].forEach(function(b){
+    bands.push([{yAxis:b[0],itemStyle:{color:b[2]}},{yAxis:b[1]}]);
+  });
+  chart.setOption({
+    backgroundColor:'transparent',
+    grid:{left:38,right:18,top:46,bottom:48,containLabel:true},
+    tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true,textStyle:{fontSize:11},
+      formatter:function(ps){
+        var s=ps[0].axisValue+' '+wk(D.cities[0].series[ps[0].dataIndex].date);
+        ps.forEach(function(p){ if(p.value!==null&&p.value!==undefined) s+='\n'+p.seriesName+'：'+LVNAME[p.value]; });
+        return s;
+      }},
+    legend:{top:6,textStyle:{fontSize:11},data:series.map(function(s){return s.name;})},
+    xAxis:{type:'category',data:dates,axisLabel:{fontSize:10,interval:3}},
+    yAxis:{type:'value',min:0,max:5,interval:1,axisLabel:{formatter:function(v){return LVNAME[v]||'';},fontSize:10},splitLine:{lineStyle:{color:'#eee'}}},
+    series:series.map(function(s,i){s.markArea=i===0?{silent:true,data:bands}:undefined;return s;})
+  });
+  window.addEventListener('resize',function(){chart.resize();});
+})();
+
+/* calendar heatmap */
+(function(){
+  var tabs=$('cal-tabs'), grid=$('cal-grid');
+  D.cities.forEach(function(c,i){
+    var b=document.createElement('button');
+    b.textContent=c.name; b.dataset.idx=i;
+    if(i===0) b.className='active';
+    b.onclick=function(){
+      var all=tabs.querySelectorAll('button');
+      for(var k=0;k<all.length;k++) all[k].className='';
+      b.className='active'; renderCal(i);
+    };
+    tabs.appendChild(b);
+  });
+  function renderCal(ci){
+    var c=D.cities[ci], byDate={};
+    c.series.forEach(function(s){byDate[s.date]=s;});
+    var html='';
+    var first=new Date(c.series[0].date+'T00:00:00');
+    var last=new Date(c.series[c.series.length-1].date+'T00:00:00');
+    var cur=new Date(first.getFullYear(),first.getMonth(),1);
+    var end=new Date(last.getFullYear(),last.getMonth()+1,1);
+    var dows=['日','一','二','三','四','五','六'];
+    while(cur<end){
+      var y=cur.getFullYear(),m=cur.getMonth();
+      html+='<div class="mh">'+y+'年'+(m+1)+'月</div>';
+      dows.forEach(function(d){html+='<div class="dow">'+d+'</div>';});
+      var lead=new Date(y,m,1).getDay();
+      for(var k=0;k<lead;k++) html+='<div class="cell"></div>';
+      var dim=new Date(y,m+1,0).getDate();
+      var winStart=c.series[0].date, winEnd=c.series[c.series.length-1].date;
+      for(var day=1;day<=dim;day++){
+        var ds=y+'-'+String(m+1).padStart(2,'0')+'-'+String(day).padStart(2,'0');
+        var s=byDate[ds];
+        var inWin = ds>=winStart && ds<=winEnd;
+        var cls='cell',style='';
+        if(!inWin){ html+='<div class="cell"></div>'; continue; }
+        if(!s || s.code===null || s.code<0){ cls+=' pending'; }
+        else if(s.code===0){ cls+=' has'; style='background:#999;color:#fff'; }
+        else { cls+=' has'; style='background:'+lvColor(s.code)+';color:'+lvTextColor(s.code); }
+        if(ds===D.today) cls+=' today';
+        var tag = (s&&s.kind==='forecast'&&s.code>=0)? '·预':'';
+        var nm = s&&s.code>=1? '<span class="n">'+LVNAME[s.code]+tag+'</span>':(s&&s.code===0?'<span class="n">未检测</span>':'<span class="n">待发布</span>');
+        html+='<div class="'+cls+'" style="'+style+'">'+day+nm+'</div>';
+      }
+      cur=new Date(y,m+1,1);
+    }
+    grid.innerHTML=html;
+  }
+  renderCal(0);
+})();
+
+/* factors */
+(function(){
+  var html='';
+  D.cities.forEach(function(c){
+    var w=c.weather_today; if(!w) return;
+    html+='<h3 style="font-size:14px;color:var(--green-d);margin:6px 0 8px">'+c.name+'（气象预报，Open-Meteo）</h3><div class="factors">'+
+      fcell('天气',w.weather)+
+      fcell('气温',Math.round(w.tmin)+'~'+Math.round(w.tmax)+'℃')+
+      fcell('降水量',(w.prcp_mm?w.prcp_mm.toFixed(1):'0')+'mm')+
+      fcell('最大风速',Math.round(w.wind_kmh)+'km/h')+
+      fcell('平均湿度',Math.round(w.rhum_pct)+'%')+
+      fcell('扩散判断',(w.is_rain?'降雨利于沉降':(w.wind_kmh>=25?'风大利于扩散':'扩散条件一般')))+
+      '</div>';
+    var bs=[];
+    if(w.is_rain||w.prcp_mm>=1) bs.push('今日有降水，雨水冲刷空气花粉，户外暴露风险下降，但降雨前后阵风可能带来短时波动');
+    else bs.push('空气干燥、无降水，花粉颗粒易在空气中悬浮，自然沉降慢');
+    bs.push('一天中 13:00-17:00 为花粉释放与飘散高峰，清晨与雨后相对较低');
+    c.predictions.slice(1,4).forEach(function(p){
+      if(p.weather.is_rain) bs.push(p.date+' 预计'+p.weather.weather+'，累计降水约'+(p.weather.prcp_mm||0).toFixed(1)+'mm，关注届时等级回落');
+    });
+    html+='<ul class="bullets">'+bs.map(function(b){return '<li>'+b+'</li>';}).join('')+'</ul>';
+  });
+  $('factors').innerHTML=html;
+  function fcell(k,v){return '<div class="factor"><div class="k">'+k+'</div><div class="v">'+v+'</div></div>';}
+})();
+
+/* season stats */
+(function(){
+  var html='';
+  D.cities.forEach(function(c){
+    var total=0,x; for(x in c.season.counts) total+=c.season.counts[x];
+    html+='<div style="margin-bottom:10px"><div style="font-size:13.5px;font-weight:600">'+c.name+' · '+c.season.name+'（自 '+md(c.season.start)+' 起累计 '+total+' 天有实测）</div>';
+    for(var lv=1;lv<=5;lv++){
+      var n=c.season.counts[lv]||0, pct=total?Math.round(n/total*100):0;
+      html+='<div class="stat-row"><div class="lab">'+LVNAME[lv]+'</div><div class="track"><div class="fill" style="width:'+Math.max(pct, n?8:0)+'%;background:'+lvColor(lv)+'">'+(n?n+'天':'')+'</div></div><div class="muted" style="width:42px">'+pct+'%</div></div>';
+    }
+    html+='</div>';
+  });
+  $('season-stats').innerHTML=html;
+})();
+
+/* ===== treatment diary (localStorage) ===== */
+var DK='pollenSentinelDiaryV1';
+var SYMPTOMS=[['sneeze','打喷嚏'],['snivel','流清涕'],['stuffy','鼻塞'],['itch_nose','鼻痒'],['itch_eye','眼痒/流泪']];
+var CHECKS=[['wake','夜间因鼻塞憋醒'],['nasal','鼻喷激素'],['oral','口服抗过敏'],['eye_d','滴眼液'],['rinse','盐水洗鼻']];
+(function buildForm(){
+  var sh='';
+  SYMPTOMS.forEach(function(s){
+    sh+='<div class="slider-row"><label>'+s[1]+'</label><input type="range" min="0" max="3" step="1" value="0" id="'+s[0]+'"><span class="sv" id="'+s[0]+'v">0</span></div>';
+  });
+  $('sliders').innerHTML=sh;
+  SYMPTOMS.forEach(function(s){
+    $(s[0]).oninput=function(){$(s[0]+'v').textContent=this.value;};
+  });
+  var ch='';
+  CHECKS.forEach(function(c){ch+='<label><input type="checkbox" id="'+c[0]+'"> '+c[1]+'</label>';});
+  $('checks').innerHTML=ch;
+})();
+function loadDiary(){ try{return JSON.parse(localStorage.getItem(DK)||'{}');}catch(e){return {};} }
+var REMOTE_DIARY={};
+function mergedDiary(){ var d=loadDiary(); for(var k in REMOTE_DIARY){ if(!d[k]) d[k]=REMOTE_DIARY[k]; } return d; }
+function saveDiary(d){ localStorage.setItem(DK,JSON.stringify(d)); }
+function todayKey(){ return D.today; }
+$('btn-save').onclick=function(){
+  var d=loadDiary(), rec={sym:{},total:0,checks:[],out:$('f-out').value,mask:$('f-mask').value,note:$('f-note').value};
+  SYMPTOMS.forEach(function(s){var v=+$(s[0]).value;rec.sym[s[0]]=v;rec.total+=v;});
+  CHECKS.forEach(function(c){if($(c[0]).checked)rec.checks.push(c[1]);});
+  d[todayKey()]=rec; saveDiary(d); alert('已保存 '+todayKey()+' 的记录'); renderDiary();
+};
+$('btn-export').onclick=function(){
+  var blob=new Blob([JSON.stringify(loadDiary(),null,1)],{type:'application/json'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pollen-sentinel-diary-'+todayKey()+'.json';a.click();
+};
+$('btn-import').onclick=function(){$('file-import').click();};
+$('file-import').onchange=function(e){
+  var f=e.target.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){try{var obj=JSON.parse(r.result);saveDiary(obj);renderDiary();alert('导入成功');}catch(err){alert('文件格式有误');}};
+  r.readAsText(f);
+};
+$('btn-clear').onclick=function(){if(confirm('确定清空本机全部日记？此操作不可恢复。')){localStorage.removeItem(DK);renderDiary();}};
+
+function renderDiary(){
+  var d=mergedDiary(), keys=Object.keys(d).sort();
+  var tbl=$('rec-table');
+  if(!keys.length){ $('diary-empty').style.display='block'; $('diary-chart').style.display='none'; tbl.innerHTML=''; return; }
+  $('diary-empty').style.display='none'; $('diary-chart').style.display='block';
+  var head='<tr><th>日期</th><th>症状总分</th><th>夜间憋醒</th><th>用药</th><th>户外</th><th>口罩</th><th>备注</th></tr>';
+  var rows='';
+  keys.slice(-30).reverse().forEach(function(k){
+    var r=d[k];
+    rows+='<tr><td>'+k+'</td><td><b>'+r.total+'</b>/15</td><td>'+(r.checks&&r.checks.indexOf('夜间因鼻塞憋醒')>=0?'是':'—')+'</td><td>'+((r.checks||[]).filter(function(x){return x!=='夜间因鼻塞憋醒';}).join('、')||'—')+'</td><td>'+(r.out||'—')+'</td><td>'+(r.mask||'—')+'</td><td>'+(r.note||'')+'</td></tr>';
+  });
+  tbl.innerHTML=head+rows;
+  if(typeof echarts==='undefined')return;
+  var last14=keys.slice(-14);
+  var maxPol=last14.map(function(k){
+    var mx=null;
+    D.cities.forEach(function(c){c.series.forEach(function(s){if(s.date===k&&s.code!==null&&s.code>=0)mx=mx===null?s.code:Math.max(mx,s.code);});});
+    return mx;
+  });
+  var ch=echarts.init($('diary-chart'));
+  ch.setOption({
+    backgroundColor:'transparent',
+    grid:{left:40,right:44,top:40,bottom:34,containLabel:true},
+    tooltip:{trigger:'axis',triggerOn:'click',renderMode:'richText',confine:true},
+    legend:{top:6,textStyle:{fontSize:11},data:['症状总分(0-15)','花粉等级']},
+    xAxis:{type:'category',data:last14.map(md),axisLabel:{fontSize:10}},
+    yAxis:[{type:'value',min:0,max:15,name:'症状分',nameTextStyle:{fontSize:10}},
+           {type:'value',min:0,max:5,name:'花粉级',nameTextStyle:{fontSize:10},interval:1,axisLabel:{formatter:function(v){return LVNAME[v]||'';},fontSize:10}}],
+    series:[
+      {name:'症状总分(0-15)',type:'bar',data:last14.map(function(k){return d[k].total;}),itemStyle:{color:'#66bb6a'}},
+      {name:'花粉等级',type:'line',yAxisIndex:1,data:maxPol,smooth:true,
+       lineStyle:{color:'#e53935',width:2},itemStyle:{color:'#e53935'},symbolSize:7}
+    ]
+  });
+}
+renderDiary();
+/* Load diary archive committed to the repo (read-only); local entries take priority. */
+fetch('../data/diary.json?_='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){
+  REMOTE_DIARY=j.records||{};
+  var n=Object.keys(REMOTE_DIARY).length;
+  if(n){ var h=$('remote-hint'); h.style.display='block';
+    h.textContent='已叠加仓库归档日记 '+n+' 天（只读，来自 data/personal/diary.json）；本机记录优先，导出后提交即可更新归档。';
+    renderDiary(); }
+}).catch(function(){});
+
+/* protection list */
+(function(){
+  var lv=D.max_level;
+  var outdoor='N95/KN95 口罩 + 护目镜或防风镜；尽量避开 13:00-17:00 花粉高峰；远离草坪、河滩、荒地与蒿草丛生区域，骑行/开窗通勤改为关窗内循环。';
+  if(lv<=2) outdoor='外出佩戴普通医用口罩即可，花粉高峰时段仍建议减少在草丛、荒地的长时间停留。';
+  else if(lv===3) outdoor='建议佩戴口罩、必要时加护目镜；缩短 13:00-17:00 户外停留，回家后及时清洁。';
+  var sport = lv>=4? '高等级期间跑步、户外训练改室内或安排在清晨/雨后；你日常 3 公里跑步建议等等级降到“中”以下再户外，“很高”日改为室内核心训练。'
+            : lv===3? '运动尽量安排清晨或雨后，户外跑步后及时洗脸洗鼻。'
+            : '气象条件友好，可正常安排户外 3 公里跑步。';
+  var next='';
+  var p0=D.cities[0].predictions[1]||D.cities[0].predictions[0];
+  if(p0) next=D.cities.map(function(c){var p=c.predictions[1]||c.predictions[0];return c.name+' '+p.date+' 预测“'+LVNAME[p.level]+'”';}).join('；')+'。';
+  var cards=[
+    ['外出防护',outdoor],
+    ['回家清洁','进门先换外衣、洗脸并清洗鼻腔（生理盐水每侧 1-2 次）；头发易附着花粉，睡前洗头；外衣不进卧室。'],
+    ['居家环境','午后保持门窗关闭，空气净化器开内循环并及时更换滤芯；衣物、被单尽量室内晾干，不在室外晾晒。'],
+    ['运动安排',sport],
+    ['规范用药','鼻喷糖皮质激素需规律连续使用（通常连续数日才达稳定效果，勿症状一缓即停）；抗组胺口服药、抗过敏滴眼液按既往医嘱备用；若出现胸闷喘息及时就医。'],
+    ['明日预判',next+' 结合天气变化提前做好防护与用药安排。']
+  ];
+  $('protect').innerHTML=cards.map(function(c){return '<div class="pcard"><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div>';}).join('');
+})();
+
+/* footer */
+$('footer').innerHTML=
+  '报告日期 '+D.today+'，生成时间 '+D.generated_at+'。<br>'+
+  '花粉等级来源：中国天气网 · 首都医科大学附属北京同仁医院「花粉过敏指数」（每日下午发布当日实况与后续预报，早报以“昨日实况+预报”为准，等级单位：粒/千平方毫米）；气象数据来源：Open-Meteo（CC BY 4.0）；规则推断为 PollenSentinel 基于降水冲刷、降温、季节物候的可解释模型，置信度随天数递减。<br>'+
+  '本报告为个人健康管理参考，不替代医生面诊与处方，具体用药请遵医嘱。项目源码：github.com/pollen-sentinel/pollen-sentinel（MIT License）。';
+</script>
+</body>
+</html>
