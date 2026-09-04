@@ -44,6 +44,17 @@ def collect_city(city, start, end, fetch_weather=True):
     records = pc.normalize(payload)
     wrows = wo.forecast(city["lat"], city["lon"], days=7) if fetch_weather else []
     return records, wrows
+def _load_json_lenient(path):
+    """Load JSON, tolerating files where two documents got concatenated by an
+    artifact-merge edge case ('Extra data'): take the first complete object."""
+    with open(path, encoding="utf-8") as f:
+        text = f.read()
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        obj, _end = json.JSONDecoder().raw_decode(text.lstrip())
+        print("[warn] %s had extra trailing data; recovered first document" % path)
+        return obj
 def _find_snapshot_files(raw_dir):
     """Recursively collect city snapshot files under data/raw.
     Artifact download nesting can differ (data/raw/<date>/x.json vs an extra
@@ -64,8 +75,7 @@ def _find_snapshot_files(raw_dir):
     return {en: v[1] for en, v in found.items()}
 def _rows_from_snapshot(city, path, stamp):
     """Build normalised pollen/weather rows from a saved raw snapshot."""
-    with open(path, encoding="utf-8") as f:
-        snap = json.load(f)
+    snap = _load_json_lenient(path)
     pollen_rows, weather_rows = [], []
     for r in snap["pollen"]:
         pollen_rows.append({
@@ -112,7 +122,7 @@ def assemble(stamp=None):
         pr, wr = _rows_from_snapshot(city, path, stamp)
         pollen_rows.extend(pr)
         weather_rows.extend(wr)
-        recs = json.load(open(path, encoding="utf-8"))["pollen"]
+        recs = _load_json_lenient(path)["pollen"]
         latest = pc.latest_observed(recs)
         summary_cities.append({
             "en": en, "name": city["name"], "prov": city["prov"], "ok": True,
@@ -155,6 +165,8 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=F
     today = date.today()
     stamp = today.isoformat()
     raw_dir = os.path.join(ROOT, "data", "raw", stamp)
+    if shard and raw_only:
+        raw_dir = os.path.join(raw_dir, "shard%d" % shard[0])
     os.makedirs(raw_dir, exist_ok=True)
     pollen_rows, weather_rows = [], []
     summary_cities = []
