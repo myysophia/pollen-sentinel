@@ -51,7 +51,8 @@ jobs:
       - name: Upload shard snapshots
         uses: actions/upload-artifact@v4
         with:
-          name: raw-${{ matrix.shard }}
+          # Artifact names cannot contain '/' (NTFS-incompatible); map 0/8 -> 0-8.
+          name: raw-${{ replace(matrix.shard, '/', '-') }}
           path: data/raw
           retention-days: 7
           if-no-files-found: error
@@ -114,7 +115,9 @@ jobs:
         run: |
           git config user.name  "pollen-sentinel-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data web reports
+          for d in data web reports; do
+            [ -e "$d" ] && git add "$d"
+          done
           if git diff --staged --quiet; then
             echo "nothing to commit"
           else
