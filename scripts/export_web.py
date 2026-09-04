@@ -13,6 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from collectors import pollen_cma as pc
+from collectors.collect import _find_snapshot_files, _load_json_lenient
 from predictor.rules import predict_series
 
 
@@ -21,12 +22,17 @@ def main():
     with open(os.path.join(ROOT, "config", "cities.json"), encoding="utf-8") as f:
         cities = json.load(f)["cities"]
     raw_dir = os.path.join(ROOT, "data", "raw", today)
+    # Same discovery/lenient-read as the assembler: per-shard snapshots may sit
+    # one level deeper and a stale root-level file must not be preferred.
+    snaps = _find_snapshot_files(raw_dir)
+    if not snaps:
+        snaps = _find_snapshot_files(os.path.join(ROOT, "data", "raw"))
     out_cities = []
     for c in cities:
-        p = os.path.join(raw_dir, c["en"] + ".json")
-        if not os.path.exists(p):
+        p = snaps.get(c["en"])
+        if not p:
             continue
-        raw = json.load(open(p, encoding="utf-8"))
+        raw = _load_json_lenient(p)
         hist = raw["pollen"]
         latest = pc.latest_observed(hist)
         try:

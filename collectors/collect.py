@@ -59,7 +59,9 @@ def _find_snapshot_files(raw_dir):
     """Recursively collect city snapshot files under data/raw.
     Artifact download nesting can differ (data/raw/<date>/x.json vs an extra
     level), so discover by the <city_en>.json filename rather than a fixed
-    depth. Returns {city_en: abs_path}, shallowest path wins on duplicates.
+    depth. Returns {city_en: abs_path}. On duplicates the DEEPER per-shard
+    snapshot (this run's fresh data) wins over a stale root-level file that an
+    earlier commit may have left in the checkout.
     """
     found = {}
     if not os.path.isdir(raw_dir):
@@ -70,7 +72,7 @@ def _find_snapshot_files(raw_dir):
                 continue
             en = fn[:-5]
             depth = os.path.relpath(os.path.join(dirpath, fn), raw_dir).count(os.sep)
-            if en not in found or depth < found[en][0]:
+            if en not in found or depth > found[en][0]:
                 found[en] = (depth, os.path.join(dirpath, fn))
     return {en: v[1] for en, v in found.items()}
 def _rows_from_snapshot(city, path, stamp):
