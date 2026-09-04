@@ -1,0 +1,5 @@
+# PollenSentinel uses only the Python 3.10+ standard library at runtime.
+# No third-party package is required to collect data, predict, or build reports.
+#
+# Optional, development only:
+# pillow   # cropping headless-browser screenshots during visual QA

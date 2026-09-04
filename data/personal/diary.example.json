@@ -1,0 +1,10 @@
+{
+  "schema": "pollen-sentinel-diary-v1",
+  "owner": "example",
+  "records": {
+    "2026-09-01": {"sym": {"sneeze": 1, "snivel": 1, "stuffy": 1, "itch_nose": 1, "itch_eye": 1}, "total": 5, "checks": ["鼻喷激素", "盐水洗鼻"], "out": "1-3小时", "mask": "是", "note": "示例：白天鼻塞"},
+    "2026-09-02": {"sym": {"sneeze": 2, "snivel": 2, "stuffy": 2, "itch_nose": 2, "itch_eye": 1}, "total": 9, "checks": ["夜间因鼻塞憋醒", "鼻喷激素", "口服抗过敏"], "out": ">3小时", "mask": "是", "note": "示例：晚上加重"},
+    "2026-09-03": {"sym": {"sneeze": 3, "snivel": 3, "stuffy": 3, "itch_nose": 2, "itch_eye": 2}, "total": 13, "checks": ["夜间因鼻塞憋醒", "鼻喷激素", "口服抗过敏", "滴眼液", "盐水洗鼻"], "out": "1-3小时", "mask": "N95/KN95", "note": "示例：很高日很难受"},
+    "2026-09-04": {"sym": {"sneeze": 2, "snivel": 2, "stuffy": 2, "itch_nose": 1, "itch_eye": 1}, "total": 8, "checks": ["鼻喷激素", "口服抗过敏", "盐水洗鼻"], "out": "<1小时", "mask": "是", "note": "示例：用药后好转"}
+  }
+}
