@@ -37,12 +37,38 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Probe data sources
+        run: |
+          mkdir -p data
+          P=$(curl -sS -m 15 -H 'Referer: https://www.weather.com.cn/' 'https://graph.weatherdt.com/ty/pollen/v2/hfindex.html?eletype=1&city=xian&start=2026-09-01&end=2026-09-04&predictFlag=true' || true)
+          M=$(curl -sS -m 15 'https://api.open-meteo.com/v1/forecast?latitude=34.266&longitude=108.940&daily=weather_code&timezone=Asia%2FShanghai&forecast_days=3' || true)
+          {
+            echo "== probe at $(date -u) =="
+            echo "--- pollen source (xian) ---"; echo "${P}" | head -c 600; echo
+            if echo "${P}" | grep -q 'levelCode'; then echo "POLLEN_STATUS=ok"; else echo "POLLEN_STATUS=fail"; fi
+            echo "--- open-meteo (xian) ---"; echo "${M}" | head -c 400; echo
+            if echo "${M}" | grep -q 'daily'; then echo "METEO_STATUS=ok"; else echo "METEO_STATUS=fail"; fi
+          } > data/probe.txt 2>&1 || true
+          cat data/probe.txt
+
+      - name: Fast-fail if pollen source unreachable
+        run: |
+          if grep -q 'POLLEN_STATUS=ok' data/probe.txt; then
+            echo 'pollen source reachable, continue'
+          else
+            echo '::error::pollen source unreachable from the GitHub runner; skip full collection'
+            exit 2
+          fi
+
       - name: Run daily pipeline
         env:
           CITIES: ${{ github.event.inputs.cities }}
           REPORT_CITIES: xian,xianyang
           SLEEP: '0.8'
-        run: bash scripts/run_daily.sh
+        run: |
+          mkdir -p data
+          set -o pipefail
+          bash scripts/run_daily.sh 2>&1 | tee data/run-log.txt
 
       - name: Validate outputs
         run: |
@@ -51,6 +77,7 @@ jobs:
           python3 -c "import json;d=json.load(open('web/data.json'));assert len(d['cities'])>0;print('dashboard cities:',len(d['cities']))"
 
       - name: Commit snapshots and site
+        if: always()
         run: |
           git config user.name  "pollen-sentinel-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -58,6 +85,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "nothing to commit"
           else
-            git commit -m "data: daily snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git commit -m "data: daily snapshot $(date -u +%Y-%m-%dT%H:%MZ) [${{ job.status }}]"
             git push
           fi
