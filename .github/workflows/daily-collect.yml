@@ -30,7 +30,9 @@ jobs:
       matrix:
         # 53 monitored cities split into 8 parallel shards (~7 cities each),
         # so a slow cross-border request cannot blow the whole run's budget.
-        shard: ['0/8', '1/8', '2/8', '3/8', '4/8', '5/8', '6/8', '7/8']
+        # Integer index only; the i/8 shard spec is assembled in the command
+        # (artifact names cannot contain '/').
+        i: [0, 1, 2, 3, 4, 5, 6, 7]
     steps:
       - uses: actions/checkout@v4
 
@@ -39,20 +41,19 @@ jobs:
           python-version: '3.12'
 
       - name: Probe pollen source (shard 0)
-        if: matrix.shard == '0/8'
+        if: matrix.i == 0
         run: |
           P=$(curl -sS -m 10 -H 'Referer: https://www.weather.com.cn/' 'https://graph.weatherdt.com/ty/pollen/v2/hfindex.html?eletype=1&city=xian&start=2026-09-01&end=2026-09-04&predictFlag=true' || true)
           echo "${P}" | head -c 400
           echo "${P}" | grep -q 'levelCode' || { echo '::error::pollen source unreachable'; exit 2; }
 
-      - name: Collect shard ${{ matrix.shard }} (raw snapshots only)
-        run: python3 -m collectors.collect --shard ${{ matrix.shard }} --raw-only --sleep 0.35 --days 40
+      - name: Collect shard ${{ matrix.i }}/8 (raw snapshots only)
+        run: python3 -m collectors.collect --shard ${{ matrix.i }}/8 --raw-only --sleep 0.35 --days 40
 
       - name: Upload shard snapshots
         uses: actions/upload-artifact@v4
         with:
-          # Artifact names cannot contain '/' (NTFS-incompatible); map 0/8 -> 0-8.
-          name: raw-${{ replace(matrix.shard, '/', '-') }}
+          name: raw-${{ matrix.i }}
           path: data/raw
           retention-days: 7
           if-no-files-found: error
