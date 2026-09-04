@@ -1,4 +1,4 @@
-=== date (runner TZ): Fri Sep  4 15:03:18 UTC 2026 ===
+=== date (runner TZ): Fri Sep  4 15:13:28 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -55,12 +55,26 @@ data/raw/2026-09-04/zhengzhou.json
 data/raw/2026-09-04/zibo.json
 snapshot count: 53
 === assemble ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/pollen-sentinel/pollen-sentinel/collectors/collect.py", line 269, in <module>
+    main()
+  File "/home/runner/work/pollen-sentinel/pollen-sentinel/collectors/collect.py", line 260, in main
+    assemble(args.date or None)
+  File "/home/runner/work/pollen-sentinel/pollen-sentinel/collectors/collect.py", line 112, in assemble
+    pr, wr = _rows_from_snapshot(city, path, stamp)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/pollen-sentinel/pollen-sentinel/collectors/collect.py", line 68, in _rows_from_snapshot
+    snap = json.load(f)
+           ^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 471 column 3 (char 8919)
 found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
-assembled from 53 snapshots. pollen_rows=2227 weather_rows=371
-=== build report ===
-report written: web/reports/latest.html 46 KB
-=== export web ===
-web/data.json written, cities=53
-=== validate ===
-dashboard cities: 53
-=== BUILD OK ===
