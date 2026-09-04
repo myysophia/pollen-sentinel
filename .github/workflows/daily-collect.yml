@@ -6,14 +6,9 @@ on:
     - cron: '0 23 * * *'
     - cron: '30 9 * * *'
   workflow_dispatch:
-    inputs:
-      cities:
-        description: 'Comma-separated city en names (empty = all 53)'
-        default: ''
-  # Bootstrap trigger: editing this workflow itself runs the pipeline once,
-  # so no manual workflow_dispatch is needed after initial setup. Daily runs
-  # come from the schedule above; ordinary code pushes do NOT collect (the
-  # path filter matches only this file).
+  # Bootstrap trigger: editing this workflow itself runs the pipeline once.
+  # Daily runs come from the schedule; ordinary code pushes do NOT collect
+  # (the path filter matches only this file).
   push:
     branches: [main]
     paths:
@@ -27,9 +22,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  collect:
+  shard:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        # 53 monitored cities split into 8 parallel shards (~7 cities each),
+        # so a slow cross-border request cannot blow the whole run's budget.
+        shard: ['0/8', '1/8', '2/8', '3/8', '4/8', '5/8', '6/8', '7/8']
     steps:
       - uses: actions/checkout@v4
 
@@ -37,38 +38,61 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Probe data sources
+      - name: Probe pollen source (shard 0)
+        if: matrix.shard == '0/8'
         run: |
-          mkdir -p data
           P=$(curl -sS -m 10 -H 'Referer: https://www.weather.com.cn/' 'https://graph.weatherdt.com/ty/pollen/v2/hfindex.html?eletype=1&city=xian&start=2026-09-01&end=2026-09-04&predictFlag=true' || true)
-          M=$(curl -sS -m 10 'https://api.open-meteo.com/v1/forecast?latitude=34.266&longitude=108.940&daily=weather_code&timezone=Asia%2FShanghai&forecast_days=3' || true)
-          {
-            echo "== probe at $(date -u) =="
-            echo "--- pollen source (xian) ---"; echo "${P}" | head -c 600; echo
-            if echo "${P}" | grep -q 'levelCode'; then echo "POLLEN_STATUS=ok"; else echo "POLLEN_STATUS=fail"; fi
-            echo "--- open-meteo (xian) ---"; echo "${M}" | head -c 400; echo
-            if echo "${M}" | grep -q 'daily'; then echo "METEO_STATUS=ok"; else echo "METEO_STATUS=fail"; fi
-          } > data/probe.txt 2>&1 || true
-          cat data/probe.txt
+          echo "${P}" | head -c 400
+          echo "${P}" | grep -q 'levelCode' || { echo '::error::pollen source unreachable'; exit 2; }
 
-      - name: Fast-fail if pollen source unreachable
-        run: |
-          if grep -q 'POLLEN_STATUS=ok' data/probe.txt; then
-            echo 'pollen source reachable, continue'
-          else
-            echo '::error::pollen source unreachable from the GitHub runner; skip full collection'
-            exit 2
-          fi
+      - name: Collect shard ${{ matrix.shard }} (raw snapshots only)
+        run: python3 -m collectors.collect --shard ${{ matrix.shard }} --raw-only --sleep 0.35 --days 40
 
-      - name: Run daily pipeline
-        env:
-          CITIES: ${{ github.event.inputs.cities }}
-          REPORT_CITIES: xian,xianyang
-          SLEEP: '0.35'
+      - name: Upload shard snapshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ matrix.shard }}
+          path: data/raw
+          retention-days: 7
+          if-no-files-found: error
+
+  assemble:
+    needs: shard
+    if: success() || failure()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Download all shard snapshots
+        uses: actions/download-artifact@v4
+        with:
+          pattern: raw-*
+          path: data/raw
+          merge-multiple: true
+
+      - name: Inspect downloaded snapshots
         run: |
-          mkdir -p data
-          set -o pipefail
-          bash scripts/run_daily.sh 2>&1 | tee data/run-log.txt
+          find data/raw -type f -name '*.json' | sort
+          echo "snapshot count: $(find data/raw -type f -name '*.json' | wc -l)"
+
+      - name: Assemble normalised CSVs from snapshots
+        run: python3 -m collectors.collect --assemble
+
+      - name: Build personal report (xian/xianyang)
+        run: |
+          test -f "data/raw/$(date +%F)/xian.json" || { echo '::error::xian snapshot missing'; exit 3; }
+          python3 -m reporter.build_report --cities xian,xianyang --out web/reports/latest.html
+          cp web/reports/latest.html "web/reports/$(date +%F).html"
+          mkdir -p web/data
+          cp data/personal/diary.json web/data/diary.json
+
+      - name: Export national dashboard data
+        run: python3 scripts/export_web.py
 
       - name: Validate outputs
         run: |

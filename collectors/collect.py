@@ -56,7 +56,81 @@ def collect_city(city, start, end, fetch_weather=True):
     return records, wrows
 
 
-def run(city_names, days, do_backfill=False, sleep_s=1.0):
+def _rows_from_snapshot(city, stamp):
+    """Build normalised pollen/weather rows from a saved raw snapshot."""
+    path = os.path.join(ROOT, "data", "raw", stamp, city["en"] + ".json")
+    with open(path, encoding="utf-8") as f:
+        snap = json.load(f)
+    pollen_rows, weather_rows = [], []
+    for r in snap["pollen"]:
+        pollen_rows.append({
+            "date": r["date"], "city": city["en"], "city_name": city["name"],
+            "level_code": r["level_code"], "level": r["level"],
+            "kind": r["kind"], "created_at": r["created_at"] or "",
+        })
+    for w in snap.get("weather_forecast", []):
+        weather_rows.append({
+            "date": w["date"], "city": city["en"],
+            "code": w["code"] if w["code"] is not None else "",
+            "weather": w["weather"], "is_rain": int(w["is_rain"]),
+            "tmax": "" if w["tmax"] is None else w["tmax"],
+            "tmin": "" if w["tmin"] is None else w["tmin"],
+            "prcp_mm": "" if w["prcp_mm"] is None else w["prcp_mm"],
+            "wind_kmh": "" if w["wind_kmh"] is None else w["wind_kmh"],
+            "rhum_pct": "" if w["rhum_pct"] is None else w["rhum_pct"],
+            "fetched_date": stamp,
+        })
+    return pollen_rows, weather_rows
+
+
+def assemble(stamp=None):
+    """Rebuild normalised CSVs and summary from data/raw/<date>/ snapshots.
+    Used by the aggregator job after parallel shards upload their artifacts."""
+    today = date.today()
+    stamp = stamp or today.isoformat()
+    raw_dir = os.path.join(ROOT, "data", "raw", stamp)
+    cities = load_cities()
+    by_en = {c["en"]: c for c in cities}
+    pollen_rows, weather_rows, summary_cities = [], [], []
+    present = sorted(f[:-5] for f in os.listdir(raw_dir) if f.endswith(".json"))
+    for en in present:
+        city = by_en.get(en)
+        if not city:
+            continue
+        pr, wr = _rows_from_snapshot(city, stamp)
+        pollen_rows.extend(pr)
+        weather_rows.extend(wr)
+        recs = json.load(open(os.path.join(raw_dir, en + ".json"), encoding="utf-8"))["pollen"]
+        latest = pc.latest_observed(recs)
+        summary_cities.append({
+            "en": en, "name": city["name"], "prov": city["prov"], "ok": True,
+            "latest_date": latest["date"] if latest else None,
+            "latest_level": latest["level"] if latest else None,
+            "latest_code": latest["level_code"] if latest else None,
+            "real_days": len([r for r in recs if r["level_code"] >= 0]),
+        })
+    n_pol = upsert_csv(
+        os.path.join(ROOT, "data", "daily", "pollen.csv"),
+        ["date", "city", "city_name", "level_code", "level", "kind", "created_at"],
+        pollen_rows, ["date", "city", "kind"])
+    n_wx = upsert_csv(
+        os.path.join(ROOT, "data", "daily", "weather.csv"),
+        ["date", "city", "code", "weather", "is_rain", "tmax", "tmin",
+         "prcp_mm", "wind_kmh", "rhum_pct", "fetched_date"],
+        weather_rows, ["date", "city"])
+    summary = {
+        "fetched_at": datetime.now().isoformat(timespec="seconds"),
+        "today": stamp, "mode": "assembled",
+        "cities_ok": len(summary_cities), "cities_failed": [],
+        "pollen_rows": n_pol, "weather_rows": n_wx, "cities": summary_cities,
+    }
+    with open(os.path.join(ROOT, "data", "latest_summary.json"), "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=1)
+    print("assembled from %d snapshots. pollen_rows=%d weather_rows=%d" % (
+        len(present), n_pol, n_wx))
+
+
+def run(city_names, days, do_backfill=False, sleep_s=1.0, shard=None, raw_only=False):
     cities = load_cities()
     if city_names:
         wanted = set(city_names)
@@ -64,6 +138,10 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0):
         missing = wanted - {c["en"] for c in cities}
         if missing:
             print("[warn] unknown cities:", ",".join(sorted(missing)))
+    if shard:
+        idx, n = shard
+        cities = [c for i, c in enumerate(cities) if i % n == idx]
+        print("[shard %d/%d] %d cities: %s" % (idx, n, len(cities), ",".join(c["en"] for c in cities)))
     today = date.today()
     stamp = today.isoformat()
     raw_dir = os.path.join(ROOT, "data", "raw", stamp)
@@ -134,6 +212,13 @@ def run(city_names, days, do_backfill=False, sleep_s=1.0):
         if i < len(cities) - 1:
             time.sleep(sleep_s)
 
+    if raw_only:
+        # Shard mode: only raw snapshots matter; the aggregator assembles CSVs.
+        print("raw-only shard done. cities=%d ok=%d failed=%d" % (
+            len(summary_cities),
+            sum(1 for c in summary_cities if c["ok"]),
+            sum(1 for c in summary_cities if not c["ok"])))
+        return
     n_pol = upsert_csv(
         os.path.join(ROOT, "data", "daily", "pollen.csv"),
         ["date", "city", "city_name", "level_code", "level", "kind", "created_at"],
@@ -164,9 +249,20 @@ def main():
     ap.add_argument("--days", type=int, default=40)
     ap.add_argument("--backfill", action="store_true")
     ap.add_argument("--sleep", type=float, default=1.0)
+    ap.add_argument("--shard", default="", help="shard index/total, e.g. 3/8")
+    ap.add_argument("--raw-only", action="store_true", help="only write raw snapshots (shard worker)")
+    ap.add_argument("--assemble", action="store_true", help="rebuild CSVs from today raw snapshots")
+    ap.add_argument("--date", default="", help="assemble target date YYYY-MM-DD")
     args = ap.parse_args()
+    if args.assemble:
+        assemble(args.date or None)
+        return
     names = [x.strip() for x in args.cities.split(",") if x.strip()]
-    run(names, args.days, args.backfill, args.sleep)
+    shard = None
+    if args.shard:
+        i, n = args.shard.split("/")
+        shard = (int(i), int(n))
+    run(names, args.days, args.backfill, args.sleep, shard, args.raw_only)
 
 
 if __name__ == "__main__":
