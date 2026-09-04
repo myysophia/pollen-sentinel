@@ -2133,6 +2133,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-04,dalian,大连,3,中,observed,2026-09-04T17:31:22
 2026-09-04,eerduosi,鄂尔多斯,-1,暂无,forecast,2026-09-03T23:30:00
 2026-09-04,fuzhou,福州,-1,暂无,forecast,2026-09-03T17:30:28
+2026-09-04,fuzhou,福州,-1,暂无,observed,2026-09-04T20:46:38
 2026-09-04,guangzhou,广州,1,很低,forecast,2026-09-03T22:59:35
 2026-09-04,guiyang,贵阳,-1,暂无,forecast,2026-09-03T17:05:14
 2026-09-04,haerbin,哈尔滨,2,低,forecast,2026-09-03T18:49:05

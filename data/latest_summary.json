@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-04T10:57:31",
+ "fetched_at": "2026-09-04T15:03:20",
  "today": "2026-09-04",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 2226,
+ "pollen_rows": 2227,
  "weather_rows": 371,
  "cities": [
   {
