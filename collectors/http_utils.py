@@ -10,7 +10,7 @@ DEFAULT_HEADERS = {
 }
 
 
-def http_get(url, extra_headers=None, timeout=20, retries=3, backoff=1.5):
+def http_get(url, extra_headers=None, timeout=12, retries=2, backoff=1.2):
     """GET a URL with retries; returns decoded text. Raises after exhausting retries."""
     headers = dict(DEFAULT_HEADERS)
     if extra_headers:
@@ -30,5 +30,5 @@ def http_get(url, extra_headers=None, timeout=20, retries=3, backoff=1.5):
     raise RuntimeError("GET failed after %d attempts: %s (%s)" % (retries, url, last_err))
 
 
-def http_json(url, extra_headers=None, timeout=20, retries=3):
+def http_json(url, extra_headers=None, timeout=12, retries=2):
     return json.loads(http_get(url, extra_headers, timeout, retries))

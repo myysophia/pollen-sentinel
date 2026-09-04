@@ -29,7 +29,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -40,8 +40,8 @@ jobs:
       - name: Probe data sources
         run: |
           mkdir -p data
-          P=$(curl -sS -m 15 -H 'Referer: https://www.weather.com.cn/' 'https://graph.weatherdt.com/ty/pollen/v2/hfindex.html?eletype=1&city=xian&start=2026-09-01&end=2026-09-04&predictFlag=true' || true)
-          M=$(curl -sS -m 15 'https://api.open-meteo.com/v1/forecast?latitude=34.266&longitude=108.940&daily=weather_code&timezone=Asia%2FShanghai&forecast_days=3' || true)
+          P=$(curl -sS -m 10 -H 'Referer: https://www.weather.com.cn/' 'https://graph.weatherdt.com/ty/pollen/v2/hfindex.html?eletype=1&city=xian&start=2026-09-01&end=2026-09-04&predictFlag=true' || true)
+          M=$(curl -sS -m 10 'https://api.open-meteo.com/v1/forecast?latitude=34.266&longitude=108.940&daily=weather_code&timezone=Asia%2FShanghai&forecast_days=3' || true)
           {
             echo "== probe at $(date -u) =="
             echo "--- pollen source (xian) ---"; echo "${P}" | head -c 600; echo
@@ -64,7 +64,7 @@ jobs:
         env:
           CITIES: ${{ github.event.inputs.cities }}
           REPORT_CITIES: xian,xianyang
-          SLEEP: '0.8'
+          SLEEP: '0.35'
         run: |
           mkdir -p data
           set -o pipefail
