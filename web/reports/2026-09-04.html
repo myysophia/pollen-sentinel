@@ -29,8 +29,9 @@ h2{font-size:17px;color:var(--green-d);margin-bottom:12px;padding-left:10px;bord
 .risk .row{font-size:13.5px;margin-top:6px;color:var(--ink)}
 .risk .msg{margin-top:8px;font-size:13px;background:rgba(255,255,255,.7);border-radius:8px;padding:7px 10px}
 .pill{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:600;color:#fff}
-.src-tag{display:inline-block;font-size:11px;padding:0 7px;border-radius:6px;margin-left:6px;font-weight:400}
-.src-official{background:#2e7d32}.src-rule{background:#78909c}
+.src-tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;margin-left:6px;font-weight:600;line-height:1.5}
+.src-official{background:#e8f3e9;color:#2e7d32;border:1px solid #b6d8b9}
+.src-rule{background:#eceff1;color:#455a64;border:1px solid #cfd8dc}
 .conf-high{color:#2e7d32}.conf-medium{color:#b26a00}.conf-low{color:#8a8a8a}
 .fc-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;overflow-x:auto}
 .fc-day{border:1px solid var(--line);border-radius:10px;padding:9px 6px;text-align:center;min-width:96px;background:#fbfdfb}
@@ -103,14 +104,11 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     </div>
     <div class="muted">PollenSentinel · 比花粉早知道一步</div>
   </div>
-
   <div class="cheer" id="cheer"></div>
-
   <div class="card">
     <h2>今日风险</h2>
     <div class="cards" id="risk-cards"></div>
   </div>
-
   <div class="card">
     <h2>未来 7 天花粉展望</h2>
     <div class="legend-inline">
@@ -121,7 +119,6 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     <div class="fc-strip" id="fc-strip"></div>
     <ul class="reasons" id="fc-reasons"></ul>
   </div>
-
   <div class="card">
     <h2>近 35 天花粉等级趋势</h2>
     <div class="legend-inline">
@@ -130,7 +127,6 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     <div id="trend" class="chart"></div>
     <div class="fallback" id="trend-fb">图表库未加载(离线环境)，可查看日历热力获取每日等级。</div>
   </div>
-
   <div class="card">
     <h2>花粉日历</h2>
     <div class="cal-toolbar" id="cal-tabs"></div>
@@ -145,12 +141,10 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     </div>
     <div class="cal-grid" id="cal-grid"></div>
   </div>
-
   <div class="card">
     <h2>影响因素：天气与扩散条件</h2>
     <div id="factors"></div>
   </div>
-
   <div class="card">
     <h2>花粉季节历与本季统计</h2>
     <div class="season-bar">
@@ -167,7 +161,6 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     <div class="muted" style="margin-bottom:8px">北方致敏花粉：春季以柏/杨/榆/悬铃木为主，秋季以蒿属、葎草、豚草、藜苋为主。</div>
     <div id="season-stats"></div>
   </div>
-
   <div class="card diary">
     <h2>我的治疗日记 <span class="muted" style="font-weight:400">（数据保存在本机浏览器，可导出备份）</span></h2>
     <div class="muted" style="margin-bottom:10px">每天花 20 秒记录症状与用药，下方曲线将症状与花粉等级叠加——症状通常比花粉浓度滞后 1-3 天，对照观察可辅助判断诱因与用药效果，复诊时可直接给医生看。</div>
@@ -203,20 +196,17 @@ footer{font-size:12px;color:var(--sub);line-height:1.8}
     <div id="diary-empty" class="muted">暂无日记，开始记录后这里会出现对照曲线。</div>
     <div style="overflow-x:auto"><table class="records" id="rec-table"></table></div>
   </div>
-
   <div class="card">
     <h2>今日防护清单</h2>
     <div class="protect" id="protect"></div>
   </div>
-
   <div class="card">
     <footer id="footer"></footer>
   </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script>
-var D = {"generated_at": "2026-09-04 15:03", "today": "2026-09-04", "weekday": "星期五", "cities": [{"en": "xian", "name": "西安", "prov": "陕西", "lat": 34.266, "lon": 108.94, "latest": {"date": "2026-09-03", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": "2026-09-03T16:14:22", "kind": "observed"}, "first_forecast": {"date": "2026-09-05", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": null, "kind": "forecast"}, "series": [{"date": "2026-07-31", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-01", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-02", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-03", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-04", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-05", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-06", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-07", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-08", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-09", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-10", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-11", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-12", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-13", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-14", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-15", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-16", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-17", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-18", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-19", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-20", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-21", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-22", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-23", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-24", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-25", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-26", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-27", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-28", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-29", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-30", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-31", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-01", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-02", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-03", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-04", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-05", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-06", "code": null, "kind": null, "level": ""}, {"date": "2026-09-07", "code": null, "kind": null, "level": ""}, {"date": "2026-09-08", "code": null, "kind": null, "level": ""}, {"date": "2026-09-09", "code": null, "kind": null, "level": ""}, {"date": "2026-09-10", "code": null, "kind": null, "level": ""}], "season": {"key": "autumn", "name": "秋季花粉季(8-10月: 蒿属/葎草/豚草/藜苋)", "start": "2026-08-01", "counts": {"0": 0, "1": 17, "2": 6, "3": 7, "4": 2, "5": 2}}, "predictions": [{"date": "2026-09-05", "level": 5, "direction": "平", "source": "official", "confidence": "high", "reasons": ["官方已发布预报"], "weather": {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 32.6, "tmin": 20.8, "prcp_mm": 0.0, "wind_kmh": 10.6, "rhum_pct": 56, "code": 3}}, {"date": "2026-09-06", "level": 5, "direction": "平", "source": "rule", "confidence": "medium", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-06", "weather": "多云", "is_rain": false, "tmax": 35.0, "tmin": 22.3, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 45, "code": 2}}, {"date": "2026-09-07", "level": 5, "direction": "平", "source": "rule", "confidence": "low", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-07", "weather": "阴", "is_rain": false, "tmax": 33.9, "tmin": 23.6, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 52, "code": 3}}, {"date": "2026-09-08", "level": 3, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水8mm冲刷,等级下调1级", "强降温-9℃抑制花粉释放"], "weather": {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.9, "tmin": 20.8, "prcp_mm": 7.8, "wind_kmh": 16.4, "rhum_pct": 75, "code": 61}}, {"date": "2026-09-09", "level": 1, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水19mm冲刷,等级下调2级"], "weather": {"date": "2026-09-09", "weather": "小雨", "is_rain": true, "tmax": 20.3, "tmin": 16.0, "prcp_mm": 19.2, "wind_kmh": 12.4, "rhum_pct": 95, "code": 61}}, {"date": "2026-09-10", "level": 0, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水11mm冲刷,等级下调2级"], "weather": {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 17.9, "tmin": 15.7, "prcp_mm": 11.4, "wind_kmh": 7.2, "rhum_pct": 92, "code": 53}}], "weather_today": {"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 30.5, "tmin": 19.5, "prcp_mm": 0.0, "wind_kmh": 11.8, "rhum_pct": 51, "code": 3}, "weather7": [{"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 30.5, "tmin": 19.5, "prcp_mm": 0.0, "wind_kmh": 11.8, "rhum_pct": 51, "code": 3}, {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 32.6, "tmin": 20.8, "prcp_mm": 0.0, "wind_kmh": 10.6, "rhum_pct": 56, "code": 3}, {"date": "2026-09-06", "weather": "多云", "is_rain": false, "tmax": 35.0, "tmin": 22.3, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 45, "code": 2}, {"date": "2026-09-07", "weather": "阴", "is_rain": false, "tmax": 33.9, "tmin": 23.6, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 52, "code": 3}, {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.9, "tmin": 20.8, "prcp_mm": 7.8, "wind_kmh": 16.4, "rhum_pct": 75, "code": 61}, {"date": "2026-09-09", "weather": "小雨", "is_rain": true, "tmax": 20.3, "tmin": 16.0, "prcp_mm": 19.2, "wind_kmh": 12.4, "rhum_pct": 95, "code": 61}, {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 17.9, "tmin": 15.7, "prcp_mm": 11.4, "wind_kmh": 7.2, "rhum_pct": 92, "code": 53}]}, {"en": "xianyang", "name": "咸阳", "prov": "陕西", "lat": 34.338, "lon": 108.703, "latest": {"date": "2026-09-04", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": "2026-09-04T17:14:19", "kind": "observed"}, "first_forecast": {"date": "2026-09-05", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": null, "kind": "forecast"}, "series": [{"date": "2026-07-31", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-01", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-02", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-03", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-04", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-05", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-06", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-07", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-08", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-09", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-10", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-11", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-12", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-13", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-14", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-15", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-16", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-17", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-18", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-19", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-20", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-21", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-22", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-23", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-24", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-25", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-26", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-27", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-28", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-08-29", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-30", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-08-31", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-01", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-02", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-03", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-04", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-05", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-06", "code": null, "kind": null, "level": ""}, {"date": "2026-09-07", "code": null, "kind": null, "level": ""}, {"date": "2026-09-08", "code": null, "kind": null, "level": ""}, {"date": "2026-09-09", "code": null, "kind": null, "level": ""}, {"date": "2026-09-10", "code": null, "kind": null, "level": ""}], "season": {"key": "autumn", "name": "秋季花粉季(8-10月: 蒿属/葎草/豚草/藜苋)", "start": "2026-08-01", "counts": {"0": 0, "1": 18, "2": 4, "3": 6, "4": 4, "5": 3}}, "predictions": [{"date": "2026-09-05", "level": 5, "direction": "平", "source": "official", "confidence": "high", "reasons": ["官方已发布预报"], "weather": {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 31.4, "tmin": 20.7, "prcp_mm": 0.0, "wind_kmh": 18.2, "rhum_pct": 49, "code": 3}}, {"date": "2026-09-06", "level": 5, "direction": "平", "source": "rule", "confidence": "medium", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-06", "weather": "阴", "is_rain": false, "tmax": 33.1, "tmin": 21.8, "prcp_mm": 0.0, "wind_kmh": 20.6, "rhum_pct": 46, "code": 3}}, {"date": "2026-09-07", "level": 4, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["有降水,利于花粉沉降"], "weather": {"date": "2026-09-07", "weather": "小毛毛雨", "is_rain": true, "tmax": 31.9, "tmin": 22.8, "prcp_mm": 0.1, "wind_kmh": 18.9, "rhum_pct": 56, "code": 51}}, {"date": "2026-09-08", "level": 2, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水10mm冲刷,等级下调1级", "强降温-7℃抑制花粉释放"], "weather": {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.6, "tmin": 20.6, "prcp_mm": 9.6, "wind_kmh": 22.0, "rhum_pct": 81, "code": 61}}, {"date": "2026-09-09", "level": 0, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水22mm冲刷,等级下调2级"], "weather": {"date": "2026-09-09", "weather": "阵雨", "is_rain": true, "tmax": 20.4, "tmin": 16.1, "prcp_mm": 22.2, "wind_kmh": 13.8, "rhum_pct": 95, "code": 80}}, {"date": "2026-09-10", "level": 0, "direction": "平", "source": "rule", "confidence": "low", "reasons": ["降水12mm冲刷,等级下调2级"], "weather": {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 18.0, "tmin": 15.7, "prcp_mm": 12.3, "wind_kmh": 7.6, "rhum_pct": 94, "code": 53}}], "weather_today": {"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 29.3, "tmin": 19.3, "prcp_mm": 0.0, "wind_kmh": 17.5, "rhum_pct": 46, "code": 3}, "weather7": [{"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 29.3, "tmin": 19.3, "prcp_mm": 0.0, "wind_kmh": 17.5, "rhum_pct": 46, "code": 3}, {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 31.4, "tmin": 20.7, "prcp_mm": 0.0, "wind_kmh": 18.2, "rhum_pct": 49, "code": 3}, {"date": "2026-09-06", "weather": "阴", "is_rain": false, "tmax": 33.1, "tmin": 21.8, "prcp_mm": 0.0, "wind_kmh": 20.6, "rhum_pct": 46, "code": 3}, {"date": "2026-09-07", "weather": "小毛毛雨", "is_rain": true, "tmax": 31.9, "tmin": 22.8, "prcp_mm": 0.1, "wind_kmh": 18.9, "rhum_pct": 56, "code": 51}, {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.6, "tmin": 20.6, "prcp_mm": 9.6, "wind_kmh": 22.0, "rhum_pct": 81, "code": 61}, {"date": "2026-09-09", "weather": "阵雨", "is_rain": true, "tmax": 20.4, "tmin": 16.1, "prcp_mm": 22.2, "wind_kmh": 13.8, "rhum_pct": 95, "code": 80}, {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 18.0, "tmin": 15.7, "prcp_mm": 12.3, "wind_kmh": 7.6, "rhum_pct": 94, "code": 53}]}], "max_level": 5, "cheer": "今天的谨慎,是为了症状更轻的明天。", "cheers": ["花粉季只是一年中的一段,你比自己想象的更能扛。", "规范用药不是脆弱,是聪明地照顾自己。", "每一次认真防护,都是在给鼻子减负。", "雨后空气最干净,记得把那杯喜欢的茶留给自己。", "症状会有起伏,但季节一定会过去。", "今天也要好好洗鼻,把附着的花粉冲掉。", "你不需要硬扛,防护到位就可以安心出门。", "把口罩戴好,就是给自己最实在的安全感。", "难受的日子记下来,复诊时这些都是最有用的线索。", "身体在努力适应,你也在努力,这就够了。", "高浓度的日子缩短户外时间,不是退缩是策略。", "开窗通风选在清晨或雨后,小细节有大帮助。", "规律作息让免疫系统更稳,今晚早点休息。", "别和症状较劲,用药、冲洗、休息,一步一步来。", "你已经比上个花粉季更懂得照顾自己了。", "哪怕今天症状重一些,也不代表明天会一样。", "冷空气来时加件外套,鼻子会感谢你。", "运动可以换到室内,坚持本身就没有中断。", "记录不是负担,是你和身体对话的方式。", "回家先洗脸洗鼻,把花粉留在门外。", "被单衣物室内晾干,减少的不只是花粉还有焦虑。", "药按时用、觉按时睡,你已经做得很好。", "秋天的蒿草终会枯萎,清爽呼吸的日子正在路上。", "今天的谨慎,是为了症状更轻的明天。", "允许自己在难受的日子慢一点,没关系的。", "又平安度过一天高浓度日,你真的很会照顾自己。"], "level_meta": {"-1": {"name": "待发布", "color": "#E5E7EB"}, "0": {"name": "未检测", "color": "#999999", "min": 0, "max": 0}, "1": {"name": "很低", "color": "#81CB31", "min": 1, "max": 20, "pct": "10%"}, "2": {"name": "低", "color": "#A1FF3D", "min": 21, "max": 60, "pct": "25%"}, "3": {"name": "中", "color": "#F5EE32", "min": 61, "max": 170, "pct": "50%"}, "4": {"name": "高", "color": "#FFAF13", "min": 171, "max": 390, "pct": "75%"}, "5": {"name": "很高", "color": "#FF2319", "min": 391, "max": null, "pct": "75%+"}}};
+var D = {"generated_at": "2026-09-04 15:23", "today": "2026-09-04", "weekday": "星期五", "cities": [{"en": "xian", "name": "西安", "prov": "陕西", "lat": 34.266, "lon": 108.94, "latest": {"date": "2026-09-03", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": "2026-09-03T16:14:22", "kind": "observed"}, "first_forecast": {"date": "2026-09-05", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": null, "kind": "forecast"}, "series": [{"date": "2026-07-31", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-01", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-02", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-03", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-04", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-05", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-06", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-07", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-08", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-09", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-10", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-11", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-12", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-13", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-14", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-15", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-16", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-17", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-18", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-19", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-20", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-21", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-22", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-23", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-24", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-25", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-26", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-27", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-28", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-29", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-30", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-31", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-01", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-02", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-03", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-04", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-05", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-06", "code": null, "kind": null, "level": ""}, {"date": "2026-09-07", "code": null, "kind": null, "level": ""}, {"date": "2026-09-08", "code": null, "kind": null, "level": ""}, {"date": "2026-09-09", "code": null, "kind": null, "level": ""}, {"date": "2026-09-10", "code": null, "kind": null, "level": ""}], "season": {"key": "autumn", "name": "秋季花粉季(8-10月: 蒿属/葎草/豚草/藜苋)", "start": "2026-08-01", "counts": {"0": 0, "1": 17, "2": 6, "3": 7, "4": 2, "5": 2}}, "predictions": [{"date": "2026-09-05", "level": 5, "direction": "平", "source": "official", "confidence": "high", "reasons": ["官方已发布预报"], "weather": {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 32.6, "tmin": 20.8, "prcp_mm": 0.0, "wind_kmh": 10.6, "rhum_pct": 56, "code": 3}}, {"date": "2026-09-06", "level": 5, "direction": "平", "source": "rule", "confidence": "medium", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-06", "weather": "多云", "is_rain": false, "tmax": 35.0, "tmin": 22.3, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 45, "code": 2}}, {"date": "2026-09-07", "level": 5, "direction": "平", "source": "rule", "confidence": "low", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-07", "weather": "阴", "is_rain": false, "tmax": 33.9, "tmin": 23.6, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 52, "code": 3}}, {"date": "2026-09-08", "level": 3, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水8mm冲刷,等级下调1级", "强降温-9℃抑制花粉释放"], "weather": {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.9, "tmin": 20.8, "prcp_mm": 7.8, "wind_kmh": 16.4, "rhum_pct": 75, "code": 61}}, {"date": "2026-09-09", "level": 1, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水19mm冲刷,等级下调2级"], "weather": {"date": "2026-09-09", "weather": "小雨", "is_rain": true, "tmax": 20.3, "tmin": 16.0, "prcp_mm": 19.2, "wind_kmh": 12.4, "rhum_pct": 95, "code": 61}}, {"date": "2026-09-10", "level": 0, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水11mm冲刷,等级下调2级"], "weather": {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 17.9, "tmin": 15.7, "prcp_mm": 11.4, "wind_kmh": 7.2, "rhum_pct": 92, "code": 53}}], "weather_today": {"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 30.5, "tmin": 19.5, "prcp_mm": 0.0, "wind_kmh": 11.8, "rhum_pct": 51, "code": 3}, "weather7": [{"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 30.5, "tmin": 19.5, "prcp_mm": 0.0, "wind_kmh": 11.8, "rhum_pct": 51, "code": 3}, {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 32.6, "tmin": 20.8, "prcp_mm": 0.0, "wind_kmh": 10.6, "rhum_pct": 56, "code": 3}, {"date": "2026-09-06", "weather": "多云", "is_rain": false, "tmax": 35.0, "tmin": 22.3, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 45, "code": 2}, {"date": "2026-09-07", "weather": "阴", "is_rain": false, "tmax": 33.9, "tmin": 23.6, "prcp_mm": 0.0, "wind_kmh": 17.7, "rhum_pct": 52, "code": 3}, {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.9, "tmin": 20.8, "prcp_mm": 7.8, "wind_kmh": 16.4, "rhum_pct": 75, "code": 61}, {"date": "2026-09-09", "weather": "小雨", "is_rain": true, "tmax": 20.3, "tmin": 16.0, "prcp_mm": 19.2, "wind_kmh": 12.4, "rhum_pct": 95, "code": 61}, {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 17.9, "tmin": 15.7, "prcp_mm": 11.4, "wind_kmh": 7.2, "rhum_pct": 92, "code": 53}]}, {"en": "xianyang", "name": "咸阳", "prov": "陕西", "lat": 34.338, "lon": 108.703, "latest": {"date": "2026-09-04", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": "2026-09-04T17:14:19", "kind": "observed"}, "first_forecast": {"date": "2026-09-05", "level_code": 5, "level": "很高", "color": "#FF2319", "msg": "极易引发过敏，减少外出，持续规范用药。", "created_at": null, "kind": "forecast"}, "series": [{"date": "2026-07-31", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-01", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-02", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-03", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-04", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-05", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-06", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-07", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-08", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-09", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-10", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-11", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-12", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-13", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-14", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-15", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-16", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-17", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-18", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-19", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-20", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-21", "code": 1, "kind": "observed", "level": "很低"}, {"date": "2026-08-22", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-23", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-24", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-25", "code": 2, "kind": "observed", "level": "低"}, {"date": "2026-08-26", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-27", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-28", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-08-29", "code": 3, "kind": "observed", "level": "中"}, {"date": "2026-08-30", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-08-31", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-01", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-02", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-03", "code": 4, "kind": "observed", "level": "高"}, {"date": "2026-09-04", "code": 5, "kind": "observed", "level": "很高"}, {"date": "2026-09-05", "code": 5, "kind": "forecast", "level": "很高"}, {"date": "2026-09-06", "code": null, "kind": null, "level": ""}, {"date": "2026-09-07", "code": null, "kind": null, "level": ""}, {"date": "2026-09-08", "code": null, "kind": null, "level": ""}, {"date": "2026-09-09", "code": null, "kind": null, "level": ""}, {"date": "2026-09-10", "code": null, "kind": null, "level": ""}], "season": {"key": "autumn", "name": "秋季花粉季(8-10月: 蒿属/葎草/豚草/藜苋)", "start": "2026-08-01", "counts": {"0": 0, "1": 18, "2": 4, "3": 6, "4": 4, "5": 3}}, "predictions": [{"date": "2026-09-05", "level": 5, "direction": "平", "source": "official", "confidence": "high", "reasons": ["官方已发布预报"], "weather": {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 31.4, "tmin": 20.7, "prcp_mm": 0.0, "wind_kmh": 18.2, "rhum_pct": 49, "code": 3}}, {"date": "2026-09-06", "level": 5, "direction": "平", "source": "rule", "confidence": "medium", "reasons": ["气象平稳,维持当前等级"], "weather": {"date": "2026-09-06", "weather": "阴", "is_rain": false, "tmax": 33.1, "tmin": 21.8, "prcp_mm": 0.0, "wind_kmh": 20.6, "rhum_pct": 46, "code": 3}}, {"date": "2026-09-07", "level": 4, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["有降水,利于花粉沉降"], "weather": {"date": "2026-09-07", "weather": "小毛毛雨", "is_rain": true, "tmax": 31.9, "tmin": 22.8, "prcp_mm": 0.1, "wind_kmh": 18.9, "rhum_pct": 56, "code": 51}}, {"date": "2026-09-08", "level": 2, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水10mm冲刷,等级下调1级", "强降温-7℃抑制花粉释放"], "weather": {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.6, "tmin": 20.6, "prcp_mm": 9.6, "wind_kmh": 22.0, "rhum_pct": 81, "code": 61}}, {"date": "2026-09-09", "level": 0, "direction": "降", "source": "rule", "confidence": "low", "reasons": ["降水22mm冲刷,等级下调2级"], "weather": {"date": "2026-09-09", "weather": "阵雨", "is_rain": true, "tmax": 20.4, "tmin": 16.1, "prcp_mm": 22.2, "wind_kmh": 13.8, "rhum_pct": 95, "code": 80}}, {"date": "2026-09-10", "level": 0, "direction": "平", "source": "rule", "confidence": "low", "reasons": ["降水12mm冲刷,等级下调2级"], "weather": {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 18.0, "tmin": 15.7, "prcp_mm": 12.3, "wind_kmh": 7.6, "rhum_pct": 94, "code": 53}}], "weather_today": {"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 29.3, "tmin": 19.3, "prcp_mm": 0.0, "wind_kmh": 17.5, "rhum_pct": 46, "code": 3}, "weather7": [{"date": "2026-09-04", "weather": "阴", "is_rain": false, "tmax": 29.3, "tmin": 19.3, "prcp_mm": 0.0, "wind_kmh": 17.5, "rhum_pct": 46, "code": 3}, {"date": "2026-09-05", "weather": "阴", "is_rain": false, "tmax": 31.4, "tmin": 20.7, "prcp_mm": 0.0, "wind_kmh": 18.2, "rhum_pct": 49, "code": 3}, {"date": "2026-09-06", "weather": "阴", "is_rain": false, "tmax": 33.1, "tmin": 21.8, "prcp_mm": 0.0, "wind_kmh": 20.6, "rhum_pct": 46, "code": 3}, {"date": "2026-09-07", "weather": "小毛毛雨", "is_rain": true, "tmax": 31.9, "tmin": 22.8, "prcp_mm": 0.1, "wind_kmh": 18.9, "rhum_pct": 56, "code": 51}, {"date": "2026-09-08", "weather": "小雨", "is_rain": true, "tmax": 24.6, "tmin": 20.6, "prcp_mm": 9.6, "wind_kmh": 22.0, "rhum_pct": 81, "code": 61}, {"date": "2026-09-09", "weather": "阵雨", "is_rain": true, "tmax": 20.4, "tmin": 16.1, "prcp_mm": 22.2, "wind_kmh": 13.8, "rhum_pct": 95, "code": 80}, {"date": "2026-09-10", "weather": "毛毛雨", "is_rain": true, "tmax": 18.0, "tmin": 15.7, "prcp_mm": 12.3, "wind_kmh": 7.6, "rhum_pct": 94, "code": 53}]}], "max_level": 5, "cheer": "今天的谨慎,是为了症状更轻的明天。", "cheers": ["花粉季只是一年中的一段,你比自己想象的更能扛。", "规范用药不是脆弱,是聪明地照顾自己。", "每一次认真防护,都是在给鼻子减负。", "雨后空气最干净,记得把那杯喜欢的茶留给自己。", "症状会有起伏,但季节一定会过去。", "今天也要好好洗鼻,把附着的花粉冲掉。", "你不需要硬扛,防护到位就可以安心出门。", "把口罩戴好,就是给自己最实在的安全感。", "难受的日子记下来,复诊时这些都是最有用的线索。", "身体在努力适应,你也在努力,这就够了。", "高浓度的日子缩短户外时间,不是退缩是策略。", "开窗通风选在清晨或雨后,小细节有大帮助。", "规律作息让免疫系统更稳,今晚早点休息。", "别和症状较劲,用药、冲洗、休息,一步一步来。", "你已经比上个花粉季更懂得照顾自己了。", "哪怕今天症状重一些,也不代表明天会一样。", "冷空气来时加件外套,鼻子会感谢你。", "运动可以换到室内,坚持本身就没有中断。", "记录不是负担,是你和身体对话的方式。", "回家先洗脸洗鼻,把花粉留在门外。", "被单衣物室内晾干,减少的不只是花粉还有焦虑。", "药按时用、觉按时睡,你已经做得很好。", "秋天的蒿草终会枯萎,清爽呼吸的日子正在路上。", "今天的谨慎,是为了症状更轻的明天。", "允许自己在难受的日子慢一点,没关系的。", "又平安度过一天高浓度日,你真的很会照顾自己。"], "level_meta": {"-1": {"name": "待发布", "color": "#E5E7EB"}, "0": {"name": "未检测", "color": "#999999", "min": 0, "max": 0}, "1": {"name": "很低", "color": "#81CB31", "min": 1, "max": 20, "pct": "10%"}, "2": {"name": "低", "color": "#A1FF3D", "min": 21, "max": 60, "pct": "25%"}, "3": {"name": "中", "color": "#F5EE32", "min": 61, "max": 170, "pct": "50%"}, "4": {"name": "高", "color": "#FFAF13", "min": 171, "max": 390, "pct": "75%"}, "5": {"name": "很高", "color": "#FF2319", "min": 391, "max": null, "pct": "75%+"}}};
 var LVM = D.level_meta;
 var LVNAME = {0:'未检测',1:'很低',2:'低',3:'中',4:'高',5:'很高'};
 function lvColor(c){ if(c===null||c===undefined||c===-1) return '#E5E7EB'; return LVM[String(c)].color; }
@@ -224,12 +214,8 @@ function lvTextColor(c){ return (c===2||c===3)? '#333':'#fff'; }
 function md(ds){ return ds.slice(5); }
 function wk(ds){ var w=['日','一','二','三','四','五','六']; return '周'+w[new Date(ds+'T00:00:00').getDay()]; }
 function $(id){ return document.getElementById(id); }
-
-/* header + cheer */
 $('h-date').textContent = '报告日期 '+D.today+' '+D.weekday+' · 城市：'+D.cities.map(function(c){return c.name;}).join(' / ');
 $('cheer').textContent = '今日寄语｜'+D.cheer;
-
-/* risk cards */
 (function(){
   var html='';
   D.cities.forEach(function(c){
@@ -247,8 +233,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   });
   $('risk-cards').innerHTML=html;
 })();
-
-/* 7-day outlook */
 (function(){
   var days = D.cities[0].predictions.length, html='';
   for(var i=0;i<days;i++){
@@ -277,8 +261,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   });
   $('fc-reasons').innerHTML=rh;
 })();
-
-/* trend chart */
 (function(){
   if(typeof echarts==='undefined'){ $('trend-fb').style.display='block'; return; }
   var chart=echarts.init($('trend'));
@@ -316,8 +298,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   });
   window.addEventListener('resize',function(){chart.resize();});
 })();
-
-/* calendar heatmap */
 (function(){
   var tabs=$('cal-tabs'), grid=$('cal-grid');
   D.cities.forEach(function(c,i){
@@ -368,8 +348,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   }
   renderCal(0);
 })();
-
-/* factors */
 (function(){
   var html='';
   D.cities.forEach(function(c){
@@ -394,8 +372,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   $('factors').innerHTML=html;
   function fcell(k,v){return '<div class="factor"><div class="k">'+k+'</div><div class="v">'+v+'</div></div>';}
 })();
-
-/* season stats */
 (function(){
   var html='';
   D.cities.forEach(function(c){
@@ -409,8 +385,6 @@ $('cheer').textContent = '今日寄语｜'+D.cheer;
   });
   $('season-stats').innerHTML=html;
 })();
-
-/* ===== treatment diary (localStorage) ===== */
 var DK='pollenSentinelDiaryV1';
 var SYMPTOMS=[['sneeze','打喷嚏'],['snivel','流清涕'],['stuffy','鼻塞'],['itch_nose','鼻痒'],['itch_eye','眼痒/流泪']];
 var CHECKS=[['wake','夜间因鼻塞憋醒'],['nasal','鼻喷激素'],['oral','口服抗过敏'],['eye_d','滴眼液'],['rinse','盐水洗鼻']];
@@ -449,7 +423,6 @@ $('file-import').onchange=function(e){
   r.readAsText(f);
 };
 $('btn-clear').onclick=function(){if(confirm('确定清空本机全部日记？此操作不可恢复。')){localStorage.removeItem(DK);renderDiary();}};
-
 function renderDiary(){
   var d=mergedDiary(), keys=Object.keys(d).sort();
   var tbl=$('rec-table');
@@ -486,7 +459,6 @@ function renderDiary(){
   });
 }
 renderDiary();
-/* Load diary archive committed to the repo (read-only); local entries take priority. */
 fetch('../data/diary.json?_='+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){
   REMOTE_DIARY=j.records||{};
   var n=Object.keys(REMOTE_DIARY).length;
@@ -494,8 +466,6 @@ fetch('../data/diary.json?_='+Date.now()).then(function(r){if(!r.ok)throw 0;retu
     h.textContent='已叠加仓库归档日记 '+n+' 天（只读，来自 data/personal/diary.json）；本机记录优先，导出后提交即可更新归档。';
     renderDiary(); }
 }).catch(function(){});
-
-/* protection list */
 (function(){
   var lv=D.max_level;
   var outdoor='N95/KN95 口罩 + 护目镜或防风镜；尽量避开 13:00-17:00 花粉高峰；远离草坪、河滩、荒地与蒿草丛生区域，骑行/开窗通勤改为关窗内循环。';
@@ -517,12 +487,10 @@ fetch('../data/diary.json?_='+Date.now()).then(function(r){if(!r.ok)throw 0;retu
   ];
   $('protect').innerHTML=cards.map(function(c){return '<div class="pcard"><h3>'+c[0]+'</h3><p>'+c[1]+'</p></div>';}).join('');
 })();
-
-/* footer */
 $('footer').innerHTML=
   '报告日期 '+D.today+'，生成时间 '+D.generated_at+'。<br>'+
   '花粉等级来源：中国天气网 · 首都医科大学附属北京同仁医院「花粉过敏指数」（每日下午发布当日实况与后续预报，早报以“昨日实况+预报”为准，等级单位：粒/千平方毫米）；气象数据来源：Open-Meteo（CC BY 4.0）；规则推断为 PollenSentinel 基于降水冲刷、降温、季节物候的可解释模型，置信度随天数递减。<br>'+
-  '本报告为个人健康管理参考，不替代医生面诊与处方，具体用药请遵医嘱。项目源码：github.com/pollen-sentinel/pollen-sentinel（MIT License）。';
+  '本报告为个人健康管理参考，不替代医生面诊与处方，具体用药请遵医嘱。项目源码：github.com/myysophia/pollen-sentinel（MIT License）。';
 </script>
 </body>
 </html>
