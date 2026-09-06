@@ -1,4 +1,4 @@
-=== date (runner TZ): Sun Sep  6 00:19:38 UTC 2026 ===
+=== date (runner TZ): Sun Sep  6 13:00:32 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -215,16 +215,11 @@ data/raw/2026-09-06/shard7/yanan.json
 snapshot count: 212
 === assemble ===
 found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
-assembled from 53 snapshots. pollen_rows=2418 weather_rows=477
+assembled from 53 snapshots. pollen_rows=2422 weather_rows=477
 === build report ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 172, in <module>
-    main()
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 168, in main
-    build(names, out, args.date or None)
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 127, in build
-    with open(os.path.join(raw_dir, en + ".json"), encoding="utf-8") as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-06/xian.json'
+report written: web/reports/latest.html 46 KB
+=== export web ===
+web/data.json written, cities=53
+=== validate ===
+dashboard cities: 53
+=== BUILD OK ===

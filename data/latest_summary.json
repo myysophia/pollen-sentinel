@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-06T00:19:38",
+ "fetched_at": "2026-09-06T13:00:33",
  "today": "2026-09-06",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 2418,
+ "pollen_rows": 2422,
  "weather_rows": 477,
  "cities": [
   {
@@ -35,7 +35,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "botou",
@@ -52,10 +52,10 @@
    "name": "沧州",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-05",
+   "latest_date": "2026-09-06",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "changchun",
@@ -155,7 +155,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 33
+   "real_days": 34
   },
   {
    "en": "guiyang",
@@ -202,10 +202,10 @@
    "name": "合肥",
    "prov": "安徽",
    "ok": true,
-   "latest_date": null,
-   "latest_level": null,
-   "latest_code": null,
-   "real_days": 0
+   "latest_date": "2026-09-07",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 1
   },
   {
    "en": "huhehaote",
@@ -215,7 +215,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "jinan",
@@ -245,7 +245,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "lanzhou",
@@ -255,7 +255,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "lasa",
@@ -295,7 +295,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "nanchong",
@@ -375,17 +375,17 @@
    "latest_date": "2026-09-05",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "wuhai",
    "name": "乌海",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-09-05",
+   "latest_date": "2026-09-06",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "wuhan",
@@ -502,10 +502,10 @@
    "name": "榆林",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-09-05",
+   "latest_date": "2026-09-06",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "zhangjiakou",
@@ -515,7 +515,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "zhengzhou",
@@ -535,7 +535,7 @@
    "latest_date": "2026-09-05",
    "latest_level": "高",
    "latest_code": 4,
-   "real_days": 33
+   "real_days": 34
   }
  ]
 }
