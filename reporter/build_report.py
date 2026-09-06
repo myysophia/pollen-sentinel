@@ -11,6 +11,7 @@ import os
 from datetime import date, datetime, timedelta
 
 from collectors import pollen_cma as pc
+from collectors.collect import _find_snapshot_files, _load_json_lenient
 from predictor.rules import predict_series, season_phase
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -115,17 +116,30 @@ def build_city(city, raw, today):
     }
 
 
+def _load_city_snapshots(raw_dir, city_en_list):
+    """按城市名加载当天快照，兼容分片目录和旧的平铺目录。"""
+    snapshots = _find_snapshot_files(raw_dir)
+    missing = [en for en in city_en_list if en not in snapshots]
+    if missing:
+        available = ",".join(sorted(snapshots)) or "无"
+        raise FileNotFoundError(
+            "raw snapshot missing for %s under %s; available: %s"
+            % (", ".join(missing), raw_dir, available)
+        )
+    return {en: _load_json_lenient(snapshots[en]) for en in city_en_list}
+
+
 def build(city_en_list, out_path, raw_date=None):
     today = date.fromisoformat(raw_date) if raw_date else date.today()
     with open(os.path.join(ROOT, "config", "cities.json"), encoding="utf-8") as f:
         all_cities = {c["en"]: c for c in json.load(f)["cities"]}
     raw_dir = os.path.join(ROOT, "data", "raw", today.isoformat())
+    raw_snapshots = _load_city_snapshots(raw_dir, city_en_list)
 
     cities_data = []
     max_level = 0
     for en in city_en_list:
-        with open(os.path.join(raw_dir, en + ".json"), encoding="utf-8") as f:
-            raw = json.load(f)
+        raw = raw_snapshots[en]
         cd = build_city(all_cities[en], raw, today)
         cities_data.append(cd)
         if cd["latest"]:
