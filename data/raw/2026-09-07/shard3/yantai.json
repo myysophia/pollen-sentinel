@@ -1,0 +1,470 @@
+{
+ "city": {
+  "code": "101120501",
+  "en": "yantai",
+  "name": "烟台",
+  "prov": "山东",
+  "lat": 37.464,
+  "lon": 121.448
+ },
+ "fetched_at": "2026-09-07T00:25:09",
+ "pollen": [
+  {
+   "date": "2026-07-29",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-29T17:13:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-30",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-30T17:14:59",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-07-31",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-07-31T17:08:56",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-01",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-01T16:18:48",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-02",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-02T16:45:52",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-03",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": "2026-08-03T23:30:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-04",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-04T16:24:58",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-05",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-05T16:50:38",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-06",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-06T16:24:58",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-07",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-07T16:54:50",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-08",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-08-08T16:23:40",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-09",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-08-09T16:35:31",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-10",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-10T18:44:01",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-11",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-11T17:24:04",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-12",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-12T16:33:00",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-13",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-13T17:45:46",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-14",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-14T16:53:09",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-15",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-15T16:18:14",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-16",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-16T17:10:27",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-17",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-17T18:27:34",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-18",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-18T16:45:35",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-19",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-19T17:17:45",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-20",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-20T16:36:49",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-21",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-21T17:08:44",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-22",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-22T17:06:47",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-23",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-23T18:11:44",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-24",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-08-24T17:52:36",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-25",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-08-25T16:39:53",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-26",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-08-26T17:13:59",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-27",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
+   "created_at": "2026-08-27T16:11:50",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-28",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-08-28T16:44:35",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-29",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-08-29T17:08:23",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-30",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-08-30T16:38:24",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-08-31",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-08-31T18:12:43",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-01",
+   "level_code": 4,
+   "level": "高",
+   "color": "#FFAF13",
+   "msg": "易引发过敏，加强防护，规范用药。",
+   "created_at": "2026-09-01T16:21:39",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-02",
+   "level_code": 4,
+   "level": "高",
+   "color": "#FFAF13",
+   "msg": "易引发过敏，加强防护，规范用药。",
+   "created_at": "2026-09-02T16:20:41",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-03",
+   "level_code": 4,
+   "level": "高",
+   "color": "#FFAF13",
+   "msg": "易引发过敏，加强防护，规范用药。",
+   "created_at": "2026-09-03T16:27:32",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-04",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-09-04T17:40:24",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-05",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-09-05T16:37:28",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-06",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-09-06T16:53:23",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-07",
+   "level_code": 3,
+   "level": "中",
+   "color": "#F5EE32",
+   "msg": "易引发过敏，加强防护，对症用药。",
+   "created_at": "2026-09-06T16:53:23",
+   "kind": "forecast"
+  },
+  {
+   "date": "2026-09-08",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "forecast"
+  }
+ ],
+ "weather_forecast": [
+  {
+   "date": "2026-09-07",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 27.4,
+   "tmin": 17.9,
+   "prcp_mm": 0.0,
+   "wind_kmh": 15.3,
+   "rhum_pct": 69
+  },
+  {
+   "date": "2026-09-08",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 24.0,
+   "tmin": 21.1,
+   "prcp_mm": 0.0,
+   "wind_kmh": 32.3,
+   "rhum_pct": 57
+  },
+  {
+   "date": "2026-09-09",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 22.7,
+   "tmin": 20.6,
+   "prcp_mm": 0.0,
+   "wind_kmh": 32.0,
+   "rhum_pct": 51
+  },
+  {
+   "date": "2026-09-10",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 24.9,
+   "tmin": 19.6,
+   "prcp_mm": 0.0,
+   "wind_kmh": 18.0,
+   "rhum_pct": 50
+  },
+  {
+   "date": "2026-09-11",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 25.6,
+   "tmin": 17.3,
+   "prcp_mm": 0.0,
+   "wind_kmh": 9.3,
+   "rhum_pct": 53
+  },
+  {
+   "date": "2026-09-12",
+   "code": 2,
+   "weather": "多云",
+   "is_rain": false,
+   "tmax": 27.9,
+   "tmin": 14.0,
+   "prcp_mm": 0.0,
+   "wind_kmh": 15.3,
+   "rhum_pct": 55
+  },
+  {
+   "date": "2026-09-13",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 29.7,
+   "tmin": 19.5,
+   "prcp_mm": 0.0,
+   "wind_kmh": 9.8,
+   "rhum_pct": 59
+  }
+ ]
+}
