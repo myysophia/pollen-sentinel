@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-08T00:47:04",
+ "fetched_at": "2026-09-08T13:44:46",
  "today": "2026-09-08",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 2630,
+ "pollen_rows": 2633,
  "weather_rows": 583,
  "cities": [
   {
@@ -35,7 +35,7 @@
    "latest_date": "2026-09-07",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "botou",
@@ -155,7 +155,7 @@
    "latest_date": "2026-09-07",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 33
+   "real_days": 34
   },
   {
    "en": "guiyang",
@@ -202,10 +202,10 @@
    "name": "合肥",
    "prov": "安徽",
    "ok": true,
-   "latest_date": null,
-   "latest_level": null,
-   "latest_code": null,
-   "real_days": 0
+   "latest_date": "2026-09-09",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 1
   },
   {
    "en": "huhehaote",
@@ -215,7 +215,7 @@
    "latest_date": "2026-09-06",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "jinan",
@@ -252,10 +252,10 @@
    "name": "兰州",
    "prov": "甘肃",
    "ok": true,
-   "latest_date": "2026-09-07",
-   "latest_level": "高",
-   "latest_code": 4,
-   "real_days": 41
+   "latest_date": "2026-09-08",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 42
   },
   {
    "en": "lasa",
@@ -502,20 +502,20 @@
    "name": "榆林",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-09-07",
+   "latest_date": "2026-09-08",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "zhangjiakou",
    "name": "张家口",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-07",
-   "latest_level": "很高",
-   "latest_code": 5,
-   "real_days": 41
+   "latest_date": "2026-09-08",
+   "latest_level": "高",
+   "latest_code": 4,
+   "real_days": 42
   },
   {
    "en": "zhengzhou",
