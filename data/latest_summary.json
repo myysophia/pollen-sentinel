@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-09T00:47:28",
+ "fetched_at": "2026-09-09T13:48:54",
  "today": "2026-09-09",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 2736,
+ "pollen_rows": 2741,
  "weather_rows": 636,
  "cities": [
   {
@@ -62,10 +62,10 @@
    "name": "长春",
    "prov": "吉林",
    "ok": true,
-   "latest_date": "2026-09-08",
+   "latest_date": "2026-09-09",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "changsha",
@@ -282,10 +282,10 @@
    "name": "六盘水",
    "prov": "贵州",
    "ok": true,
-   "latest_date": "2026-09-08",
+   "latest_date": "2026-09-09",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 37
+   "real_days": 38
   },
   {
    "en": "nanchang",
@@ -402,20 +402,20 @@
    "name": "乌兰浩特",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": null,
-   "latest_level": null,
-   "latest_code": null,
-   "real_days": 0
+   "latest_date": "2026-09-10",
+   "latest_level": "未检测到花粉",
+   "latest_code": 0,
+   "real_days": 1
   },
   {
    "en": "wulumuqi",
    "name": "乌鲁木齐",
    "prov": "新疆",
    "ok": true,
-   "latest_date": "2026-09-08",
-   "latest_level": "中",
-   "latest_code": 3,
-   "real_days": 41
+   "latest_date": "2026-09-09",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 42
   },
   {
    "en": "wuxi",
@@ -432,10 +432,10 @@
    "name": "西安",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-09-08",
-   "latest_level": "很高",
-   "latest_code": 5,
-   "real_days": 41
+   "latest_date": "2026-09-09",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 42
   },
   {
    "en": "xianyang",
@@ -472,10 +472,10 @@
    "name": "扬州",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-09-08",
+   "latest_date": "2026-09-09",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 39
+   "real_days": 40
   },
   {
    "en": "yantai",
