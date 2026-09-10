@@ -2735,6 +2735,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-09,zibo,淄博,5,很高,forecast,2026-09-08T23:30:00
 2026-09-09,zibo,淄博,5,很高,observed,2026-09-09T23:30:00
 2026-09-10,baoding,保定,3,中,forecast,2026-09-09T17:08:17
+2026-09-10,baoding,保定,4,高,observed,2026-09-10T17:27:54
 2026-09-10,baotou,包头,3,中,forecast,2026-09-09T23:03:43
 2026-09-10,beijing,北京,5,很高,forecast,2026-09-09T23:30:00
 2026-09-10,botou,泊头,3,中,forecast,2026-09-09T20:46:03
@@ -2746,6 +2747,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-10,chifeng,赤峰,2,低,forecast,2026-09-09T21:37:35
 2026-09-10,chongqing,重庆,1,很低,forecast,2026-09-09T21:20:50
 2026-09-10,dalian,大连,4,高,forecast,2026-09-09T17:31:24
+2026-09-10,dalian,大连,4,高,observed,2026-09-10T17:43:39
 2026-09-10,eerduosi,鄂尔多斯,5,很高,forecast,2026-09-09T18:40:49
 2026-09-10,fuzhou,福州,1,很低,forecast,2026-09-09T21:48:23
 2026-09-10,guangzhou,广州,2,低,forecast,2026-09-09T23:30:00
@@ -2753,6 +2755,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-10,haerbin,哈尔滨,1,很低,forecast,2026-09-09T20:02:49
 2026-09-10,haikou,海口,1,很低,forecast,2026-09-09T21:40:54
 2026-09-10,hangzhou,杭州,1,很低,forecast,2026-09-09T17:32:54
+2026-09-10,hangzhou,杭州,1,很低,observed,2026-09-10T21:02:46
 2026-09-10,hefei,合肥,-1,暂无,forecast,2026-09-09T23:30:00
 2026-09-10,huhehaote,呼和浩特,3,中,forecast,2026-09-09T22:32:04
 2026-09-10,jinan,济南,5,很高,forecast,2026-09-09T18:14:30
@@ -2765,6 +2768,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-10,liupanshui,六盘水,2,低,forecast,2026-09-09T19:38:23
 2026-09-10,nanchang,南昌,2,低,forecast,2026-09-09T17:00:26
 2026-09-10,nanchong,南充,1,很低,forecast,2026-09-09T19:07:14
+2026-09-10,nanchong,南充,-1,暂无,observed,2026-09-10T19:12:59
 2026-09-10,nanning,南宁,2,低,forecast,2026-09-09T17:52:14
 2026-09-10,shanghai,上海,1,很低,forecast,2026-09-09T23:30:00
 2026-09-10,shenyang,沈阳,1,很低,forecast,2026-09-09T18:14:10
@@ -2788,7 +2792,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-10,zhangjiakou,张家口,3,中,forecast,2026-09-09T17:08:19
 2026-09-10,zhengzhou,郑州,3,中,forecast,2026-09-09T17:58:11
 2026-09-10,zibo,淄博,5,很高,forecast,2026-09-09T23:30:00
-2026-09-11,baoding,保定,-1,暂无,forecast,
+2026-09-11,baoding,保定,3,中,forecast,
 2026-09-11,baotou,包头,-1,暂无,forecast,
 2026-09-11,beijing,北京,-1,暂无,forecast,
 2026-09-11,botou,泊头,-1,暂无,forecast,
@@ -2799,14 +2803,14 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-11,chengdu,成都,-1,暂无,forecast,
 2026-09-11,chifeng,赤峰,-1,暂无,forecast,
 2026-09-11,chongqing,重庆,-1,暂无,forecast,
-2026-09-11,dalian,大连,-1,暂无,forecast,
+2026-09-11,dalian,大连,4,高,forecast,
 2026-09-11,eerduosi,鄂尔多斯,-1,暂无,forecast,
 2026-09-11,fuzhou,福州,-1,暂无,forecast,
 2026-09-11,guangzhou,广州,-1,暂无,forecast,
 2026-09-11,guiyang,贵阳,-1,暂无,forecast,
 2026-09-11,haerbin,哈尔滨,-1,暂无,forecast,
 2026-09-11,haikou,海口,-1,暂无,forecast,
-2026-09-11,hangzhou,杭州,-1,暂无,forecast,
+2026-09-11,hangzhou,杭州,1,很低,forecast,
 2026-09-11,hefei,合肥,-1,暂无,forecast,
 2026-09-11,huhehaote,呼和浩特,-1,暂无,forecast,
 2026-09-11,jinan,济南,-1,暂无,forecast,
@@ -2817,7 +2821,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-11,liaocheng,聊城,-1,暂无,forecast,
 2026-09-11,liupanshui,六盘水,-1,暂无,forecast,
 2026-09-11,nanchang,南昌,-1,暂无,forecast,
-2026-09-11,nanchong,南充,-1,暂无,forecast,
+2026-09-11,nanchong,南充,1,很低,forecast,
 2026-09-11,nanning,南宁,-1,暂无,forecast,
 2026-09-11,shanghai,上海,-1,暂无,forecast,
 2026-09-11,shenyang,沈阳,-1,暂无,forecast,
@@ -2832,8 +2836,8 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-11,wuxi,无锡,-1,暂无,forecast,
 2026-09-11,xian,西安,-1,暂无,forecast,
 2026-09-11,xianyang,咸阳,-1,暂无,forecast,
-2026-09-11,xining,西宁,-1,暂无,forecast,
-2026-09-11,yanan,延安,-1,暂无,forecast,
+2026-09-11,xining,西宁,1,很低,forecast,
+2026-09-11,yanan,延安,2,低,forecast,
 2026-09-11,yangzhou,扬州,-1,暂无,forecast,
 2026-09-11,yantai,烟台,-1,暂无,forecast,
 2026-09-11,yinchuan,银川,-1,暂无,forecast,
