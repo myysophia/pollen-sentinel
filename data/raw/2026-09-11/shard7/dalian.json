@@ -7,7 +7,7 @@
   "lat": 38.914,
   "lon": 121.614
  },
- "fetched_at": "2026-09-11T00:38:13",
+ "fetched_at": "2026-09-11T13:41:12",
  "pollen": [
   {
    "date": "2026-08-02",
@@ -371,19 +371,19 @@
   },
   {
    "date": "2026-09-11",
+   "level_code": 2,
+   "level": "低",
+   "color": "#A1FF3D",
+   "msg": "易引发轻度过敏，适当防护对症用药。",
+   "created_at": "2026-09-11T17:10:59",
+   "kind": "observed"
+  },
+  {
+   "date": "2026-09-12",
    "level_code": 4,
    "level": "高",
    "color": "#FFAF13",
    "msg": "易引发过敏，加强防护，规范用药。",
-   "created_at": "2026-09-10T17:43:39",
-   "kind": "forecast"
-  },
-  {
-   "date": "2026-09-12",
-   "level_code": -1,
-   "level": "暂无",
-   "color": "#C4A39F",
-   "msg": "",
    "created_at": null,
    "kind": "forecast"
   }
@@ -394,21 +394,21 @@
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 28.2,
+   "tmax": 28.9,
    "tmin": 20.0,
    "prcp_mm": 0.0,
-   "wind_kmh": 16.7,
-   "rhum_pct": 54
+   "wind_kmh": 17.0,
+   "rhum_pct": 52
   },
   {
    "date": "2026-09-12",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 27.3,
-   "tmin": 20.8,
+   "tmax": 27.7,
+   "tmin": 20.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 17.9,
+   "wind_kmh": 18.6,
    "rhum_pct": 57
   },
   {
@@ -417,43 +417,43 @@
    "weather": "小毛毛雨",
    "is_rain": true,
    "tmax": 28.2,
-   "tmin": 20.6,
+   "tmin": 21.1,
    "prcp_mm": 0.1,
-   "wind_kmh": 13.0,
-   "rhum_pct": 53
+   "wind_kmh": 13.8,
+   "rhum_pct": 54
   },
   {
    "date": "2026-09-14",
    "code": 0,
    "weather": "晴",
    "is_rain": false,
-   "tmax": 25.0,
-   "tmin": 18.7,
+   "tmax": 24.8,
+   "tmin": 18.5,
    "prcp_mm": 0.0,
-   "wind_kmh": 17.2,
-   "rhum_pct": 37
+   "wind_kmh": 17.9,
+   "rhum_pct": 39
   },
   {
    "date": "2026-09-15",
    "code": 0,
    "weather": "晴",
    "is_rain": false,
-   "tmax": 25.1,
-   "tmin": 17.3,
+   "tmax": 24.8,
+   "tmin": 16.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 18.0,
-   "rhum_pct": 55
+   "wind_kmh": 16.7,
+   "rhum_pct": 51
   },
   {
    "date": "2026-09-16",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 29.5,
-   "tmin": 21.9,
+   "tmax": 25.1,
+   "tmin": 21.6,
    "prcp_mm": 0.0,
-   "wind_kmh": 18.1,
-   "rhum_pct": 65
+   "wind_kmh": 19.4,
+   "rhum_pct": 69
   },
   {
    "date": "2026-09-17",
@@ -461,10 +461,10 @@
    "weather": "阴",
    "is_rain": false,
    "tmax": 24.4,
-   "tmin": 22.1,
+   "tmin": 21.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 14.9,
-   "rhum_pct": 78
+   "wind_kmh": 15.8,
+   "rhum_pct": 77
   }
  ]
 }
