@@ -467,4 +467,10 @@
    "rhum_pct": 69
   }
  ]
+},
+   "prcp_mm": 0.3,
+   "wind_kmh": 12.7,
+   "rhum_pct": 65
+  }
+ ]
 }

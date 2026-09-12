@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-09-12T00:46:54",
+ "fetched_at": "2026-09-12T12:58:11",
  "today": "2026-09-12",
  "mode": "assembled",
- "cities_ok": 52,
+ "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3052,
- "weather_rows": 794,
+ "pollen_rows": 3059,
+ "weather_rows": 795,
  "cities": [
   {
    "en": "baoding",
@@ -45,7 +45,7 @@
    "latest_date": "2026-09-11",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "cangzhou",
@@ -72,10 +72,10 @@
    "name": "长沙",
    "prov": "湖南",
    "ok": true,
-   "latest_date": "2026-09-11",
+   "latest_date": "2026-09-12",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 9
+   "real_days": 10
   },
   {
    "en": "chengde",
@@ -105,7 +105,7 @@
    "latest_date": "2026-09-11",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "chongqing",
@@ -115,7 +115,7 @@
    "latest_date": "2026-09-10",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 37
   },
   {
    "en": "dalian",
@@ -312,10 +312,10 @@
    "name": "南宁",
    "prov": "广西",
    "ok": true,
-   "latest_date": "2026-09-11",
-   "latest_level": "很低",
-   "latest_code": 1,
-   "real_days": 40
+   "latest_date": "2026-09-12",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 41
   },
   {
    "en": "shanghai",
@@ -376,6 +376,16 @@
    "latest_level": "中",
    "latest_code": 3,
    "real_days": 41
+  },
+  {
+   "en": "wuhai",
+   "name": "乌海",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": "2026-09-12",
+   "latest_level": "很高",
+   "latest_code": 5,
+   "real_days": 42
   },
   {
    "en": "wuhan",
@@ -472,10 +482,10 @@
    "name": "烟台",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-11",
-   "latest_level": "高",
-   "latest_code": 4,
-   "real_days": 40
+   "latest_date": "2026-09-12",
+   "latest_level": "很高",
+   "latest_code": 5,
+   "real_days": 41
   },
   {
    "en": "yinchuan",
@@ -512,10 +522,10 @@
    "name": "郑州",
    "prov": "河南",
    "ok": true,
-   "latest_date": "2026-09-11",
-   "latest_level": "中",
-   "latest_code": 3,
-   "real_days": 34
+   "latest_date": "2026-09-12",
+   "latest_level": "高",
+   "latest_code": 4,
+   "real_days": 35
   },
   {
    "en": "zibo",
