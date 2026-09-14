@@ -3190,6 +3190,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-14,nanchang,南昌,1,很低,forecast,2026-09-13T16:26:05
 2026-09-14,nanchong,南充,1,很低,forecast,2026-09-13T16:59:39
 2026-09-14,nanning,南宁,3,中,forecast,2026-09-13T17:22:27
+2026-09-14,nanning,南宁,3,中,observed,2026-09-14T17:16:37
 2026-09-14,shanghai,上海,-1,暂无,forecast,2026-09-13T23:30:00
 2026-09-14,shenyang,沈阳,4,高,forecast,2026-09-13T18:28:17
 2026-09-14,shenzhen,深圳,1,很低,forecast,2026-09-13T22:01:25
@@ -3207,10 +3208,12 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-14,yanan,延安,-1,暂无,forecast,2026-09-13T23:30:00
 2026-09-14,yangzhou,扬州,1,很低,forecast,2026-09-13T22:12:22
 2026-09-14,yantai,烟台,5,很高,forecast,2026-09-13T16:39:57
+2026-09-14,yantai,烟台,4,高,observed,2026-09-14T16:16:50
 2026-09-14,yinchuan,银川,3,中,forecast,2026-09-13T19:45:08
 2026-09-14,yulin,榆林,5,很高,forecast,2026-09-13T23:30:00
 2026-09-14,zhangjiakou,张家口,4,高,forecast,2026-09-13T21:16:23
 2026-09-14,zhengzhou,郑州,4,高,forecast,2026-09-13T18:42:44
+2026-09-14,zhengzhou,郑州,4,高,observed,2026-09-14T18:38:33
 2026-09-14,zibo,淄博,5,很高,forecast,2026-09-13T21:56:57
 2026-09-15,baoding,保定,-1,暂无,forecast,
 2026-09-15,baotou,包头,-1,暂无,forecast,
@@ -3242,7 +3245,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-15,liupanshui,六盘水,-1,暂无,forecast,
 2026-09-15,nanchang,南昌,-1,暂无,forecast,
 2026-09-15,nanchong,南充,-1,暂无,forecast,
-2026-09-15,nanning,南宁,-1,暂无,forecast,
+2026-09-15,nanning,南宁,3,中,forecast,
 2026-09-15,shanghai,上海,-1,暂无,forecast,
 2026-09-15,shenyang,沈阳,-1,暂无,forecast,
 2026-09-15,shenzhen,深圳,-1,暂无,forecast,
@@ -3259,9 +3262,9 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-15,xining,西宁,-1,暂无,forecast,
 2026-09-15,yanan,延安,-1,暂无,forecast,
 2026-09-15,yangzhou,扬州,-1,暂无,forecast,
-2026-09-15,yantai,烟台,-1,暂无,forecast,
+2026-09-15,yantai,烟台,5,很高,forecast,
 2026-09-15,yinchuan,银川,-1,暂无,forecast,
 2026-09-15,yulin,榆林,-1,暂无,forecast,
 2026-09-15,zhangjiakou,张家口,-1,暂无,forecast,
-2026-09-15,zhengzhou,郑州,-1,暂无,forecast,
+2026-09-15,zhengzhou,郑州,4,高,forecast,
 2026-09-15,zibo,淄博,-1,暂无,forecast,

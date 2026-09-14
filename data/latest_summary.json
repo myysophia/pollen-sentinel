@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-14T00:31:45",
+ "fetched_at": "2026-09-14T15:57:43",
  "today": "2026-09-14",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3266,
+ "pollen_rows": 3269,
  "weather_rows": 901,
  "cities": [
   {
@@ -312,10 +312,10 @@
    "name": "南宁",
    "prov": "广西",
    "ok": true,
-   "latest_date": "2026-09-13",
+   "latest_date": "2026-09-14",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "shanghai",
@@ -482,10 +482,10 @@
    "name": "烟台",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-13",
-   "latest_level": "很高",
-   "latest_code": 5,
-   "real_days": 41
+   "latest_date": "2026-09-14",
+   "latest_level": "高",
+   "latest_code": 4,
+   "real_days": 42
   },
   {
    "en": "yinchuan",
@@ -522,10 +522,10 @@
    "name": "郑州",
    "prov": "河南",
    "ok": true,
-   "latest_date": "2026-09-13",
+   "latest_date": "2026-09-14",
    "latest_level": "高",
    "latest_code": 4,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "zibo",
