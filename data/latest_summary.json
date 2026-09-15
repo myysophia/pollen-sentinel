@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-15T01:02:23",
+ "fetched_at": "2026-09-15T14:23:42",
  "today": "2026-09-15",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3372,
+ "pollen_rows": 3377,
  "weather_rows": 954,
  "cities": [
   {
@@ -12,10 +12,10 @@
    "name": "保定",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-14",
+   "latest_date": "2026-09-15",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "baotou",
@@ -122,10 +122,10 @@
    "name": "大连",
    "prov": "辽宁",
    "ok": true,
-   "latest_date": "2026-09-14",
+   "latest_date": "2026-09-15",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "eerduosi",
@@ -192,10 +192,10 @@
    "name": "杭州",
    "prov": "浙江",
    "ok": true,
-   "latest_date": "2026-09-14",
+   "latest_date": "2026-09-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 23
+   "real_days": 24
   },
   {
    "en": "hefei",
@@ -452,10 +452,10 @@
    "name": "西宁",
    "prov": "青海",
    "ok": true,
-   "latest_date": "2026-09-14",
+   "latest_date": "2026-09-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "yanan",
@@ -465,7 +465,7 @@
    "latest_date": "2026-09-14",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 22
+   "real_days": 23
   },
   {
    "en": "yangzhou",
