@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-17T00:57:02",
+ "fetched_at": "2026-09-17T14:22:38",
  "today": "2026-09-17",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3584,
+ "pollen_rows": 3591,
  "weather_rows": 1060,
  "cities": [
   {
@@ -132,10 +132,10 @@
    "name": "鄂尔多斯",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "fuzhou",
@@ -162,30 +162,30 @@
    "name": "贵阳",
    "prov": "贵州",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 17
+   "real_days": 18
   },
   {
    "en": "haerbin",
    "name": "哈尔滨",
    "prov": "黑龙江",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "haikou",
    "name": "海口",
    "prov": "海南",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 29
+   "real_days": 30
   },
   {
    "en": "hangzhou",
@@ -272,10 +272,10 @@
    "name": "聊城",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "liupanshui",
@@ -362,10 +362,10 @@
    "name": "太原",
    "prov": "山西",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "tianjin",
@@ -422,10 +422,10 @@
    "name": "无锡",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-09-16",
+   "latest_date": "2026-09-17",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 33
+   "real_days": 34
   },
   {
    "en": "xian",
