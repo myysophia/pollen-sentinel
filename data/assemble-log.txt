@@ -1,4 +1,4 @@
-=== date (runner TZ): Sat Sep 19 00:44:57 UTC 2026 ===
+=== date (runner TZ): Sat Sep 19 13:15:44 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -862,6 +862,13 @@ data/raw/2026-09-19/shard1/jinan.json
 data/raw/2026-09-19/shard1/jiuquan.json
 data/raw/2026-09-19/shard1/shanghai.json
 data/raw/2026-09-19/shard1/shenzhen.json
+data/raw/2026-09-19/shard2/cangzhou.json
+data/raw/2026-09-19/shard2/kunming.json
+data/raw/2026-09-19/shard2/nanchang.json
+data/raw/2026-09-19/shard2/tianjin.json
+data/raw/2026-09-19/shard2/wuhai.json
+data/raw/2026-09-19/shard2/yinchuan.json
+data/raw/2026-09-19/shard2/zibo.json
 data/raw/2026-09-19/shard3/botou.json
 data/raw/2026-09-19/shard3/changsha.json
 data/raw/2026-09-19/shard3/chifeng.json
@@ -894,14 +901,14 @@ data/raw/2026-09-19/shard7/hangzhou.json
 data/raw/2026-09-19/shard7/nanchong.json
 data/raw/2026-09-19/shard7/xining.json
 data/raw/2026-09-19/shard7/yanan.json
-snapshot count: 894
+snapshot count: 901
 === assemble ===
-found 46 snapshot files: baoding,baotou,beijing,botou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,lanzhou,lasa,liaocheng,liupanshui,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yulin,zhangjiakou,zhengzhou
-assembled from 46 snapshots. pollen_rows=3788 weather_rows=1159
+found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
+assembled from 53 snapshots. pollen_rows=3803 weather_rows=1166
 === build report ===
 report written: web/reports/latest.html 46 KB
 === export web ===
-web/data.json written, cities=46
+web/data.json written, cities=53
 === validate ===
-dashboard cities: 46
+dashboard cities: 53
 === BUILD OK ===
