@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-20T00:28:55",
+ "fetched_at": "2026-09-20T13:39:07",
  "today": "2026-09-20",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3902,
+ "pollen_rows": 3905,
  "weather_rows": 1219,
  "cities": [
   {
@@ -12,10 +12,10 @@
    "name": "保定",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-19",
+   "latest_date": "2026-09-20",
    "latest_level": "高",
    "latest_code": 4,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "baotou",
@@ -122,10 +122,10 @@
    "name": "大连",
    "prov": "辽宁",
    "ok": true,
-   "latest_date": "2026-09-19",
+   "latest_date": "2026-09-20",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "eerduosi",
@@ -192,10 +192,10 @@
    "name": "杭州",
    "prov": "浙江",
    "ok": true,
-   "latest_date": "2026-09-19",
+   "latest_date": "2026-09-20",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 26
+   "real_days": 27
   },
   {
    "en": "hefei",
@@ -305,7 +305,7 @@
    "latest_date": "2026-09-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 26
+   "real_days": 27
   },
   {
    "en": "nanning",
@@ -455,7 +455,7 @@
    "latest_date": "2026-09-19",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "yanan",
@@ -465,7 +465,7 @@
    "latest_date": "2026-09-17",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 23
+   "real_days": 24
   },
   {
    "en": "yangzhou",
