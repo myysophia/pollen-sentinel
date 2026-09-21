@@ -1,4 +1,4 @@
-=== date (runner TZ): Sun Sep 20 13:39:07 UTC 2026 ===
+=== date (runner TZ): Mon Sep 21 00:38:04 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -954,14 +954,61 @@ data/raw/2026-09-20/shard7/hangzhou.json
 data/raw/2026-09-20/shard7/nanchong.json
 data/raw/2026-09-20/shard7/xining.json
 data/raw/2026-09-20/shard7/yanan.json
-snapshot count: 954
+data/raw/2026-09-21/shard0/hefei.json
+data/raw/2026-09-21/shard1/baotou.json
+data/raw/2026-09-21/shard1/chengde.json
+data/raw/2026-09-21/shard1/fuzhou.json
+data/raw/2026-09-21/shard1/jinan.json
+data/raw/2026-09-21/shard1/jiuquan.json
+data/raw/2026-09-21/shard1/shanghai.json
+data/raw/2026-09-21/shard1/shenzhen.json
+data/raw/2026-09-21/shard2/cangzhou.json
+data/raw/2026-09-21/shard2/kunming.json
+data/raw/2026-09-21/shard2/nanchang.json
+data/raw/2026-09-21/shard2/tianjin.json
+data/raw/2026-09-21/shard2/wuhai.json
+data/raw/2026-09-21/shard2/yinchuan.json
+data/raw/2026-09-21/shard2/zibo.json
+data/raw/2026-09-21/shard3/botou.json
+data/raw/2026-09-21/shard3/changsha.json
+data/raw/2026-09-21/shard3/chifeng.json
+data/raw/2026-09-21/shard3/chongqing.json
+data/raw/2026-09-21/shard3/nanning.json
+data/raw/2026-09-21/shard3/yantai.json
+data/raw/2026-09-21/shard3/zhengzhou.json
+data/raw/2026-09-21/shard4/eerduosi.json
+data/raw/2026-09-21/shard4/guiyang.json
+data/raw/2026-09-21/shard4/haerbin.json
+data/raw/2026-09-21/shard4/haikou.json
+data/raw/2026-09-21/shard4/liaocheng.json
+data/raw/2026-09-21/shard4/taiyuan.json
+data/raw/2026-09-21/shard4/wuxi.json
+data/raw/2026-09-21/shard5/changchun.json
+data/raw/2026-09-21/shard5/liupanshui.json
+data/raw/2026-09-21/shard5/wulanhaote.json
+data/raw/2026-09-21/shard5/wulumuqi.json
+data/raw/2026-09-21/shard5/xian.json
+data/raw/2026-09-21/shard5/yangzhou.json
+data/raw/2026-09-21/shard6/chengdu.json
+data/raw/2026-09-21/shard6/lasa.json
+data/raw/2026-09-21/shard6/shenyang.json
+data/raw/2026-09-21/shard6/shijiazhuang.json
+data/raw/2026-09-21/shard6/wuhan.json
+data/raw/2026-09-21/shard6/xianyang.json
+data/raw/2026-09-21/shard7/baoding.json
+data/raw/2026-09-21/shard7/dalian.json
+data/raw/2026-09-21/shard7/hangzhou.json
+data/raw/2026-09-21/shard7/nanchong.json
+data/raw/2026-09-21/shard7/xining.json
+data/raw/2026-09-21/shard7/yanan.json
+snapshot count: 1001
 === assemble ===
-found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
-assembled from 53 snapshots. pollen_rows=3905 weather_rows=1219
+found 47 snapshot files: baoding,baotou,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guiyang,haerbin,haikou,hangzhou,hefei,jinan,jiuquan,kunming,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,zhengzhou,zibo
+assembled from 47 snapshots. pollen_rows=3996 weather_rows=1266
 === build report ===
 report written: web/reports/latest.html 46 KB
 === export web ===
-web/data.json written, cities=53
+web/data.json written, cities=47
 === validate ===
-dashboard cities: 53
+dashboard cities: 47
 === BUILD OK ===
