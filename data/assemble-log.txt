@@ -1,4 +1,4 @@
-=== date (runner TZ): Mon Sep 21 00:38:04 UTC 2026 ===
+=== date (runner TZ): Mon Sep 21 15:59:33 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -954,7 +954,13 @@ data/raw/2026-09-20/shard7/hangzhou.json
 data/raw/2026-09-20/shard7/nanchong.json
 data/raw/2026-09-20/shard7/xining.json
 data/raw/2026-09-20/shard7/yanan.json
+data/raw/2026-09-21/shard0/beijing.json
+data/raw/2026-09-21/shard0/guangzhou.json
 data/raw/2026-09-21/shard0/hefei.json
+data/raw/2026-09-21/shard0/huhehaote.json
+data/raw/2026-09-21/shard0/lanzhou.json
+data/raw/2026-09-21/shard0/yulin.json
+data/raw/2026-09-21/shard0/zhangjiakou.json
 data/raw/2026-09-21/shard1/baotou.json
 data/raw/2026-09-21/shard1/chengde.json
 data/raw/2026-09-21/shard1/fuzhou.json
@@ -1001,14 +1007,33 @@ data/raw/2026-09-21/shard7/hangzhou.json
 data/raw/2026-09-21/shard7/nanchong.json
 data/raw/2026-09-21/shard7/xining.json
 data/raw/2026-09-21/shard7/yanan.json
-snapshot count: 1001
+snapshot count: 1007
 === assemble ===
-found 47 snapshot files: baoding,baotou,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guiyang,haerbin,haikou,hangzhou,hefei,jinan,jiuquan,kunming,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,zhengzhou,zibo
-assembled from 47 snapshots. pollen_rows=3996 weather_rows=1266
+found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/chengdu.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/chengdu.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/lasa.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/lasa.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shenyang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shenyang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shijiazhuang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shijiazhuang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/wuhan.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/wuhan.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/xianyang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/xianyang.json had extra trailing data; recovered first document
+assembled from 53 snapshots. pollen_rows=4014 weather_rows=1272
 === build report ===
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/xianyang.json had extra trailing data; recovered first document
 report written: web/reports/latest.html 46 KB
 === export web ===
-web/data.json written, cities=47
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shenyang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/shijiazhuang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/xianyang.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/lasa.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/wuhan.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-21/shard6/chengdu.json had extra trailing data; recovered first document
+web/data.json written, cities=53
 === validate ===
-dashboard cities: 47
+dashboard cities: 53
 === BUILD OK ===

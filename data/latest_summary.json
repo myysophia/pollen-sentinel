@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-09-21T00:38:04",
+ "fetched_at": "2026-09-21T15:59:33",
  "today": "2026-09-21",
  "mode": "assembled",
- "cities_ok": 47,
+ "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 3996,
- "weather_rows": 1266,
+ "pollen_rows": 4014,
+ "weather_rows": 1272,
  "cities": [
   {
    "en": "baoding",
@@ -25,6 +25,16 @@
    "latest_date": "2026-09-20",
    "latest_level": "很高",
    "latest_code": 5,
+   "real_days": 41
+  },
+  {
+   "en": "beijing",
+   "name": "北京",
+   "prov": "北京",
+   "ok": true,
+   "latest_date": "2026-09-20",
+   "latest_level": "高",
+   "latest_code": 4,
    "real_days": 41
   },
   {
@@ -138,6 +148,16 @@
    "real_days": 16
   },
   {
+   "en": "guangzhou",
+   "name": "广州",
+   "prov": "广东",
+   "ok": true,
+   "latest_date": "2026-09-21",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 37
+  },
+  {
    "en": "guiyang",
    "name": "贵阳",
    "prov": "贵州",
@@ -188,6 +208,16 @@
    "real_days": 0
   },
   {
+   "en": "huhehaote",
+   "name": "呼和浩特",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": "2026-09-20",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 28
+  },
+  {
    "en": "jinan",
    "name": "济南",
    "prov": "山东",
@@ -216,6 +246,16 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 28
+  },
+  {
+   "en": "lanzhou",
+   "name": "兰州",
+   "prov": "甘肃",
+   "ok": true,
+   "latest_date": "2026-09-21",
+   "latest_level": "很高",
+   "latest_code": 5,
+   "real_days": 42
   },
   {
    "en": "lasa",
@@ -456,6 +496,26 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 36
+  },
+  {
+   "en": "yulin",
+   "name": "榆林",
+   "prov": "陕西",
+   "ok": true,
+   "latest_date": "2026-09-21",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 42
+  },
+  {
+   "en": "zhangjiakou",
+   "name": "张家口",
+   "prov": "河北",
+   "ok": true,
+   "latest_date": "2026-09-21",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 42
   },
   {
    "en": "zhengzhou",
