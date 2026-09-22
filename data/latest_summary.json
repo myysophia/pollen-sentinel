@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-22T01:22:04",
+ "fetched_at": "2026-09-22T14:06:44",
  "today": "2026-09-22",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 4114,
+ "pollen_rows": 4117,
  "weather_rows": 1325,
  "cities": [
   {
@@ -95,7 +95,7 @@
    "latest_date": "2026-09-21",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 38
+   "real_days": 39
   },
   {
    "en": "chifeng",
@@ -265,7 +265,7 @@
    "latest_date": "2026-09-19",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "liaocheng",
@@ -332,10 +332,10 @@
    "name": "沈阳",
    "prov": "辽宁",
    "ok": true,
-   "latest_date": "2026-09-21",
-   "latest_level": "低",
-   "latest_code": 2,
-   "real_days": 41
+   "latest_date": "2026-09-22",
+   "latest_level": "中",
+   "latest_code": 3,
+   "real_days": 42
   },
   {
    "en": "shenzhen",
@@ -355,7 +355,7 @@
    "latest_date": "2026-09-21",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "taiyuan",
@@ -392,10 +392,10 @@
    "name": "武汉",
    "prov": "湖北",
    "ok": true,
-   "latest_date": "2026-09-21",
-   "latest_level": "高",
-   "latest_code": 4,
-   "real_days": 32
+   "latest_date": "2026-09-22",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 33
   },
   {
    "en": "wulanhaote",
@@ -442,10 +442,10 @@
    "name": "咸阳",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-09-21",
-   "latest_level": "很高",
-   "latest_code": 5,
-   "real_days": 41
+   "latest_date": "2026-09-22",
+   "latest_level": "高",
+   "latest_code": 4,
+   "real_days": 42
   },
   {
    "en": "xining",
