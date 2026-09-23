@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-09-23T01:00:37",
+ "fetched_at": "2026-09-23T14:19:00",
  "today": "2026-09-23",
  "mode": "assembled",
- "cities_ok": 52,
+ "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 4218,
- "weather_rows": 1377,
+ "pollen_rows": 4225,
+ "weather_rows": 1378,
  "cities": [
   {
    "en": "baoding",
@@ -95,7 +95,7 @@
    "latest_date": "2026-09-22",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 38
+   "real_days": 39
   },
   {
    "en": "chifeng",
@@ -262,10 +262,10 @@
    "name": "拉萨",
    "prov": "西藏",
    "ok": true,
-   "latest_date": "2026-09-19",
-   "latest_level": "低",
-   "latest_code": 2,
-   "real_days": 33
+   "latest_date": "2026-09-23",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 35
   },
   {
    "en": "liaocheng",
@@ -332,10 +332,10 @@
    "name": "沈阳",
    "prov": "辽宁",
    "ok": true,
-   "latest_date": "2026-09-22",
+   "latest_date": "2026-09-23",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "shenzhen",
@@ -352,10 +352,10 @@
    "name": "石家庄",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-22",
+   "latest_date": "2026-09-23",
    "latest_level": "很高",
    "latest_code": 5,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "taiyuan",
@@ -395,7 +395,7 @@
    "latest_date": "2026-09-22",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "wulanhaote",
@@ -418,6 +418,16 @@
    "real_days": 41
   },
   {
+   "en": "wuxi",
+   "name": "无锡",
+   "prov": "江苏",
+   "ok": true,
+   "latest_date": "2026-09-23",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 39
+  },
+  {
    "en": "xian",
    "name": "西安",
    "prov": "陕西",
@@ -432,10 +442,10 @@
    "name": "咸阳",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-09-22",
-   "latest_level": "高",
-   "latest_code": 4,
-   "real_days": 41
+   "latest_date": "2026-09-23",
+   "latest_level": "很高",
+   "latest_code": 5,
+   "real_days": 42
   },
   {
    "en": "xining",
