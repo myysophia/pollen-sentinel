@@ -1,4 +1,4 @@
-=== date (runner TZ): Fri Sep 25 01:01:00 UTC 2026 ===
+=== date (runner TZ): Fri Sep 25 14:40:41 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -1169,6 +1169,10 @@ data/raw/2026-09-24/shard7/yanan.json
 data/raw/2026-09-25/shard0/beijing.json
 data/raw/2026-09-25/shard0/guangzhou.json
 data/raw/2026-09-25/shard0/hefei.json
+data/raw/2026-09-25/shard0/huhehaote.json
+data/raw/2026-09-25/shard0/lanzhou.json
+data/raw/2026-09-25/shard0/yulin.json
+data/raw/2026-09-25/shard0/zhangjiakou.json
 data/raw/2026-09-25/shard1/baotou.json
 data/raw/2026-09-25/shard1/chengde.json
 data/raw/2026-09-25/shard1/fuzhou.json
@@ -1197,6 +1201,17 @@ data/raw/2026-09-25/shard4/haikou.json
 data/raw/2026-09-25/shard4/liaocheng.json
 data/raw/2026-09-25/shard4/taiyuan.json
 data/raw/2026-09-25/shard4/wuxi.json
+data/raw/2026-09-25/shard5/changchun.json
+data/raw/2026-09-25/shard5/liupanshui.json
+data/raw/2026-09-25/shard5/wulanhaote.json
+data/raw/2026-09-25/shard5/wulumuqi.json
+data/raw/2026-09-25/shard5/xian.json
+data/raw/2026-09-25/shard5/yangzhou.json
+data/raw/2026-09-25/shard6/chengdu.json
+data/raw/2026-09-25/shard6/lasa.json
+data/raw/2026-09-25/shard6/shenyang.json
+data/raw/2026-09-25/shard6/shijiazhuang.json
+data/raw/2026-09-25/shard6/wuhan.json
 data/raw/2026-09-25/shard6/xianyang.json
 data/raw/2026-09-25/shard7/baoding.json
 data/raw/2026-09-25/shard7/dalian.json
@@ -1204,21 +1219,23 @@ data/raw/2026-09-25/shard7/hangzhou.json
 data/raw/2026-09-25/shard7/nanchong.json
 data/raw/2026-09-25/shard7/xining.json
 data/raw/2026-09-25/shard7/yanan.json
-snapshot count: 1204
+snapshot count: 1219
 === assemble ===
-found 38 snapshot files: baoding,baotou,beijing,botou,cangzhou,changsha,chengde,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,jinan,jiuquan,kunming,liaocheng,nanchang,nanchong,nanning,shanghai,shenzhen,taiyuan,tianjin,wuhai,wuxi,xianyang,xining,yanan,yantai,yinchuan,zhengzhou,zibo
-assembled from 38 snapshots. pollen_rows=4402 weather_rows=1469
+found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/beijing.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/beijing.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/guangzhou.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/guangzhou.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/hefei.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/hefei.json had extra trailing data; recovered first document
+assembled from 53 snapshots. pollen_rows=4441 weather_rows=1484
 === build report ===
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 186, in <module>
-    main()
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 182, in main
-    build(names, out, args.date or None)
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 137, in build
-    raw_snapshots = _load_city_snapshots(raw_dir, city_en_list)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/pollen-sentinel/pollen-sentinel/reporter/build_report.py", line 125, in _load_city_snapshots
-    raise FileNotFoundError(
-FileNotFoundError: raw snapshot missing for xian under /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25; available: baoding,baotou,beijing,botou,cangzhou,changsha,chengde,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,jinan,jiuquan,kunming,liaocheng,nanchang,nanchong,nanning,shanghai,shenzhen,taiyuan,tianjin,wuhai,wuxi,xianyang,xining,yanan,yantai,yinchuan,zhengzhou,zibo
+report written: web/reports/latest.html 46 KB
+=== export web ===
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/beijing.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/hefei.json had extra trailing data; recovered first document
+[warn] /home/runner/work/pollen-sentinel/pollen-sentinel/data/raw/2026-09-25/shard0/guangzhou.json had extra trailing data; recovered first document
+web/data.json written, cities=53
+=== validate ===
+dashboard cities: 53
+=== BUILD OK ===
