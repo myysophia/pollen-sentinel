@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-09-27T01:00:20",
+ "fetched_at": "2026-09-27T14:46:36",
  "today": "2026-09-27",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 4644,
+ "pollen_rows": 4648,
  "weather_rows": 1590,
  "cities": [
   {
@@ -22,10 +22,10 @@
    "name": "包头",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-09-26",
+   "latest_date": "2026-09-27",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "beijing",
@@ -82,10 +82,10 @@
    "name": "承德",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-26",
+   "latest_date": "2026-09-27",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "chengdu",
@@ -145,7 +145,7 @@
    "latest_date": "2026-09-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 14
+   "real_days": 15
   },
   {
    "en": "guangzhou",
@@ -222,10 +222,10 @@
    "name": "济南",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-26",
+   "latest_date": "2026-09-27",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 37
+   "real_days": 38
   },
   {
    "en": "jiuquan",
@@ -325,7 +325,7 @@
    "latest_date": "2026-09-24",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 28
+   "real_days": 29
   },
   {
    "en": "shenyang",
@@ -342,10 +342,10 @@
    "name": "深圳",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-09-26",
+   "latest_date": "2026-09-27",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "shijiazhuang",
