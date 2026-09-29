@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-09-29T02:21:58",
+ "fetched_at": "2026-09-29T16:02:26",
  "today": "2026-09-29",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 4856,
- "weather_rows": 1696,
+ "pollen_rows": 4863,
+ "weather_rows": 1703,
  "cities": [
   {
    "en": "baoding",
@@ -42,7 +42,7 @@
    "name": "泊头",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-28",
+   "latest_date": "2026-09-29",
    "latest_level": "低",
    "latest_code": 2,
    "real_days": 42
@@ -72,7 +72,7 @@
    "name": "长沙",
    "prov": "湖南",
    "ok": true,
-   "latest_date": "2026-09-28",
+   "latest_date": "2026-09-29",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 21
@@ -105,14 +105,14 @@
    "latest_date": "2026-09-28",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 35
   },
   {
    "en": "chongqing",
    "name": "重庆",
    "prov": "重庆",
    "ok": true,
-   "latest_date": "2026-09-28",
+   "latest_date": "2026-09-29",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 37
@@ -312,7 +312,7 @@
    "name": "南宁",
    "prov": "广西",
    "ok": true,
-   "latest_date": "2026-09-28",
+   "latest_date": "2026-09-29",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -482,9 +482,9 @@
    "name": "烟台",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-28",
-   "latest_level": "低",
-   "latest_code": 2,
+   "latest_date": "2026-09-29",
+   "latest_level": "中",
+   "latest_code": 3,
    "real_days": 41
   },
   {
@@ -522,9 +522,9 @@
    "name": "郑州",
    "prov": "河南",
    "ok": true,
-   "latest_date": "2026-09-28",
-   "latest_level": "中",
-   "latest_code": 3,
+   "latest_date": "2026-09-29",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 39
   },
   {
