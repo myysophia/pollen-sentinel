@@ -4859,6 +4859,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-30,beijing,北京,3,中,forecast,2026-09-29T23:30:00
 2026-09-30,botou,泊头,2,低,forecast,2026-09-29T20:04:36
 2026-09-30,cangzhou,沧州,3,中,forecast,2026-09-29T16:31:48
+2026-09-30,cangzhou,沧州,3,中,observed,2026-09-30T17:10:19
 2026-09-30,changchun,长春,2,低,forecast,2026-09-29T22:10:27
 2026-09-30,changsha,长沙,1,很低,forecast,2026-09-29T17:22:52
 2026-09-30,chengde,承德,2,低,forecast,2026-09-29T22:11:39
@@ -4879,11 +4880,13 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-30,jiuquan,酒泉,-1,暂无,forecast,
 2026-09-30,jiuquan,酒泉,-1,暂无,observed,
 2026-09-30,kunming,昆明,3,中,forecast,2026-09-29T23:30:00
+2026-09-30,kunming,昆明,3,中,observed,2026-09-30T23:30:00
 2026-09-30,lanzhou,兰州,4,高,forecast,2026-09-29T21:35:11
 2026-09-30,lasa,拉萨,2,低,forecast,2026-09-29T19:05:39
 2026-09-30,liaocheng,聊城,1,很低,forecast,2026-09-29T16:52:20
 2026-09-30,liupanshui,六盘水,2,低,forecast,2026-09-29T20:44:52
 2026-09-30,nanchang,南昌,2,低,forecast,2026-09-29T17:07:18
+2026-09-30,nanchang,南昌,1,很低,observed,2026-09-30T17:24:09
 2026-09-30,nanchong,南充,1,很低,forecast,2026-09-29T20:02:04
 2026-09-30,nanning,南宁,1,很低,forecast,2026-09-29T16:53:17
 2026-09-30,shanghai,上海,1,很低,forecast,2026-09-29T16:01:00
@@ -4892,7 +4895,9 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-30,shijiazhuang,石家庄,5,很高,forecast,2026-09-29T19:17:30
 2026-09-30,taiyuan,太原,2,低,forecast,2026-09-29T21:01:49
 2026-09-30,tianjin,天津,1,很低,forecast,2026-09-29T16:24:19
+2026-09-30,tianjin,天津,3,中,observed,2026-09-30T16:42:06
 2026-09-30,wuhai,乌海,2,低,forecast,2026-09-29T21:59:59
+2026-09-30,wuhai,乌海,2,低,observed,2026-09-30T17:47:26
 2026-09-30,wuhan,武汉,3,中,forecast,2026-09-29T16:24:10
 2026-09-30,wulanhaote,乌兰浩特,-1,暂无,forecast,2026-09-29T23:30:00
 2026-09-30,wulumuqi,乌鲁木齐,3,中,forecast,2026-09-29T20:38:20
@@ -4904,10 +4909,12 @@ date,city,city_name,level_code,level,kind,created_at
 2026-09-30,yangzhou,扬州,1,很低,forecast,2026-09-29T18:01:54
 2026-09-30,yantai,烟台,3,中,forecast,2026-09-29T16:40:07
 2026-09-30,yinchuan,银川,1,很低,forecast,2026-09-29T17:17:36
+2026-09-30,yinchuan,银川,2,低,observed,2026-09-30T17:24:23
 2026-09-30,yulin,榆林,2,低,forecast,2026-09-29T22:25:31
 2026-09-30,zhangjiakou,张家口,1,很低,forecast,2026-09-29T17:08:01
 2026-09-30,zhengzhou,郑州,1,很低,forecast,2026-09-29T17:18:20
 2026-09-30,zibo,淄博,-1,暂无,forecast,2026-09-29T23:30:00
+2026-09-30,zibo,淄博,4,高,observed,2026-09-30T19:41:36
 2026-10-01,baoding,保定,1,很低,forecast,
 2026-10-01,baotou,包头,2,低,forecast,
 2026-10-01,beijing,北京,3,中,forecast,
