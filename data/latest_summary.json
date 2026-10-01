@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-01T01:39:15",
+ "fetched_at": "2026-10-01T16:35:56",
  "today": "2026-10-01",
  "mode": "assembled",
- "cities_ok": 52,
+ "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 5066,
- "weather_rows": 1801,
+ "pollen_rows": 5076,
+ "weather_rows": 1810,
  "cities": [
   {
    "en": "baoding",
@@ -52,9 +52,19 @@
    "name": "沧州",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-09-30",
-   "latest_level": "中",
-   "latest_code": 3,
+   "latest_date": "2026-10-01",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 42
+  },
+  {
+   "en": "changchun",
+   "name": "长春",
+   "prov": "吉林",
+   "ok": true,
+   "latest_date": "2026-10-01",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 42
   },
   {
@@ -235,7 +245,7 @@
    "latest_date": "2026-09-30",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 33
+   "real_days": 32
   },
   {
    "en": "lanzhou",
@@ -282,7 +292,7 @@
    "name": "南昌",
    "prov": "江西",
    "ok": true,
-   "latest_date": "2026-09-30",
+   "latest_date": "2026-10-01",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -362,9 +372,9 @@
    "name": "天津",
    "prov": "天津",
    "ok": true,
-   "latest_date": "2026-09-30",
-   "latest_level": "中",
-   "latest_code": 3,
+   "latest_date": "2026-10-01",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 42
   },
   {
@@ -372,7 +382,7 @@
    "name": "乌海",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-09-30",
+   "latest_date": "2026-10-01",
    "latest_level": "低",
    "latest_code": 2,
    "real_days": 42
@@ -482,7 +492,7 @@
    "name": "银川",
    "prov": "宁夏",
    "ok": true,
-   "latest_date": "2026-09-30",
+   "latest_date": "2026-10-01",
    "latest_level": "低",
    "latest_code": 2,
    "real_days": 38
@@ -522,9 +532,9 @@
    "name": "淄博",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-30",
-   "latest_level": "高",
-   "latest_code": 4,
+   "latest_date": "2026-10-01",
+   "latest_level": "中",
+   "latest_code": 3,
    "real_days": 38
   }
  ]
