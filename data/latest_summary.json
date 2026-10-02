@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-02T01:51:56",
+ "fetched_at": "2026-10-02T15:55:34",
  "today": "2026-10-02",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 5174,
+ "pollen_rows": 5180,
  "weather_rows": 1855,
  "cities": [
   {
@@ -62,7 +62,7 @@
    "name": "长春",
    "prov": "吉林",
    "ok": true,
-   "latest_date": "2026-10-01",
+   "latest_date": "2026-10-02",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -415,7 +415,7 @@
    "latest_date": "2026-10-01",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 40
   },
   {
    "en": "wuxi",
@@ -432,9 +432,9 @@
    "name": "西安",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-10-01",
-   "latest_level": "很高",
-   "latest_code": 5,
+   "latest_date": "2026-10-02",
+   "latest_level": "高",
+   "latest_code": 4,
    "real_days": 42
   },
   {
@@ -472,7 +472,7 @@
    "name": "扬州",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-10-01",
+   "latest_date": "2026-10-02",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42

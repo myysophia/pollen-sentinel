@@ -5072,6 +5072,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-02,botou,泊头,1,很低,forecast,2026-10-01T21:53:48
 2026-10-02,cangzhou,沧州,2,低,forecast,2026-10-01T17:26:59
 2026-10-02,changchun,长春,1,很低,forecast,2026-10-01T19:06:55
+2026-10-02,changchun,长春,1,很低,observed,2026-10-02T21:03:49
 2026-10-02,changsha,长沙,-1,暂无,forecast,2026-10-01T23:30:00
 2026-10-02,chengde,承德,2,低,forecast,2026-10-01T17:07:43
 2026-10-02,chengdu,成都,5,很高,forecast,2026-10-01T20:29:34
@@ -5095,6 +5096,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-02,lasa,拉萨,1,很低,forecast,2026-10-01T18:52:30
 2026-10-02,liaocheng,聊城,1,很低,forecast,2026-10-01T16:51:03
 2026-10-02,liupanshui,六盘水,-1,暂无,forecast,2026-10-01T23:30:00
+2026-10-02,liupanshui,六盘水,-1,暂无,observed,2026-10-02T23:30:00
 2026-10-02,nanchang,南昌,1,很低,forecast,2026-10-01T16:35:09
 2026-10-02,nanchong,南充,1,很低,forecast,2026-10-01T20:41:29
 2026-10-02,nanning,南宁,1,很低,forecast,2026-10-01T18:15:07
@@ -5107,13 +5109,17 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-02,wuhai,乌海,2,低,forecast,2026-10-01T19:12:06
 2026-10-02,wuhan,武汉,3,中,forecast,2026-10-01T21:08:39
 2026-10-02,wulanhaote,乌兰浩特,-1,暂无,forecast,2026-10-01T23:30:00
+2026-10-02,wulanhaote,乌兰浩特,-1,暂无,observed,2026-10-02T23:30:00
 2026-10-02,wulumuqi,乌鲁木齐,2,低,forecast,2026-10-01T20:49:11
+2026-10-02,wulumuqi,乌鲁木齐,-1,暂无,observed,2026-10-02T23:30:00
 2026-10-02,wuxi,无锡,2,低,forecast,2026-10-01T16:53:10
 2026-10-02,xian,西安,5,很高,forecast,2026-10-01T17:59:49
+2026-10-02,xian,西安,4,高,observed,2026-10-02T17:01:38
 2026-10-02,xianyang,咸阳,4,高,forecast,2026-10-01T17:00:56
 2026-10-02,xining,西宁,1,很低,forecast,2026-10-01T22:00:44
 2026-10-02,yanan,延安,3,中,forecast,2026-10-01T23:30:00
 2026-10-02,yangzhou,扬州,1,很低,forecast,2026-10-01T22:15:28
+2026-10-02,yangzhou,扬州,1,很低,observed,2026-10-02T21:10:51
 2026-10-02,yantai,烟台,2,低,forecast,2026-10-01T17:07:26
 2026-10-02,yinchuan,银川,2,低,forecast,2026-10-01T18:00:45
 2026-10-02,yulin,榆林,-1,暂无,forecast,2026-10-01T23:30:00
