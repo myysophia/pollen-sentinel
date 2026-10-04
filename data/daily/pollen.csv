@@ -5294,8 +5294,11 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-04,fuzhou,福州,-1,暂无,forecast,2026-10-03T17:42:44
 2026-10-04,guangzhou,广州,1,很低,forecast,2026-10-03T20:57:58
 2026-10-04,guiyang,贵阳,1,很低,forecast,2026-10-03T18:21:00
+2026-10-04,guiyang,贵阳,1,很低,observed,2026-10-04T16:03:16
 2026-10-04,haerbin,哈尔滨,1,很低,forecast,2026-10-03T18:54:48
+2026-10-04,haerbin,哈尔滨,-1,暂无,observed,2026-10-04T21:04:12
 2026-10-04,haikou,海口,-1,暂无,forecast,2026-10-03T21:32:37
+2026-10-04,haikou,海口,-1,暂无,observed,2026-10-04T21:33:05
 2026-10-04,hangzhou,杭州,-1,暂无,forecast,2026-10-03T20:01:04
 2026-10-04,hefei,合肥,-1,暂无,forecast,2026-10-03T23:30:00
 2026-10-04,huhehaote,呼和浩特,-1,暂无,forecast,2026-10-03T21:04:52
@@ -5306,6 +5309,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-04,lanzhou,兰州,3,中,forecast,2026-10-03T23:30:00
 2026-10-04,lasa,拉萨,2,低,forecast,2026-10-03T19:03:31
 2026-10-04,liaocheng,聊城,1,很低,forecast,2026-10-03T16:04:29
+2026-10-04,liaocheng,聊城,1,很低,observed,2026-10-04T16:09:59
 2026-10-04,liupanshui,六盘水,-1,暂无,forecast,2026-10-03T23:30:00
 2026-10-04,nanchang,南昌,1,很低,forecast,2026-10-03T16:36:47
 2026-10-04,nanchong,南充,1,很低,forecast,2026-10-03T18:46:03
@@ -5315,12 +5319,14 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-04,shenzhen,深圳,2,低,forecast,2026-10-03T23:30:00
 2026-10-04,shijiazhuang,石家庄,5,很高,forecast,2026-10-03T21:02:05
 2026-10-04,taiyuan,太原,1,很低,forecast,2026-10-03T18:42:54
+2026-10-04,taiyuan,太原,2,低,observed,2026-10-04T19:28:29
 2026-10-04,tianjin,天津,2,低,forecast,2026-10-03T23:30:00
 2026-10-04,wuhai,乌海,2,低,forecast,2026-10-03T23:30:00
 2026-10-04,wuhan,武汉,3,中,forecast,2026-10-03T23:30:00
 2026-10-04,wulanhaote,乌兰浩特,-1,暂无,forecast,2026-10-03T23:30:00
 2026-10-04,wulumuqi,乌鲁木齐,2,低,forecast,2026-10-03T19:26:09
 2026-10-04,wuxi,无锡,1,很低,forecast,2026-10-03T23:20:43
+2026-10-04,wuxi,无锡,1,很低,observed,2026-10-04T18:18:11
 2026-10-04,xian,西安,3,中,forecast,2026-10-03T18:17:15
 2026-10-04,xianyang,咸阳,3,中,forecast,2026-10-03T17:27:13
 2026-10-04,xining,西宁,1,很低,forecast,2026-10-03T21:38:07
