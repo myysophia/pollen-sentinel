@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-05T01:21:48",
+ "fetched_at": "2026-10-05T18:39:32",
  "today": "2026-10-05",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 5492,
- "weather_rows": 2014,
+ "pollen_rows": 5499,
+ "weather_rows": 2021,
  "cities": [
   {
    "en": "baoding",
@@ -132,10 +132,10 @@
    "name": "鄂尔多斯",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-10-04",
+   "latest_date": "2026-10-05",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "fuzhou",
@@ -162,10 +162,10 @@
    "name": "贵阳",
    "prov": "贵州",
    "ok": true,
-   "latest_date": "2026-10-04",
+   "latest_date": "2026-10-05",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 28
+   "real_days": 29
   },
   {
    "en": "haerbin",
@@ -175,7 +175,7 @@
    "latest_date": "2026-10-03",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 38
+   "real_days": 39
   },
   {
    "en": "haikou",
@@ -185,7 +185,7 @@
    "latest_date": "2026-10-02",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 22
+   "real_days": 23
   },
   {
    "en": "hangzhou",
@@ -272,10 +272,10 @@
    "name": "聊城",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-10-04",
+   "latest_date": "2026-10-05",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "liupanshui",
@@ -362,10 +362,10 @@
    "name": "太原",
    "prov": "山西",
    "ok": true,
-   "latest_date": "2026-10-04",
+   "latest_date": "2026-10-05",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "tianjin",
@@ -422,10 +422,10 @@
    "name": "无锡",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-10-04",
-   "latest_level": "很低",
-   "latest_code": 1,
-   "real_days": 40
+   "latest_date": "2026-10-05",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 41
   },
   {
    "en": "xian",
