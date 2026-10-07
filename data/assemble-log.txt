@@ -1,4 +1,4 @@
-=== date (runner TZ): Wed Oct  7 01:53:53 UTC 2026 ===
+=== date (runner TZ): Wed Oct  7 16:44:07 UTC 2026 ===
 === tree under data/raw ===
 data/raw/2026-09-04/baoding.json
 data/raw/2026-09-04/baotou.json
@@ -1858,7 +1858,7 @@ data/raw/2026-10-07/shard7/yanan.json
 snapshot count: 1855
 === assemble ===
 found 53 snapshot files: baoding,baotou,beijing,botou,cangzhou,changchun,changsha,chengde,chengdu,chifeng,chongqing,dalian,eerduosi,fuzhou,guangzhou,guiyang,haerbin,haikou,hangzhou,hefei,huhehaote,jinan,jiuquan,kunming,lanzhou,lasa,liaocheng,liupanshui,nanchang,nanchong,nanning,shanghai,shenyang,shenzhen,shijiazhuang,taiyuan,tianjin,wuhai,wuhan,wulanhaote,wulumuqi,wuxi,xian,xianyang,xining,yanan,yangzhou,yantai,yinchuan,yulin,zhangjiakou,zhengzhou,zibo
-assembled from 53 snapshots. pollen_rows=5704 weather_rows=2120
+assembled from 53 snapshots. pollen_rows=5711 weather_rows=2127
 === build report ===
 report written: web/reports/latest.html 46 KB
 === export web ===
