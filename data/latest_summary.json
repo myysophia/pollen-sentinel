@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-08T02:20:35",
+ "fetched_at": "2026-10-08T16:42:34",
  "today": "2026-10-08",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 5810,
- "weather_rows": 2173,
+ "pollen_rows": 5817,
+ "weather_rows": 2180,
  "cities": [
   {
    "en": "baoding",
@@ -52,7 +52,7 @@
    "name": "沧州",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-10-07",
+   "latest_date": "2026-10-08",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -242,9 +242,9 @@
    "name": "昆明",
    "prov": "云南",
    "ok": true,
-   "latest_date": "2026-10-07",
-   "latest_level": "中",
-   "latest_code": 3,
+   "latest_date": "2026-10-08",
+   "latest_level": "高",
+   "latest_code": 4,
    "real_days": 33
   },
   {
@@ -292,7 +292,7 @@
    "name": "南昌",
    "prov": "江西",
    "ok": true,
-   "latest_date": "2026-10-07",
+   "latest_date": "2026-10-08",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -372,7 +372,7 @@
    "name": "天津",
    "prov": "天津",
    "ok": true,
-   "latest_date": "2026-10-07",
+   "latest_date": "2026-10-08",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -382,9 +382,9 @@
    "name": "乌海",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-10-07",
-   "latest_level": "很低",
-   "latest_code": 1,
+   "latest_date": "2026-10-08",
+   "latest_level": "低",
+   "latest_code": 2,
    "real_days": 42
   },
   {
@@ -492,7 +492,7 @@
    "name": "银川",
    "prov": "宁夏",
    "ok": true,
-   "latest_date": "2026-10-07",
+   "latest_date": "2026-10-08",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 39
