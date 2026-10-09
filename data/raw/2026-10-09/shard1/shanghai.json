@@ -467,4 +467,14 @@
    "rhum_pct": 70
   }
  ]
+}": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 26.0,
+   "tmin": 17.8,
+   "prcp_mm": 0.0,
+   "wind_kmh": 11.8,
+   "rhum_pct": 61
+  }
+ ]
 }
