@@ -7,7 +7,7 @@
   "lat": 26.074,
   "lon": 119.296
  },
- "fetched_at": "2026-10-10T01:57:58",
+ "fetched_at": "2026-10-10T15:29:21",
  "pollen": [
   {
    "date": "2026-08-31",
@@ -394,21 +394,21 @@
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 29.5,
+   "tmax": 29.7,
    "tmin": 19.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.6,
+   "wind_kmh": 12.8,
    "rhum_pct": 72
   },
   {
    "date": "2026-10-11",
-   "code": 0,
-   "weather": "晴",
+   "code": 2,
+   "weather": "多云",
    "is_rain": false,
-   "tmax": 29.7,
-   "tmin": 19.6,
+   "tmax": 30.1,
+   "tmin": 19.8,
    "prcp_mm": 0.0,
-   "wind_kmh": 11.5,
+   "wind_kmh": 13.9,
    "rhum_pct": 74
   },
   {
@@ -416,55 +416,57 @@
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 29.4,
-   "tmin": 20.0,
+   "tmax": 29.2,
+   "tmin": 19.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 11.4,
-   "rhum_pct": 76
+   "wind_kmh": 11.8,
+   "rhum_pct": 78
   },
   {
    "date": "2026-10-13",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 31.7,
-   "tmin": 20.9,
+   "tmax": 31.5,
+   "tmin": 21.1,
    "prcp_mm": 0.0,
-   "wind_kmh": 10.3,
-   "rhum_pct": 76
+   "wind_kmh": 10.9,
+   "rhum_pct": 77
   },
   {
    "date": "2026-10-14",
    "code": 2,
    "weather": "多云",
    "is_rain": false,
-   "tmax": 28.8,
-   "tmin": 22.4,
+   "tmax": 28.5,
+   "tmin": 21.9,
    "prcp_mm": 0.0,
-   "wind_kmh": 15.2,
-   "rhum_pct": 70
+   "wind_kmh": 14.9,
+   "rhum_pct": 69
   },
   {
    "date": "2026-10-15",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 28.0,
-   "tmin": 21.0,
+   "tmax": 28.1,
+   "tmin": 20.7,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.6,
+   "wind_kmh": 13.9,
    "rhum_pct": 71
   },
   {
    "date": "2026-10-16",
-   "code": 1,
-   "weather": "基本晴朗",
+   "code": 3,
+   "weather": "阴",
    "is_rain": false,
-   "tmax": 29.0,
-   "tmin": 21.7,
+   "tmax": 30.1,
+   "tmin": 21.6,
    "prcp_mm": 0.0,
-   "wind_kmh": 11.6,
-   "rhum_pct": 74
+   "wind_kmh": 11.5,
+   "rhum_pct": 72
   }
+ ]
+}}
  ]
 }

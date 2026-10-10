@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-10T01:58:15",
+ "fetched_at": "2026-10-10T15:29:39",
  "today": "2026-10-10",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 6022,
+ "pollen_rows": 6026,
  "weather_rows": 2279,
  "cities": [
   {
@@ -22,7 +22,7 @@
    "name": "包头",
    "prov": "内蒙古",
    "ok": true,
-   "latest_date": "2026-10-09",
+   "latest_date": "2026-10-10",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -82,7 +82,7 @@
    "name": "承德",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-10-09",
+   "latest_date": "2026-10-10",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42
@@ -222,10 +222,10 @@
    "name": "济南",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-09-29",
-   "latest_level": "低",
-   "latest_code": 2,
-   "real_days": 30
+   "latest_date": "2026-10-10",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 31
   },
   {
    "en": "jiuquan",
@@ -342,7 +342,7 @@
    "name": "深圳",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-10-09",
+   "latest_date": "2026-10-10",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 42

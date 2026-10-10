@@ -7,7 +7,7 @@
   "lat": 39.732,
   "lon": 98.494
  },
- "fetched_at": "2026-10-10T01:57:56",
+ "fetched_at": "2026-10-10T15:29:19",
  "pollen": [
   {
    "date": "2026-08-31",
@@ -394,77 +394,77 @@
    "code": 2,
    "weather": "多云",
    "is_rain": false,
-   "tmax": 20.4,
-   "tmin": 6.6,
+   "tmax": 20.5,
+   "tmin": 7.1,
    "prcp_mm": 0.0,
-   "wind_kmh": 9.6,
-   "rhum_pct": 46
+   "wind_kmh": 9.7,
+   "rhum_pct": 47
   },
   {
    "date": "2026-10-11",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 17.0,
-   "tmin": 8.6,
+   "tmax": 16.7,
+   "tmin": 9.2,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.6,
-   "rhum_pct": 41
+   "wind_kmh": 13.2,
+   "rhum_pct": 43
   },
   {
    "date": "2026-10-12",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 19.4,
-   "tmin": 5.5,
+   "tmax": 18.9,
+   "tmin": 4.8,
    "prcp_mm": 0.0,
-   "wind_kmh": 9.6,
+   "wind_kmh": 8.9,
    "rhum_pct": 46
   },
   {
    "date": "2026-10-13",
-   "code": 0,
-   "weather": "晴",
+   "code": 2,
+   "weather": "多云",
    "is_rain": false,
-   "tmax": 17.5,
-   "tmin": 5.4,
+   "tmax": 18.7,
+   "tmin": 5.3,
    "prcp_mm": 0.0,
-   "wind_kmh": 11.3,
-   "rhum_pct": 39
+   "wind_kmh": 9.5,
+   "rhum_pct": 43
   },
   {
    "date": "2026-10-14",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 16.7,
-   "tmin": 5.5,
+   "tmax": 17.3,
+   "tmin": 6.1,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.4,
-   "rhum_pct": 36
+   "wind_kmh": 11.0,
+   "rhum_pct": 37
   },
   {
    "date": "2026-10-15",
-   "code": 2,
-   "weather": "多云",
+   "code": 3,
+   "weather": "阴",
    "is_rain": false,
-   "tmax": 16.6,
-   "tmin": 5.6,
+   "tmax": 18.0,
+   "tmin": 9.6,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.2,
-   "rhum_pct": 38
+   "wind_kmh": 10.4,
+   "rhum_pct": 39
   },
   {
    "date": "2026-10-16",
    "code": 1,
    "weather": "基本晴朗",
    "is_rain": false,
-   "tmax": 18.3,
-   "tmin": 6.4,
+   "tmax": 18.5,
+   "tmin": 5.8,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.3,
-   "rhum_pct": 37
+   "wind_kmh": 15.8,
+   "rhum_pct": 41
   }
  ]
-}
+}}
