@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-11T01:23:02",
+ "fetched_at": "2026-10-11T15:51:30",
  "today": "2026-10-11",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 6128,
+ "pollen_rows": 6135,
  "weather_rows": 2332,
  "cities": [
   {
@@ -152,10 +152,10 @@
    "name": "广州",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-10-10",
+   "latest_date": "2026-10-11",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "guiyang",
@@ -202,10 +202,10 @@
    "name": "合肥",
    "prov": "安徽",
    "ok": true,
-   "latest_date": null,
-   "latest_level": null,
-   "latest_code": null,
-   "real_days": 0
+   "latest_date": "2026-10-12",
+   "latest_level": "未检测到花粉",
+   "latest_code": 0,
+   "real_days": 1
   },
   {
    "en": "huhehaote",
@@ -215,7 +215,7 @@
    "latest_date": "2026-09-26",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 15
+   "real_days": 16
   },
   {
    "en": "jinan",
@@ -252,10 +252,10 @@
    "name": "兰州",
    "prov": "甘肃",
    "ok": true,
-   "latest_date": "2026-10-09",
+   "latest_date": "2026-10-11",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 39
+   "real_days": 41
   },
   {
    "en": "lasa",
@@ -512,10 +512,10 @@
    "name": "张家口",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-10-10",
-   "latest_level": "低",
-   "latest_code": 2,
-   "real_days": 41
+   "latest_date": "2026-10-11",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 42
   },
   {
    "en": "zhengzhou",
