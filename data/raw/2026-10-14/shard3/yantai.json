@@ -7,7 +7,7 @@
   "lat": 37.464,
   "lon": 121.448
  },
- "fetched_at": "2026-10-14T01:27:24",
+ "fetched_at": "2026-10-14T14:35:30",
  "pollen": [
   {
    "date": "2026-09-04",
@@ -380,10 +380,10 @@
   },
   {
    "date": "2026-10-15",
-   "level_code": -1,
-   "level": "暂无",
-   "color": "#C4A39F",
-   "msg": "",
+   "level_code": 1,
+   "level": "很低",
+   "color": "#81CB31",
+   "msg": "不易引发过敏反应。",
    "created_at": null,
    "kind": "forecast"
   }
@@ -394,55 +394,55 @@
    "code": 1,
    "weather": "基本晴朗",
    "is_rain": false,
-   "tmax": 23.1,
+   "tmax": 23.3,
    "tmin": 11.1,
    "prcp_mm": 0.0,
-   "wind_kmh": 25.5,
-   "rhum_pct": 48
+   "wind_kmh": 25.6,
+   "rhum_pct": 47
   },
   {
    "date": "2026-10-15",
-   "code": 51,
-   "weather": "小毛毛雨",
-   "is_rain": true,
-   "tmax": 26.8,
-   "tmin": 15.2,
-   "prcp_mm": 0.7,
-   "wind_kmh": 26.9,
-   "rhum_pct": 62
+   "code": 1,
+   "weather": "基本晴朗",
+   "is_rain": false,
+   "tmax": 27.6,
+   "tmin": 15.4,
+   "prcp_mm": 0.0,
+   "wind_kmh": 27.2,
+   "rhum_pct": 60
   },
   {
    "date": "2026-10-16",
-   "code": 53,
-   "weather": "毛毛雨",
+   "code": 51,
+   "weather": "小毛毛雨",
    "is_rain": true,
-   "tmax": 24.2,
-   "tmin": 15.0,
-   "prcp_mm": 0.7,
-   "wind_kmh": 17.8,
-   "rhum_pct": 78
+   "tmax": 25.1,
+   "tmin": 13.8,
+   "prcp_mm": 0.5,
+   "wind_kmh": 23.1,
+   "rhum_pct": 77
   },
   {
    "date": "2026-10-17",
-   "code": 80,
-   "weather": "阵雨",
+   "code": 95,
+   "weather": "雷阵雨",
    "is_rain": true,
-   "tmax": 22.0,
-   "tmin": 17.3,
-   "prcp_mm": 22.5,
-   "wind_kmh": 41.5,
+   "tmax": 21.6,
+   "tmin": 18.0,
+   "prcp_mm": 38.0,
+   "wind_kmh": 46.1,
    "rhum_pct": 87
   },
   {
    "date": "2026-10-18",
-   "code": 95,
-   "weather": "雷阵雨",
+   "code": 96,
+   "weather": "雷阵雨伴冰雹",
    "is_rain": true,
-   "tmax": 22.1,
-   "tmin": 13.4,
-   "prcp_mm": 4.2,
-   "wind_kmh": 38.4,
-   "rhum_pct": 72
+   "tmax": 21.9,
+   "tmin": 13.6,
+   "prcp_mm": 5.5,
+   "wind_kmh": 36.1,
+   "rhum_pct": 73
   },
   {
    "date": "2026-10-19",
@@ -452,19 +452,19 @@
    "tmax": 20.1,
    "tmin": 12.6,
    "prcp_mm": 0.0,
-   "wind_kmh": 12.9,
-   "rhum_pct": 57
+   "wind_kmh": 11.2,
+   "rhum_pct": 63
   },
   {
    "date": "2026-10-20",
    "code": 51,
    "weather": "小毛毛雨",
    "is_rain": true,
-   "tmax": 17.5,
-   "tmin": 10.8,
-   "prcp_mm": 1.2,
-   "wind_kmh": 15.6,
-   "rhum_pct": 69
+   "tmax": 20.0,
+   "tmin": 11.6,
+   "prcp_mm": 2.8,
+   "wind_kmh": 19.8,
+   "rhum_pct": 70
   }
  ]
 }
