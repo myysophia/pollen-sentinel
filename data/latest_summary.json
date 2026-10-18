@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-18T00:29:27",
+ "fetched_at": "2026-10-18T13:24:31",
  "today": "2026-10-18",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 6870,
+ "pollen_rows": 6872,
  "weather_rows": 2703,
  "cities": [
   {
@@ -92,10 +92,10 @@
    "name": "成都",
    "prov": "四川",
    "ok": true,
-   "latest_date": "2026-10-16",
-   "latest_level": "中",
-   "latest_code": 3,
-   "real_days": 35
+   "latest_date": "2026-10-18",
+   "latest_level": "低",
+   "latest_code": 2,
+   "real_days": 37
   },
   {
    "en": "chifeng",
@@ -265,7 +265,7 @@
    "latest_date": "2026-10-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "liaocheng",
@@ -335,7 +335,7 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 35
+   "real_days": 36
   },
   {
    "en": "shenzhen",
@@ -355,7 +355,7 @@
    "latest_date": "2026-10-17",
    "latest_level": "中",
    "latest_code": 3,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "taiyuan",
@@ -395,7 +395,7 @@
    "latest_date": "2026-10-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 37
   },
   {
    "en": "wulanhaote",
@@ -442,10 +442,10 @@
    "name": "咸阳",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-10-17",
+   "latest_date": "2026-10-18",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 41
+   "real_days": 42
   },
   {
    "en": "xining",
