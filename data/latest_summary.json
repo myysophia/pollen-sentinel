@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-10-20T01:20:51",
+ "fetched_at": "2026-10-20T14:24:52",
  "today": "2026-10-20",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 7082,
+ "pollen_rows": 7084,
  "weather_rows": 2809,
  "cities": [
   {
@@ -45,7 +45,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 37
   },
   {
    "en": "cangzhou",
@@ -75,7 +75,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 28
+   "real_days": 29
   },
   {
    "en": "chengde",
@@ -105,7 +105,7 @@
    "latest_date": "2026-10-07",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 15
+   "real_days": 16
   },
   {
    "en": "chongqing",
@@ -115,7 +115,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 37
   },
   {
    "en": "dalian",
@@ -315,7 +315,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 38
+   "real_days": 39
   },
   {
    "en": "shanghai",
@@ -482,10 +482,10 @@
    "name": "烟台",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-10-19",
+   "latest_date": "2026-10-20",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 39
+   "real_days": 40
   },
   {
    "en": "yinchuan",
@@ -522,10 +522,10 @@
    "name": "郑州",
    "prov": "河南",
    "ok": true,
-   "latest_date": "2026-10-19",
+   "latest_date": "2026-10-20",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 40
+   "real_days": 41
   },
   {
    "en": "zibo",
