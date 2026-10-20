@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-19T16:34:48",
- "today": "2026-10-19",
+ "fetched_at": "2026-10-20T01:20:51",
+ "today": "2026-10-20",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 6982,
- "weather_rows": 2762,
+ "pollen_rows": 7082,
+ "weather_rows": 2809,
  "cities": [
   {
    "en": "baoding",
@@ -15,7 +15,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 39
   },
   {
    "en": "baotou",
@@ -25,7 +25,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 39
   },
   {
    "en": "beijing",
@@ -35,7 +35,7 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 35
   },
   {
    "en": "botou",
@@ -45,14 +45,14 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "cangzhou",
    "name": "沧州",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 41
@@ -65,7 +65,7 @@
    "latest_date": "2026-10-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 39
+   "real_days": 38
   },
   {
    "en": "changsha",
@@ -75,7 +75,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 29
+   "real_days": 28
   },
   {
    "en": "chengde",
@@ -85,7 +85,7 @@
    "latest_date": "2026-10-10",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 32
+   "real_days": 31
   },
   {
    "en": "chengdu",
@@ -95,7 +95,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "chifeng",
@@ -105,14 +105,14 @@
    "latest_date": "2026-10-07",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 16
+   "real_days": 15
   },
   {
    "en": "chongqing",
    "name": "重庆",
    "prov": "重庆",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 36
@@ -125,7 +125,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 33
+   "real_days": 31
   },
   {
    "en": "eerduosi",
@@ -135,24 +135,24 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 35
+   "real_days": 34
   },
   {
    "en": "fuzhou",
    "name": "福州",
    "prov": "福建",
    "ok": true,
-   "latest_date": "2026-10-17",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 14
+   "real_days": 15
   },
   {
    "en": "guangzhou",
    "name": "广州",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 39
@@ -162,7 +162,7 @@
    "name": "贵阳",
    "prov": "贵州",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 37
@@ -175,7 +175,7 @@
    "latest_date": "2026-10-12",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 28
+   "real_days": 27
   },
   {
    "en": "haikou",
@@ -185,7 +185,7 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 15
+   "real_days": 14
   },
   {
    "en": "hangzhou",
@@ -195,17 +195,17 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 21
+   "real_days": 20
   },
   {
    "en": "hefei",
    "name": "合肥",
    "prov": "安徽",
    "ok": true,
-   "latest_date": null,
-   "latest_level": null,
-   "latest_code": null,
-   "real_days": 0
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 2
   },
   {
    "en": "huhehaote",
@@ -215,7 +215,7 @@
    "latest_date": "2026-09-26",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 11
+   "real_days": 10
   },
   {
    "en": "jinan",
@@ -225,7 +225,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 28
+   "real_days": 26
   },
   {
    "en": "jiuquan",
@@ -242,9 +242,9 @@
    "name": "昆明",
    "prov": "云南",
    "ok": true,
-   "latest_date": "2026-10-18",
-   "latest_level": "很高",
-   "latest_code": 5,
+   "latest_date": "2026-10-19",
+   "latest_level": "高",
+   "latest_code": 4,
    "real_days": 33
   },
   {
@@ -255,7 +255,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "lasa",
@@ -265,7 +265,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 33
+   "real_days": 32
   },
   {
    "en": "liaocheng",
@@ -275,7 +275,7 @@
    "latest_date": "2026-10-17",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 38
+   "real_days": 37
   },
   {
    "en": "liupanshui",
@@ -285,7 +285,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 31
+   "real_days": 30
   },
   {
    "en": "nanchang",
@@ -295,14 +295,14 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 38
+   "real_days": 37
   },
   {
    "en": "nanchong",
    "name": "南充",
    "prov": "四川",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 35
@@ -315,7 +315,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 40
+   "real_days": 38
   },
   {
    "en": "shanghai",
@@ -325,7 +325,7 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 34
+   "real_days": 33
   },
   {
    "en": "shenyang",
@@ -335,14 +335,14 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 35
+   "real_days": 33
   },
   {
    "en": "shenzhen",
    "name": "深圳",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 41
@@ -355,7 +355,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 40
   },
   {
    "en": "taiyuan",
@@ -365,7 +365,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "tianjin",
@@ -375,7 +375,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 41
+   "real_days": 39
   },
   {
    "en": "wuhai",
@@ -385,7 +385,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "wuhan",
@@ -395,7 +395,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 34
   },
   {
    "en": "wulanhaote",
@@ -405,7 +405,7 @@
    "latest_date": "2026-09-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 8
+   "real_days": 7
   },
   {
    "en": "wulumuqi",
@@ -415,14 +415,14 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 39
+   "real_days": 37
   },
   {
    "en": "wuxi",
    "name": "无锡",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-10-18",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 40
@@ -432,9 +432,9 @@
    "name": "西安",
    "prov": "陕西",
    "ok": true,
-   "latest_date": "2026-10-18",
-   "latest_level": "中",
-   "latest_code": 3,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 41
   },
   {
@@ -445,7 +445,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 42
+   "real_days": 41
   },
   {
    "en": "xining",
@@ -455,7 +455,7 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "yanan",
@@ -465,26 +465,26 @@
    "latest_date": "2026-10-14",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 19
+   "real_days": 18
   },
   {
    "en": "yangzhou",
    "name": "扬州",
    "prov": "江苏",
    "ok": true,
-   "latest_date": "2026-10-17",
+   "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 38
+   "real_days": 39
   },
   {
    "en": "yantai",
    "name": "烟台",
    "prov": "山东",
    "ok": true,
-   "latest_date": "2026-10-18",
-   "latest_level": "低",
-   "latest_code": 2,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 39
   },
   {
@@ -495,7 +495,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 34
+   "real_days": 33
   },
   {
    "en": "yulin",
@@ -505,16 +505,16 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 34
+   "real_days": 33
   },
   {
    "en": "zhangjiakou",
    "name": "张家口",
    "prov": "河北",
    "ok": true,
-   "latest_date": "2026-10-18",
-   "latest_level": "低",
-   "latest_code": 2,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 41
   },
   {
@@ -522,9 +522,9 @@
    "name": "郑州",
    "prov": "河南",
    "ok": true,
-   "latest_date": "2026-10-18",
-   "latest_level": "低",
-   "latest_code": 2,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
    "real_days": 40
   },
   {
@@ -535,7 +535,7 @@
    "latest_date": "2026-10-12",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 26
+   "real_days": 25
   }
  ]
 }
