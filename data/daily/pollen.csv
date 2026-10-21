@@ -7111,6 +7111,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-21,liupanshui,六盘水,-1,暂无,forecast,2026-10-20T23:30:00
 2026-10-21,nanchang,南昌,-1,暂无,forecast,2026-10-20T23:30:00
 2026-10-21,nanchong,南充,2,低,forecast,2026-10-20T19:33:38
+2026-10-21,nanchong,南充,1,很低,observed,2026-10-21T20:58:16
 2026-10-21,nanning,南宁,-1,暂无,forecast,2026-10-20T23:30:00
 2026-10-21,shanghai,上海,-1,暂无,forecast,2026-10-20T23:30:00
 2026-10-21,shenyang,沈阳,-1,暂无,forecast,2026-10-20T23:30:00
@@ -7134,7 +7135,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-21,zhangjiakou,张家口,2,低,forecast,2026-10-20T21:25:45
 2026-10-21,zhengzhou,郑州,1,很低,forecast,2026-10-20T18:35:17
 2026-10-21,zibo,淄博,-1,暂无,forecast,2026-10-20T23:30:00
-2026-10-22,baoding,保定,-1,暂无,forecast,
+2026-10-22,baoding,保定,0,未检测到花粉,forecast,
 2026-10-22,baotou,包头,-1,暂无,forecast,
 2026-10-22,beijing,北京,-1,暂无,forecast,
 2026-10-22,botou,泊头,-1,暂无,forecast,
@@ -7145,14 +7146,14 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-22,chengdu,成都,-1,暂无,forecast,
 2026-10-22,chifeng,赤峰,-1,暂无,forecast,
 2026-10-22,chongqing,重庆,-1,暂无,forecast,
-2026-10-22,dalian,大连,-1,暂无,forecast,
+2026-10-22,dalian,大连,0,未检测到花粉,forecast,
 2026-10-22,eerduosi,鄂尔多斯,-1,暂无,forecast,
 2026-10-22,fuzhou,福州,-1,暂无,forecast,
 2026-10-22,guangzhou,广州,-1,暂无,forecast,
 2026-10-22,guiyang,贵阳,-1,暂无,forecast,
 2026-10-22,haerbin,哈尔滨,-1,暂无,forecast,
 2026-10-22,haikou,海口,-1,暂无,forecast,
-2026-10-22,hangzhou,杭州,-1,暂无,forecast,
+2026-10-22,hangzhou,杭州,1,很低,forecast,
 2026-10-22,hefei,合肥,-1,暂无,forecast,
 2026-10-22,huhehaote,呼和浩特,-1,暂无,forecast,
 2026-10-22,jinan,济南,-1,暂无,forecast,
@@ -7163,7 +7164,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-22,liaocheng,聊城,-1,暂无,forecast,
 2026-10-22,liupanshui,六盘水,-1,暂无,forecast,
 2026-10-22,nanchang,南昌,-1,暂无,forecast,
-2026-10-22,nanchong,南充,-1,暂无,forecast,
+2026-10-22,nanchong,南充,2,低,forecast,
 2026-10-22,nanning,南宁,-1,暂无,forecast,
 2026-10-22,shanghai,上海,-1,暂无,forecast,
 2026-10-22,shenyang,沈阳,-1,暂无,forecast,
@@ -7178,8 +7179,8 @@ date,city,city_name,level_code,level,kind,created_at
 2026-10-22,wuxi,无锡,-1,暂无,forecast,
 2026-10-22,xian,西安,-1,暂无,forecast,
 2026-10-22,xianyang,咸阳,-1,暂无,forecast,
-2026-10-22,xining,西宁,-1,暂无,forecast,
-2026-10-22,yanan,延安,-1,暂无,forecast,
+2026-10-22,xining,西宁,0,未检测到花粉,forecast,
+2026-10-22,yanan,延安,0,未检测到花粉,forecast,
 2026-10-22,yangzhou,扬州,-1,暂无,forecast,
 2026-10-22,yantai,烟台,-1,暂无,forecast,
 2026-10-22,yinchuan,银川,-1,暂无,forecast,
