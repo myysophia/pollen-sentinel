@@ -467,4 +467,25 @@
    "rhum_pct": 39
   }
  ]
+}ode": 1,
+   "weather": "基本晴朗",
+   "is_rain": false,
+   "tmax": 4.0,
+   "tmin": -2.2,
+   "prcp_mm": 0.0,
+   "wind_kmh": 27.0,
+   "rhum_pct": 33
+  },
+  {
+   "date": "2026-10-28",
+   "code": 2,
+   "weather": "多云",
+   "is_rain": false,
+   "tmax": 6.1,
+   "tmin": -3.4,
+   "prcp_mm": 0.0,
+   "wind_kmh": 15.8,
+   "rhum_pct": 39
+  }
+ ]
 }
