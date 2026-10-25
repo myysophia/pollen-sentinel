@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-25T00:37:58",
+ "fetched_at": "2026-10-25T13:48:33",
  "today": "2026-10-25",
  "mode": "assembled",
  "cities_ok": 53,
@@ -55,7 +55,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 35
+   "real_days": 36
   },
   {
    "en": "changchun",
@@ -245,7 +245,7 @@
    "latest_date": "2026-10-19",
    "latest_level": "高",
    "latest_code": 4,
-   "real_days": 29
+   "real_days": 30
   },
   {
    "en": "lanzhou",
@@ -295,7 +295,7 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 32
+   "real_days": 33
   },
   {
    "en": "nanchong",
@@ -375,7 +375,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 34
+   "real_days": 35
   },
   {
    "en": "wuhai",
@@ -385,7 +385,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 31
+   "real_days": 32
   },
   {
    "en": "wuhan",
@@ -495,7 +495,7 @@
    "latest_date": "2026-10-15",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 29
+   "real_days": 30
   },
   {
    "en": "yulin",
@@ -535,7 +535,7 @@
    "latest_date": "2026-10-12",
    "latest_level": "低",
    "latest_code": 2,
-   "real_days": 20
+   "real_days": 21
   }
  ]
 }
