@@ -7,7 +7,7 @@
   "lat": 39.732,
   "lon": 98.494
  },
- "fetched_at": "2026-10-26T00:48:21",
+ "fetched_at": "2026-10-26T16:13:44",
  "pollen": [
   {
    "date": "2026-09-16",
@@ -390,81 +390,81 @@
  ],
  "weather_forecast": [
   {
-   "date": "2026-10-26",
-   "code": 1,
-   "weather": "基本晴朗",
-   "is_rain": false,
-   "tmax": 7.8,
-   "tmin": -2.8,
-   "prcp_mm": 0.0,
-   "wind_kmh": 15.7,
-   "rhum_pct": 43
-  },
-  {
    "date": "2026-10-27",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 10.6,
-   "tmin": -1.5,
+   "tmax": 11.3,
+   "tmin": -1.4,
    "prcp_mm": 0.0,
-   "wind_kmh": 7.6,
-   "rhum_pct": 37
+   "wind_kmh": 6.8,
+   "rhum_pct": 33
   },
   {
    "date": "2026-10-28",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 12.0,
-   "tmin": -1.3,
+   "tmax": 11.8,
+   "tmin": -1.4,
    "prcp_mm": 0.0,
-   "wind_kmh": 9.6,
+   "wind_kmh": 8.7,
    "rhum_pct": 30
   },
   {
    "date": "2026-10-29",
-   "code": 0,
-   "weather": "晴",
+   "code": 1,
+   "weather": "基本晴朗",
    "is_rain": false,
-   "tmax": 13.9,
+   "tmax": 13.7,
    "tmin": -0.2,
    "prcp_mm": 0.0,
-   "wind_kmh": 8.5,
-   "rhum_pct": 30
+   "wind_kmh": 6.7,
+   "rhum_pct": 32
   },
   {
    "date": "2026-10-30",
-   "code": 3,
-   "weather": "阴",
+   "code": 1,
+   "weather": "基本晴朗",
    "is_rain": false,
-   "tmax": 14.4,
-   "tmin": 3.2,
+   "tmax": 14.8,
+   "tmin": 2.2,
    "prcp_mm": 0.0,
-   "wind_kmh": 16.5,
-   "rhum_pct": 25
+   "wind_kmh": 13.3,
+   "rhum_pct": 26
   },
   {
    "date": "2026-10-31",
-   "code": 2,
-   "weather": "多云",
+   "code": 3,
+   "weather": "阴",
    "is_rain": false,
-   "tmax": 10.6,
-   "tmin": 0.3,
+   "tmax": 11.0,
+   "tmin": 0.7,
    "prcp_mm": 0.0,
-   "wind_kmh": 20.3,
+   "wind_kmh": 18.5,
    "rhum_pct": 31
   },
   {
    "date": "2026-11-01",
-   "code": 3,
-   "weather": "阴",
+   "code": 2,
+   "weather": "多云",
    "is_rain": false,
-   "tmax": 9.7,
-   "tmin": -0.4,
+   "tmax": 10.8,
+   "tmin": -1.1,
    "prcp_mm": 0.0,
-   "wind_kmh": 10.6,
-   "rhum_pct": 32
+   "wind_kmh": 9.7,
+   "rhum_pct": 34
+  },
+  {
+   "date": "2026-11-02",
+   "code": 1,
+   "weather": "基本晴朗",
+   "is_rain": false,
+   "tmax": 12.8,
+   "tmin": -0.3,
+   "prcp_mm": 0.0,
+   "wind_kmh": 8.1,
+   "rhum_pct": 36
   }
  ]
 }

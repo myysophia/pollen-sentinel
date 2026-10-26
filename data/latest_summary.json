@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-26T00:48:41",
+ "fetched_at": "2026-10-26T16:14:22",
  "today": "2026-10-26",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 7718,
- "weather_rows": 3127,
+ "pollen_rows": 7724,
+ "weather_rows": 3134,
  "cities": [
   {
    "en": "baoding",
@@ -25,7 +25,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 33
+   "real_days": 34
   },
   {
    "en": "beijing",
@@ -85,7 +85,7 @@
    "latest_date": "2026-10-10",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 25
+   "real_days": 26
   },
   {
    "en": "chengdu",
@@ -145,7 +145,7 @@
    "latest_date": "2026-10-24",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 15
+   "real_days": 16
   },
   {
    "en": "guangzhou",
@@ -225,7 +225,7 @@
    "latest_date": "2026-10-18",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 20
+   "real_days": 33
   },
   {
    "en": "jiuquan",
@@ -325,7 +325,7 @@
    "latest_date": "2026-10-16",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 30
+   "real_days": 31
   },
   {
    "en": "shenyang",
@@ -345,7 +345,7 @@
    "latest_date": "2026-10-20",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 35
+   "real_days": 36
   },
   {
    "en": "shijiazhuang",
