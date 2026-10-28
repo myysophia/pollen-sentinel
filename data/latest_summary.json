@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-28T01:51:53",
+ "fetched_at": "2026-10-28T16:11:58",
  "today": "2026-10-28",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 7930,
- "weather_rows": 3233,
+ "pollen_rows": 7937,
+ "weather_rows": 3240,
  "cities": [
   {
    "en": "baoding",
@@ -115,7 +115,7 @@
    "latest_date": "2026-10-27",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 36
+   "real_days": 35
   },
   {
    "en": "dalian",
