@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-29T01:59:39",
+ "fetched_at": "2026-10-29T16:18:12",
  "today": "2026-10-29",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 8036,
- "weather_rows": 3286,
+ "pollen_rows": 8042,
+ "weather_rows": 3292,
  "cities": [
   {
    "en": "baoding",
@@ -262,7 +262,7 @@
    "name": "拉萨",
    "prov": "西藏",
    "ok": true,
-   "latest_date": "2026-10-28",
+   "latest_date": "2026-10-29",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 35
