@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-10-30T02:13:08",
+ "fetched_at": "2026-10-30T16:06:26",
  "today": "2026-10-30",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 8142,
- "weather_rows": 3339,
+ "pollen_rows": 8148,
+ "weather_rows": 3345,
  "cities": [
   {
    "en": "baoding",
@@ -92,7 +92,7 @@
    "name": "成都",
    "prov": "四川",
    "ok": true,
-   "latest_date": "2026-10-29",
+   "latest_date": "2026-10-30",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 40
@@ -262,7 +262,7 @@
    "name": "拉萨",
    "prov": "西藏",
    "ok": true,
-   "latest_date": "2026-10-29",
+   "latest_date": "2026-10-30",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 35
