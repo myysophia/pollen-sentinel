@@ -7,7 +7,7 @@
   "lat": 46.076,
   "lon": 122.037
  },
- "fetched_at": "2026-10-31T01:54:49",
+ "fetched_at": "2026-10-31T15:25:37",
  "pollen": [
   {
    "date": "2026-09-21",
@@ -391,35 +391,35 @@
  "weather_forecast": [
   {
    "date": "2026-10-31",
-   "code": 71,
-   "weather": "小雪",
-   "is_rain": true,
-   "tmax": 0.4,
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 0.5,
    "tmin": -5.8,
-   "prcp_mm": 0.2,
+   "prcp_mm": 0.0,
    "wind_kmh": 15.2,
-   "rhum_pct": 34
+   "rhum_pct": 32
   },
   {
    "date": "2026-11-01",
-   "code": 85,
-   "weather": "阵雪",
+   "code": 71,
+   "weather": "小雪",
    "is_rain": true,
-   "tmax": -0.7,
-   "tmin": -4.3,
-   "prcp_mm": 0.5,
-   "wind_kmh": 14.5,
-   "rhum_pct": 55
+   "tmax": -0.8,
+   "tmin": -4.7,
+   "prcp_mm": 0.7,
+   "wind_kmh": 15.9,
+   "rhum_pct": 54
   },
   {
    "date": "2026-11-02",
    "code": 85,
    "weather": "阵雪",
    "is_rain": true,
-   "tmax": 3.9,
-   "tmin": -5.3,
-   "prcp_mm": 0.1,
-   "wind_kmh": 22.1,
+   "tmax": 3.5,
+   "tmin": -5.8,
+   "prcp_mm": 0.2,
+   "wind_kmh": 21.9,
    "rhum_pct": 59
   },
   {
@@ -427,44 +427,44 @@
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 1.6,
-   "tmin": -4.8,
+   "tmax": 1.5,
+   "tmin": -5.3,
    "prcp_mm": 0.0,
-   "wind_kmh": 25.7,
-   "rhum_pct": 39
+   "wind_kmh": 24.7,
+   "rhum_pct": 41
   },
   {
    "date": "2026-11-04",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": 2.4,
-   "tmin": -4.6,
+   "tmax": 1.9,
+   "tmin": -4.8,
    "prcp_mm": 0.0,
-   "wind_kmh": 13.9,
-   "rhum_pct": 52
+   "wind_kmh": 14.7,
+   "rhum_pct": 57
   },
   {
    "date": "2026-11-05",
    "code": 3,
    "weather": "阴",
    "is_rain": false,
-   "tmax": -0.9,
-   "tmin": -5.8,
+   "tmax": 0.3,
+   "tmin": -5.6,
    "prcp_mm": 0.0,
-   "wind_kmh": 12.2,
+   "wind_kmh": 13.9,
    "rhum_pct": 64
   },
   {
    "date": "2026-11-06",
-   "code": 2,
-   "weather": "多云",
+   "code": 1,
+   "weather": "基本晴朗",
    "is_rain": false,
-   "tmax": -1.9,
+   "tmax": -2.3,
    "tmin": -8.4,
    "prcp_mm": 0.0,
-   "wind_kmh": 19.4,
-   "rhum_pct": 43
+   "wind_kmh": 22.8,
+   "rhum_pct": 41
   }
  ]
 }
