@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-01T01:34:52",
+ "fetched_at": "2026-11-01T16:11:34",
  "today": "2026-11-01",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 8354,
- "weather_rows": 3445,
+ "pollen_rows": 8361,
+ "weather_rows": 3452,
  "cities": [
   {
    "en": "baoding",
@@ -242,9 +242,9 @@
    "name": "昆明",
    "prov": "云南",
    "ok": true,
-   "latest_date": "2026-10-31",
-   "latest_level": "高",
-   "latest_code": 4,
+   "latest_date": "2026-11-01",
+   "latest_level": "很高",
+   "latest_code": 5,
    "real_days": 32
   },
   {
