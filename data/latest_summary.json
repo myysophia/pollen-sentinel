@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-06T02:56:29",
+ "fetched_at": "2026-11-06T16:52:04",
  "today": "2026-11-06",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 8884,
- "weather_rows": 3710,
+ "pollen_rows": 8890,
+ "weather_rows": 3717,
  "cities": [
   {
    "en": "baoding",
@@ -142,7 +142,7 @@
    "name": "福州",
    "prov": "福建",
    "ok": true,
-   "latest_date": "2026-11-05",
+   "latest_date": "2026-11-06",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 20
