@@ -8891,6 +8891,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-11-07,changsha,长沙,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,chengde,承德,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,chengdu,成都,-1,暂无,forecast,2026-11-06T23:30:00
+2026-11-07,chengdu,成都,-1,暂无,observed,2026-11-07T23:30:00
 2026-11-07,chifeng,赤峰,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,chongqing,重庆,1,很低,forecast,2026-11-06T23:30:00
 2026-11-07,dalian,大连,-1,暂无,forecast,2026-11-06T23:30:00
@@ -8909,6 +8910,7 @@ date,city,city_name,level_code,level,kind,created_at
 2026-11-07,kunming,昆明,3,中,forecast,2026-11-06T23:30:00
 2026-11-07,lanzhou,兰州,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,lasa,拉萨,1,很低,forecast,2026-11-06T21:07:43
+2026-11-07,lasa,拉萨,1,很低,observed,2026-11-07T20:21:43
 2026-11-07,liaocheng,聊城,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,liupanshui,六盘水,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,nanchang,南昌,-1,暂无,forecast,2026-11-06T23:30:00
@@ -8916,17 +8918,21 @@ date,city,city_name,level_code,level,kind,created_at
 2026-11-07,nanning,南宁,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,shanghai,上海,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,shenyang,沈阳,-1,暂无,forecast,2026-11-06T23:30:00
+2026-11-07,shenyang,沈阳,-1,暂无,observed,2026-11-07T23:30:00
 2026-11-07,shenzhen,深圳,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,shijiazhuang,石家庄,-1,暂无,forecast,2026-11-06T23:30:00
+2026-11-07,shijiazhuang,石家庄,-1,暂无,observed,2026-11-07T23:30:00
 2026-11-07,taiyuan,太原,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,tianjin,天津,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,wuhai,乌海,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,wuhan,武汉,-1,暂无,forecast,2026-11-06T23:30:00
+2026-11-07,wuhan,武汉,-1,暂无,observed,2026-11-07T23:30:00
 2026-11-07,wulanhaote,乌兰浩特,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,wulumuqi,乌鲁木齐,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,wuxi,无锡,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,xian,西安,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,xianyang,咸阳,-1,暂无,forecast,2026-11-06T23:30:00
+2026-11-07,xianyang,咸阳,-1,暂无,observed,2026-11-07T23:30:00
 2026-11-07,xining,西宁,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,yanan,延安,-1,暂无,forecast,2026-11-06T23:30:00
 2026-11-07,yangzhou,扬州,-1,暂无,forecast,2026-11-06T23:30:00
