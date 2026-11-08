@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-08T01:56:15",
+ "fetched_at": "2026-11-08T16:08:25",
  "today": "2026-11-08",
  "mode": "assembled",
- "cities_ok": 46,
+ "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 9082,
- "weather_rows": 3809,
+ "pollen_rows": 9109,
+ "weather_rows": 3830,
  "cities": [
   {
    "en": "baoding",
@@ -128,14 +128,24 @@
    "real_days": 14
   },
   {
+   "en": "eerduosi",
+   "name": "鄂尔多斯",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": "2026-10-14",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 16
+  },
+  {
    "en": "fuzhou",
    "name": "福州",
    "prov": "福建",
    "ok": true,
-   "latest_date": "2026-11-06",
+   "latest_date": "2026-11-08",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 20
+   "real_days": 21
   },
   {
    "en": "guangzhou",
@@ -146,6 +156,36 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 37
+  },
+  {
+   "en": "guiyang",
+   "name": "贵阳",
+   "prov": "贵州",
+   "ok": true,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 21
+  },
+  {
+   "en": "haerbin",
+   "name": "哈尔滨",
+   "prov": "黑龙江",
+   "ok": true,
+   "latest_date": "2026-10-12",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 8
+  },
+  {
+   "en": "haikou",
+   "name": "海口",
+   "prov": "海南",
+   "ok": true,
+   "latest_date": "2026-10-20",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 6
   },
   {
    "en": "hangzhou",
@@ -228,6 +268,16 @@
    "real_days": 37
   },
   {
+   "en": "liaocheng",
+   "name": "聊城",
+   "prov": "山东",
+   "ok": true,
+   "latest_date": "2026-10-17",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 18
+  },
+  {
    "en": "liupanshui",
    "name": "六盘水",
    "prov": "贵州",
@@ -308,6 +358,16 @@
    "real_days": 26
   },
   {
+   "en": "taiyuan",
+   "name": "太原",
+   "prov": "山西",
+   "ok": true,
+   "latest_date": "2026-10-15",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 17
+  },
+  {
    "en": "tianjin",
    "name": "天津",
    "prov": "天津",
@@ -356,6 +416,16 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 19
+  },
+  {
+   "en": "wuxi",
+   "name": "无锡",
+   "prov": "江苏",
+   "ok": true,
+   "latest_date": "2026-10-20",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 22
   },
   {
    "en": "xian",
