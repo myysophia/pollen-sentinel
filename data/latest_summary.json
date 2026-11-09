@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-09T02:10:23",
+ "fetched_at": "2026-11-09T19:57:01",
  "today": "2026-11-09",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 9202,
- "weather_rows": 3869,
+ "pollen_rows": 9208,
+ "weather_rows": 3875,
  "cities": [
   {
    "en": "baoding",
@@ -265,7 +265,7 @@
    "latest_date": "2026-11-08",
    "latest_level": "很低",
    "latest_code": 1,
-   "real_days": 37
+   "real_days": 36
   },
   {
    "en": "liaocheng",
