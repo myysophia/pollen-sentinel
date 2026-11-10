@@ -1,0 +1,470 @@
+{
+ "city": {
+  "code": "101160801",
+  "en": "jiuquan",
+  "name": "酒泉",
+  "prov": "甘肃",
+  "lat": 39.732,
+  "lon": 98.494
+ },
+ "fetched_at": "2026-11-10T04:23:44",
+ "pollen": [
+  {
+   "date": "2026-10-01",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-02",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-03",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-04",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-05",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-06",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-07",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-08",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-09",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-10",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-11",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-12",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-13",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-14",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-15",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-16",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-17",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-18",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-19",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-20",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-21",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-22",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-23",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-24",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-25",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-26",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-27",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-28",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-29",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-30",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-10-31",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-01",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-02",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-03",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-04",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-05",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-06",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-07",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-08",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-09",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-10",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "observed"
+  },
+  {
+   "date": "2026-11-11",
+   "level_code": -1,
+   "level": "暂无",
+   "color": "#C4A39F",
+   "msg": "",
+   "created_at": null,
+   "kind": "forecast"
+  }
+ ],
+ "weather_forecast": [
+  {
+   "date": "2026-11-10",
+   "code": 0,
+   "weather": "晴",
+   "is_rain": false,
+   "tmax": 10.3,
+   "tmin": -1.5,
+   "prcp_mm": 0.0,
+   "wind_kmh": 7.0,
+   "rhum_pct": 28
+  },
+  {
+   "date": "2026-11-11",
+   "code": 0,
+   "weather": "晴",
+   "is_rain": false,
+   "tmax": 11.1,
+   "tmin": -0.7,
+   "prcp_mm": 0.0,
+   "wind_kmh": 6.2,
+   "rhum_pct": 22
+  },
+  {
+   "date": "2026-11-12",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 10.5,
+   "tmin": -0.2,
+   "prcp_mm": 0.0,
+   "wind_kmh": 7.3,
+   "rhum_pct": 24
+  },
+  {
+   "date": "2026-11-13",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 9.4,
+   "tmin": -0.6,
+   "prcp_mm": 0.0,
+   "wind_kmh": 7.6,
+   "rhum_pct": 31
+  },
+  {
+   "date": "2026-11-14",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 6.7,
+   "tmin": -1.3,
+   "prcp_mm": 0.0,
+   "wind_kmh": 13.0,
+   "rhum_pct": 44
+  },
+  {
+   "date": "2026-11-15",
+   "code": 3,
+   "weather": "阴",
+   "is_rain": false,
+   "tmax": 7.9,
+   "tmin": -1.6,
+   "prcp_mm": 0.0,
+   "wind_kmh": 8.3,
+   "rhum_pct": 49
+  },
+  {
+   "date": "2026-11-16",
+   "code": 85,
+   "weather": "阵雪",
+   "is_rain": true,
+   "tmax": 5.9,
+   "tmin": -2.9,
+   "prcp_mm": 0.3,
+   "wind_kmh": 11.4,
+   "rhum_pct": 52
+  }
+ ]
+}
