@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-16T02:27:54",
+ "fetched_at": "2026-11-16T19:46:42",
  "today": "2026-11-16",
  "mode": "assembled",
- "cities_ok": 41,
+ "cities_ok": 50,
  "cities_failed": [],
- "pollen_rows": 9926,
- "weather_rows": 4234,
+ "pollen_rows": 9953,
+ "weather_rows": 4252,
  "cities": [
   {
    "en": "baoding",
@@ -38,6 +38,36 @@
    "real_days": 8
   },
   {
+   "en": "botou",
+   "name": "泊头",
+   "prov": "河北",
+   "ok": true,
+   "latest_date": "2026-10-15",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 9
+  },
+  {
+   "en": "cangzhou",
+   "name": "沧州",
+   "prov": "河北",
+   "ok": true,
+   "latest_date": "2026-10-19",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 13
+  },
+  {
+   "en": "changchun",
+   "name": "长春",
+   "prov": "吉林",
+   "ok": true,
+   "latest_date": "2026-10-17",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 11
+  },
+  {
    "en": "changsha",
    "name": "长沙",
    "prov": "湖南",
@@ -66,6 +96,26 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 23
+  },
+  {
+   "en": "chifeng",
+   "name": "赤峰",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": "2026-10-07",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 1
+  },
+  {
+   "en": "chongqing",
+   "name": "重庆",
+   "prov": "重庆",
+   "ok": true,
+   "latest_date": "2026-11-15",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 35
   },
   {
    "en": "dalian",
@@ -288,6 +338,26 @@
    "real_days": 18
   },
   {
+   "en": "tianjin",
+   "name": "天津",
+   "prov": "天津",
+   "ok": true,
+   "latest_date": "2026-10-18",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 12
+  },
+  {
+   "en": "wuhai",
+   "name": "乌海",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": "2026-10-15",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 9
+  },
+  {
    "en": "wuhan",
    "name": "武汉",
    "prov": "湖北",
@@ -296,6 +366,16 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 10
+  },
+  {
+   "en": "wulanhaote",
+   "name": "乌兰浩特",
+   "prov": "内蒙古",
+   "ok": true,
+   "latest_date": null,
+   "latest_level": null,
+   "latest_code": null,
+   "real_days": 0
   },
   {
    "en": "wulumuqi",
@@ -316,6 +396,16 @@
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 14
+  },
+  {
+   "en": "xian",
+   "name": "西安",
+   "prov": "陕西",
+   "ok": true,
+   "latest_date": "2026-10-21",
+   "latest_level": "很低",
+   "latest_code": 1,
+   "real_days": 15
   },
   {
    "en": "xianyang",
