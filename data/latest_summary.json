@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-18T03:56:14",
+ "fetched_at": "2026-11-18T18:16:38",
  "today": "2026-11-18",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 10156,
- "weather_rows": 4346,
+ "pollen_rows": 10162,
+ "weather_rows": 4352,
  "cities": [
   {
    "en": "baoding",
