@@ -1,11 +1,11 @@
 {
- "fetched_at": "2026-11-23T03:18:21",
+ "fetched_at": "2026-11-23T21:35:35",
  "today": "2026-11-23",
  "mode": "assembled",
  "cities_ok": 53,
  "cities_failed": [],
- "pollen_rows": 10686,
- "weather_rows": 4611,
+ "pollen_rows": 10693,
+ "weather_rows": 4618,
  "cities": [
   {
    "en": "baoding",
@@ -152,7 +152,7 @@
    "name": "广州",
    "prov": "广东",
    "ok": true,
-   "latest_date": "2026-11-22",
+   "latest_date": "2026-11-23",
    "latest_level": "很低",
    "latest_code": 1,
    "real_days": 36
